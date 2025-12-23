@@ -79,7 +79,7 @@ class Environment(object):
             with open(self.zeoserver_conf, "w") as f:
                 f.write(text_new)
                 
-    def set_http_port(self):
+        def set_http_port(self):
         """Set instance HTTP port (zope.conf)"""
         http_port = self.env.get("HTTP_PORT", "").strip()
         if not http_port:
@@ -93,15 +93,25 @@ class Environment(object):
 
         text_new = text
 
-        # http-address variants
-        text_new = re.sub(r'(^\s*http-address\s+0\.0\.0\.0:)\d+\s*$', r'\g<1>%s' % http_port, text_new, flags=re.M)
-        text_new = re.sub(r'(^\s*http-address\s+\[::\]:)\d+\s*$', r'\g<1>%s' % http_port, text_new, flags=re.M)
-        text_new = re.sub(r'(^\s*http-address\s+)\d+\s*$', r'\g<1>%s' % http_port, text_new, flags=re.M)
+        # pega:
+        # http-address 8080
+        # http-address = 8080
+        # http-address 0.0.0.0:8080
+        # http-address = 0.0.0.0:8080
+        text_new = re.sub(
+            r'(^\s*http-address\s*=?\s*)(?:([0-9a-fA-F\.\:\[\]]+):)?(\d+)\s*$',
+            lambda m: m.group(1) + ((m.group(2) + ":") if m.group(2) else "") + http_port,
+            text_new,
+            flags=re.M
+        )
 
-        # address variants
-        text_new = re.sub(r'(^\s*address\s+0\.0\.0\.0:)\d+\s*$', r'\g<1>%s' % http_port, text_new, flags=re.M)
-        text_new = re.sub(r'(^\s*address\s+\[::\]:)\d+\s*$', r'\g<1>%s' % http_port, text_new, flags=re.M)
-        text_new = re.sub(r'(^\s*address\s+)\d+\s*$', r'\g<1>%s' % http_port, text_new, flags=re.M)
+        # pega também "address ..." se existir
+        text_new = re.sub(
+            r'(^\s*address\s*=?\s*)(?:([0-9a-fA-F\.\:\[\]]+):)?(\d+)\s*$',
+            lambda m: m.group(1) + ((m.group(2) + ":") if m.group(2) else "") + http_port,
+            text_new,
+            flags=re.M
+        )
 
         if text_new != text:
             with open(self.zope_conf, "w") as f:
