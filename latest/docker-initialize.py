@@ -63,36 +63,41 @@ class Environment(object):
         zeo_port = self.env.get("ZEO_PORT", "").strip()
         if not zeo_port:
             return
-
+    
         if not os.path.exists(self.zeoserver_conf):
             return
-
+    
         with open(self.zeoserver_conf, "r") as f:
             text = f.read()
-
-        # zeo.conf costuma ter "address 8080" ou "address 0.0.0.0:8080"
-        text_new = re.sub(r'(^\s*address\s+)\d+\s*$', r'\g<1>%s' % zeo_port, text, flags=re.M)
+    
+        text_new = text
+        # aceita:
+        # address 8080
+        # address 0.0.0.0:8080
+        # address [::]:8080
+        text_new = re.sub(r'(^\s*address\s+)\d+\s*$', r'\g<1>%s' % zeo_port, text_new, flags=re.M)
         text_new = re.sub(r'(^\s*address\s+0\.0\.0\.0:)\d+\s*$', r'\g<1>%s' % zeo_port, text_new, flags=re.M)
         text_new = re.sub(r'(^\s*address\s+\[::\]:)\d+\s*$', r'\g<1>%s' % zeo_port, text_new, flags=re.M)
-
+    
         if text_new != text:
             with open(self.zeoserver_conf, "w") as f:
                 f.write(text_new)
-                
-        def set_http_port(self):
+    
+    
+    def set_http_port(self):
         """Set instance HTTP port (zope.conf)"""
         http_port = self.env.get("HTTP_PORT", "").strip()
         if not http_port:
             return
-
+    
         if not os.path.exists(self.zope_conf):
             return
-
+    
         with open(self.zope_conf, "r") as f:
             text = f.read()
-
+    
         text_new = text
-
+    
         # pega:
         # http-address 8080
         # http-address = 8080
@@ -104,18 +109,19 @@ class Environment(object):
             text_new,
             flags=re.M
         )
-
-        # pega também "address ..." se existir
+    
+        # alguns templates usam "address" em vez de "http-address"
         text_new = re.sub(
             r'(^\s*address\s*=?\s*)(?:([0-9a-fA-F\.\:\[\]]+):)?(\d+)\s*$',
             lambda m: m.group(1) + ((m.group(2) + ":") if m.group(2) else "") + http_port,
             text_new,
             flags=re.M
         )
-
+    
         if text_new != text:
             with open(self.zope_conf, "w") as f:
                 f.write(text_new)
+
 
     
     def zeopack(self):
