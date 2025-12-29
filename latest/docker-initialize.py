@@ -12,7 +12,7 @@ class Environment(object):
         zope_conf="/home/senaite/senaitelims/parts/instance/etc/zope.conf",
         custom_conf="/home/senaite/senaitelims/custom.cfg",
         zeopack_conf="/home/senaite/senaitelims/bin/zeopack",
-        zeoserver_conf="/home/senaite/senaitelims/parts/zeoserver/etc/zeo.conf",
+        zeoserver_conf="/home/senaite/senaitelims/parts/zeo/etc/zeo.conf",
         cors_conf="/home/senaite/senaitelims/parts/instance/etc/package-includes/999-additional-overrides.zcml"
     ):
         self.env = env
@@ -59,7 +59,7 @@ class Environment(object):
     
 
     def set_zeo_port(self):
-        """Set zeoserver port (zeo.conf)"""
+        """Set zeo server port in parts/zeo/etc/zeo.conf"""
         zeo_port = self.env.get("ZEO_PORT", "").strip()
         if not zeo_port:
             return
@@ -71,17 +71,25 @@ class Environment(object):
             text = f.read()
     
         text_new = text
-        # aceita:
+    
+        # cobre:
         # address 8080
+        # address 127.0.0.1:8080
         # address 0.0.0.0:8080
         # address [::]:8080
-        text_new = re.sub(r'(^\s*address\s+)\d+\s*$', r'\g<1>%s' % zeo_port, text_new, flags=re.M)
-        text_new = re.sub(r'(^\s*address\s+0\.0\.0\.0:)\d+\s*$', r'\g<1>%s' % zeo_port, text_new, flags=re.M)
-        text_new = re.sub(r'(^\s*address\s+\[::\]:)\d+\s*$', r'\g<1>%s' % zeo_port, text_new, flags=re.M)
+        text_new = re.sub(r'(^\s*address\s+)\d+\s*$',
+                          r'\g<1>%s' % zeo_port, text_new, flags=re.M)
+        text_new = re.sub(r'(^\s*address\s+127\.0\.0\.1:)\d+\s*$',
+                          r'\g<1>%s' % zeo_port, text_new, flags=re.M)
+        text_new = re.sub(r'(^\s*address\s+0\.0\.0\.0:)\d+\s*$',
+                          r'\g<1>%s' % zeo_port, text_new, flags=re.M)
+        text_new = re.sub(r'(^\s*address\s+\[::\]:)\d+\s*$',
+                          r'\g<1>%s' % zeo_port, text_new, flags=re.M)
     
         if text_new != text:
             with open(self.zeoserver_conf, "w") as f:
                 f.write(text_new)
+
     
     
     def set_http_port(self):
