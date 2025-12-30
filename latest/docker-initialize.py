@@ -59,40 +59,27 @@ class Environment(object):
         with open(self.zope_conf, "w") as cfile:
             cfile.write(config)
 
-    def set_zeo_bind_port(self):
-        """Set zeo server bind/port in zeo.conf (server side)"""
-        zeo_port = self.env.get("ZEO_PORT", "").strip()
-        zeo_bind = self.env.get("ZEO_BIND", "").strip() or "127.0.0.1"
+    def set_zeo_bind_port(self, config_parser):
+    """Set zeo server bind address + port (zeo.conf)"""
+
+    role = self.env.get("SENAITE_ROLE", "").strip().lower()
+
+    zeo_port = self.env.get("ZEO_PORT", "").strip()
+    zeo_bind = self.env.get("ZEO_BIND", "").strip()
+
+    # Defaults seguros pro host-mode quando este container é o ZEO
+    if role == "zeo":
+        if not zeo_bind:
+            zeo_bind = "127.0.0.1"
         if not zeo_port:
-            return
+            zeo_port = "8100"
 
-        for conf in self.zeo_confs:
-            if not os.path.exists(conf):
-                continue
+    if zeo_port:
+        if zeo_bind:
+            config_parser.set("zeo", "address", "{}:{}".format(zeo_bind, zeo_port))
+        else:
+            config_parser.set("zeo", "address", zeo_port)
 
-            with open(conf, "r") as f:
-                text = f.read()
-
-            new = text
-
-            # Replace any address form with bind:port
-            # address 8080
-            # address 127.0.0.1:8080
-            # address 0.0.0.0:8080
-            # address [::]:8080
-            new = re.sub(
-                r'(^\s*address\s+)(?:([0-9a-fA-F\.\:\[\]]+):)?(\d+)\s*$',
-                lambda m: m.group(1) + ("%s:%s" % (zeo_bind, zeo_port)),
-                new, flags=re.M
-            )
-
-            # If no address line exists at all, append one (safe)
-            if not re.search(r'^\s*address\s+', new, flags=re.M):
-                new += "\n  address %s:%s\n" % (zeo_bind, zeo_port)
-
-            if new != text:
-                with open(conf, "w") as f:
-                    f.write(new)
 
     def set_http_port(self):
         """Set instance HTTP port (zope.conf)"""
