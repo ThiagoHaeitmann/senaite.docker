@@ -1,72 +1,48 @@
-# Use an official Python runtime as a parent image
-FROM python:2.7-slim-buster
+FROM debian:12-slim
 
-# Set one or more individual labels
-LABEL maintainer="Ramon Bartl"
-LABEL email="rb@ridingbytes.com"
-LABEL senaite.core.version="latest"
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=C.UTF-8 \
+    PYENV_ROOT=/opt/pyenv \
+    PATH=/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-# Set environment variables
-ENV PLONE_MAJOR=5.2 \
-    PLONE_VERSION=5.2.15 \
-    PLONE_MD5=714be71e21098ab148df8681196e78ce \
-    PLONE_UNIFIED_INSTALLER=Plone-5.2.15-UnifiedInstaller-1.0 \
-    SENAITE_HOME=/home/senaite \
-    SENAITE_USER=senaite \
-    SENAITE_INSTANCE_HOME=/home/senaite/senaitelims \
-    SENAITE_DATA=/data \
-    SENAITE_FILESTORAGE=/data/filestorage \
-    SENAITE_BLOBSTORAGE=/data/blobstorage
+# Dependências de build do Python 2.7 + libs que o Plone/SENAITE costuma precisar
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates curl git bash \
+    build-essential make \
+    libbz2-dev zlib1g-dev libssl-dev \
+    libsqlite3-dev libffi-dev uuid-dev libnss3-dev libgdbm-dev libgdbm-compat-dev \
+    libncursesw5-dev liblzma-dev libreadline-dev \
+    libpcre3-dev libcairo2 libpango-1.0-0 libpangocairo-1.0-0 \
+    rsync tini \
+ && rm -rf /var/lib/apt/lists/*
 
-# Create the senaite user
-RUN useradd --system -m -d $SENAITE_HOME -U -u 500 $SENAITE_USER
+# pyenv + python2.7.18
+RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
+ && /opt/pyenv/bin/pyenv install 2.7.18 \
+ && /opt/pyenv/bin/pyenv global 2.7.18
 
-# Create directories
-RUN mkdir -p $SENAITE_INSTANCE_HOME $SENAITE_FILESTORAGE $SENAITE_BLOBSTORAGE
+# buildout toolchain
+RUN pip install --no-cache-dir "setuptools==44.1.1" "zc.buildout==2.13.8" wheel
 
-# Copy Buildout
-COPY requirements.txt buildout.cfg $SENAITE_INSTANCE_HOME/
+# App
+WORKDIR /app
+COPY buildout.cfg.template /app/buildout.cfg.template
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-# Copy the build dependencies and startup scripts
-COPY build_deps.txt run_deps.txt docker-initialize.py docker-entrypoint.sh /
+# dirs padrão (você vai bindar volume nelas)
+RUN mkdir -p /data/zeo /data/blob /data/var /app/instance
 
-# Note: we concatenate all commands to avoid multiple layer generation and reduce the image size
-RUN echo "Acquire::Check-Valid-Until \"false\";" > /etc/apt/apt.conf.d/99no-check-valid-until && \
-    sed -i 's|http://deb.debian.org|http://archive.debian.org|g' /etc/apt/sources.list && \
-    sed -i 's|http://security.debian.org|http://archive.debian.org|g' /etc/apt/sources.list && \
-    sed -i '/stretch-updates/d' /etc/apt/sources.list && \
-    sed -i '/buster-updates/d' /etc/apt/sources.list && \
-    apt-get update \
-    # Install system packages
-    && apt-get install -y --no-install-recommends $(grep -vE "^\s*#" /build_deps.txt | tr "\n" " ") \
-    && apt-get install -y --no-install-recommends $(grep -vE "^\s*#" /run_deps.txt | tr "\n" " ") \
-    # Fetch unified installer
-    && wget -O Plone.tgz https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/$PLONE_UNIFIED_INSTALLER.tgz \
-    && echo "$PLONE_MD5 Plone.tgz" | md5sum -c - \
-    && tar -xzf /Plone.tgz \
-    && cp -rv $PLONE_UNIFIED_INSTALLER/base_skeleton/* $SENAITE_INSTANCE_HOME \
-    && cp -v $PLONE_UNIFIED_INSTALLER/buildout_templates/buildout.cfg $SENAITE_INSTANCE_HOME/buildout-base.cfg \
-    && rm -rf $PLONE_UNIFIED_INSTALLER Plone.tgz \
-    # Buildout
-    && cd $SENAITE_INSTANCE_HOME \
-    && pip install -r requirements.txt \
-    && buildout \
-    && ln -s $SENAITE_FILESTORAGE/ var/filestorage \
-    && ln -s $SENAITE_BLOBSTORAGE/ var/blobstorage \
-    && chown -R senaite:senaite $SENAITE_HOME $SENAITE_DATA \
-    # Cleanup
-    && apt-get purge -y --auto-remove $(grep -vE "^\s*#" /build_deps.txt  | tr "\n" " ") \
-    && rm -rf /$SENAITE_HOME/buildout-cache \
-    && rm -rf /var/lib/apt/lists/*
+ENV \
+  SENAITE_VERSION=2.6.0 \
+  HTTP_ADDRESS=0.0.0.0 \
+  HTTP_PORT=8080 \
+  ZEO_LISTEN=127.0.0.1 \
+  ZEO_PORT=8100 \
+  ZEO_ADDRESS=127.0.0.1:8100 \
+  ADMIN_USER=admin \
+  ADMIN_PASS=admin \
+  PLONE_SITE=senaite
 
-# Change working directory
-WORKDIR $SENAITE_INSTANCE_HOME
-
-# Mount external volume
-VOLUME /data
-
-# Expose instance port
-EXPOSE 8080
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["start"]
+ENTRYPOINT ["/usr/bin/tini","--","/entrypoint.sh"]
+CMD ["instance"]
