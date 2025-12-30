@@ -3,7 +3,6 @@ FROM python:2.7-slim-buster
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8
 
-# libs que Plone/SENAITE costuma precisar
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates bash git curl \
     build-essential gcc g++ make \
@@ -13,13 +12,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tini \
  && rm -rf /var/lib/apt/lists/*
 
-
-# toolchain buildout alinhada com docs/stack antiga
+# toolchain buildout alinhada com Plone 5.2/Py2
 RUN pip install --no-cache-dir "setuptools==44.1.1" "zc.buildout==2.13.8" wheel
 
 WORKDIR /app
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
 COPY buildout.cfg.template /app/buildout.cfg.template
 COPY entrypoint.sh /entrypoint.sh
+
 RUN chmod +x /entrypoint.sh \
  && mkdir -p /data/zeo /data/blob /data/var /app/eggs /app/downloads
 
