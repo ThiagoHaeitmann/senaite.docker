@@ -79,9 +79,23 @@ fi
 
 # ---------- write buildout.cfg ----------
 # Aqui não "substitui" nada: buildout usa ${ENV:VAR} direto.
-python - <<PY
-open("${CFG}", "w").write(open("${TEMPLATE}", "r").read())
-PY
+# escreve o template
+cat "${TEMPLATE}" > "${CFG}"
+
+# injeta seção ENV com os valores do container/Nomad
+cat >> "${CFG}" <<EOF
+
+[ENV]
+SENAITE_VERSION = ${SENAITE_VERSION}
+HTTP_ADDRESS = ${HTTP_ADDRESS}
+HTTP_PORT = ${HTTP_PORT}
+ZEO_LISTEN = ${ZEO_LISTEN}
+ZEO_PORT = ${ZEO_PORT}
+ZEO_ADDRESS = ${ZEO_ADDRESS}
+ADMIN_USER = ${ADMIN_USER}
+ADMIN_PASS = ${ADMIN_PASS}
+EOF
+
 
 # ---------- buildout idempotent ----------
 need_buildout=0
