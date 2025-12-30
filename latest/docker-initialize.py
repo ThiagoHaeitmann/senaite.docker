@@ -21,6 +21,8 @@ class Environment(object):
         self.zeopack_conf = zeopack_conf
         self.zeoserver_conf = zeoserver_conf
         self.cors_conf = cors_conf
+    if not os.path.exists(self.zeoserver_conf):
+        self.zeoserver_conf = "/home/senaite/senaitelims/parts/zeoserver/etc/zeo.conf"
 
     def zeoclient(self):
         """ ZEO Client
