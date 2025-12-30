@@ -1,4 +1,5 @@
 [buildout]
+versions = versions
 index = https://pypi.org/simple/
 extends = https://dist.plone.org/release/5.2.15/versions.cfg
 find-links =
@@ -27,7 +28,6 @@ eggs =
     senaite.panic
     senaite.lis2a
     senaite.queue
-    senaite.health
 
 eggs-directory = /app/eggs
 download-cache = /app/downloads
@@ -72,4 +72,3 @@ senaite.microorganism = 1.2.0
 senaite.panic = 2.1.0
 senaite.lis2a = 2.0.0
 senaite.queue = 1.0.3
-senaite.health = 1.2.5
