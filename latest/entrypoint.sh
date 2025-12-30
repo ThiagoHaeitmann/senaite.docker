@@ -57,7 +57,7 @@ log "RUN_BUILDOUT=${RUN_BUILDOUT} FIX_PERMS=${FIX_PERMS} PUID=${PUID} PGID=${PGI
 if [[ "${MODE}" == "instance" || "${MODE}" == "fg" ]]; then
   require_port_int "HTTP_PORT" "${HTTP_PORT}"
 fi
-require_port_int "ZEO_PORT" "${ZEO_PORT}
+require_port_int "ZEO_PORT" "${ZEO_PORT}"
 
 if [[ ! -f "${TEMPLATE}" ]]; then
   die "Missing ${TEMPLATE}. You must COPY buildout.cfg.template into the image at ${TEMPLATE}"
