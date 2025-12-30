@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ---------- defaults ----------
-MODE="${1:-instance}"
+MODE="${1:-${MODE:-instance}}"
 
 : "${SENAITE_VERSION:=2.6.0}"
 : "${HTTP_ADDRESS:=0.0.0.0}"
@@ -54,8 +54,10 @@ log "ADMIN_USER=${ADMIN_USER}"
 log "DATA_ZEO=${DATA_ZEO} DATA_BLOB=${DATA_BLOB} DATA_VAR=${DATA_VAR}"
 log "RUN_BUILDOUT=${RUN_BUILDOUT} FIX_PERMS=${FIX_PERMS} PUID=${PUID} PGID=${PGID}"
 
-require_port_int "HTTP_PORT" "${HTTP_PORT}"
-require_port_int "ZEO_PORT" "${ZEO_PORT}"
+if [[ "${MODE}" == "instance" || "${MODE}" == "fg" ]]; then
+  require_port_int "HTTP_PORT" "${HTTP_PORT}"
+fi
+require_port_int "ZEO_PORT" "${ZEO_PORT}
 
 if [[ ! -f "${TEMPLATE}" ]]; then
   die "Missing ${TEMPLATE}. You must COPY buildout.cfg.template into the image at ${TEMPLATE}"
