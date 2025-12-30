@@ -27,7 +27,6 @@ eggs =
     senaite.microorganism
     senaite.panic
     senaite.lis2a
-    senaite.queue
 
 eggs-directory = /app/eggs
 download-cache = /app/downloads
@@ -71,4 +70,3 @@ senaite.abx = 1.3.0
 senaite.microorganism = 1.2.0
 senaite.panic = 2.1.0
 senaite.lis2a = 2.0.0
-senaite.queue = 1.0.3
