@@ -1,182 +1,127 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
-COMMANDS="adduser debug fg foreground help kill logreopen logtail reopen_transcript run show status stop wait"
-START="console start restart"
+# ---------- defaults ----------
+MODE="${1:-instance}"
 
-log() { echo "[$(date -Is)] $*"; }
+: "${SENAITE_VERSION:=2.6.0}"
+: "${HTTP_ADDRESS:=0.0.0.0}"
+: "${HTTP_PORT:=8080}"
 
-# -----------------------
-# FS / permissions
-# -----------------------
-mkdir -p /data/blobstorage /data/cache /data/filestorage /data/instance /data/log /data/zeoserver
-mkdir -p /home/senaite/senaitelims/src
+: "${ZEO_LISTEN:=127.0.0.1}"
+: "${ZEO_PORT:=8100}"
+: "${ZEO_ADDRESS:=127.0.0.1:${ZEO_PORT}}"
 
-# Evita lock/permissão cagada (não falha o boot se algum path der ruim)
-find /data -not -user senaite -exec chown senaite:senaite {} \+ 2>/dev/null || true
-find /home/senaite -not -user senaite -exec chown senaite:senaite {} \+ 2>/dev/null || true
+: "${ADMIN_USER:=admin}"
+: "${ADMIN_PASS:=admin}"
 
-# -----------------------
-# Role detection + sane defaults
-# -----------------------
-ROLE="custom"
-ARG1="${1:-}"
+: "${DATA_ZEO:=/data/zeo}"
+: "${DATA_BLOB:=/data/blob}"
+: "${DATA_VAR:=/data/var}"
 
-if [[ "$ARG1" == zeo* ]]; then
-  ROLE="zeo"
-elif [[ " $START " == *" $ARG1 "* ]]; then
-  ROLE="web"
-elif [[ " $COMMANDS " == *" $ARG1 "* ]]; then
-  ROLE="web"
-fi
+: "${RUN_BUILDOUT:=1}"
+: "${FIX_PERMS:=0}"
+: "${PUID:=0}"
+: "${PGID:=0}"
 
-export SENAITE_ROLE="$ROLE"
+APP_DIR="/app"
+TEMPLATE="${APP_DIR}/buildout.cfg.template"
+CFG="${APP_DIR}/buildout.cfg"
 
-# Defaults bons pro host-mode:
-# - ZEO não pode ficar “pegando” 8080 do host (conflita com o web)
-if [[ "$ROLE" == "zeo" ]]; then
-  export ZEO_BIND="${ZEO_BIND:-127.0.0.1}"
-  export ZEO_PORT="${ZEO_PORT:-8100}"
-fi
+log() { echo "[senaite] $*"; }
+die() { echo "[senaite][FATAL] $*" >&2; exit 1; }
 
-# Web precisa saber onde tá o ZEO
-if [[ "$ROLE" == "web" ]]; then
-  export ZEO_ADDRESS="${ZEO_ADDRESS:-127.0.0.1:8100}"
-  export WAIT_FOR_ZEO="${WAIT_FOR_ZEO:-1}"
-  export WAIT_FOR_ZEO_TIMEOUT="${WAIT_FOR_ZEO_TIMEOUT:-240}"
-  export WAIT_FOR_ZEO_INTERVAL="${WAIT_FOR_ZEO_INTERVAL:-2}"
-fi
-
-# HTTP_PORT já existe no seu docker-initialize.py
-export HTTP_PORT="${HTTP_PORT:-8080}"
-
-# -----------------------
-# init from env vars (mantém fluxo original)
-# -----------------------
-gosu senaite python /docker-initialize.py
-
-git_fixture() {
-  for d in $(find /home/senaite/senaitelims/src -mindepth 1 -maxdepth 1 -type d 2>/dev/null); do
-    if [ -d "$d/.git" ]; then
-      git config --global --add safe.directory "$d" >/dev/null 2>&1 || true
-      log "git safe.directory: $d"
-    fi
-  done
-}
-git_fixture
-
-if [ -e "custom.cfg" ]; then
-  buildout -c custom.cfg
-  find /data -not -user senaite -exec chown senaite:senaite {} \+ 2>/dev/null || true
-  find /home/senaite -not -user senaite -exec chown senaite:senaite {} \+ 2>/dev/null || true
-  gosu senaite python /docker-initialize.py
-fi
-
-# -----------------------
-# Helpers
-# -----------------------
-pick_zeo_conf() {
-  if [ -f "/home/senaite/senaitelims/parts/zeo/etc/zeo.conf" ]; then
-    echo "/home/senaite/senaitelims/parts/zeo/etc/zeo.conf"
-    return 0
-  fi
-  if [ -f "/home/senaite/senaitelims/parts/zeoserver/etc/zeo.conf" ]; then
-    echo "/home/senaite/senaitelims/parts/zeoserver/etc/zeo.conf"
-    return 0
-  fi
-  return 1
+is_true() {
+  case "${1,,}" in
+    1|true|yes|y|on) return 0 ;;
+    *) return 1 ;;
+  esac
 }
 
-force_zeo_address() {
-  local bind="${ZEO_BIND:-127.0.0.1}"
-  local port="${ZEO_PORT:-8100}"
-  local conf
-  conf="$(pick_zeo_conf)"
+require_port_int() {
+  local name="$1" val="$2"
+  [[ "$val" =~ ^[0-9]+$ ]] || die "${name} must be an integer, got: ${val}"
+  (( val > 0 && val < 65536 )) || die "${name} must be 1-65535, got: ${val}"
+}
 
-  log "[zeo] conf=$conf"
-  log "[zeo] forcing address ${bind}:${port}"
-  log "[zeo] before:"
-  grep -nE '^[[:space:]]*address[[:space:]]+' "$conf" || true
+# ---------- sanity ----------
+log "MODE=${MODE}"
+log "SENAITE_VERSION=${SENAITE_VERSION}"
+log "HTTP=${HTTP_ADDRESS}:${HTTP_PORT}"
+log "ZEO_LISTEN=${ZEO_LISTEN}:${ZEO_PORT}"
+log "ZEO_ADDRESS=${ZEO_ADDRESS}"
+log "ADMIN_USER=${ADMIN_USER}"
+log "DATA_ZEO=${DATA_ZEO} DATA_BLOB=${DATA_BLOB} DATA_VAR=${DATA_VAR}"
+log "RUN_BUILDOUT=${RUN_BUILDOUT} FIX_PERMS=${FIX_PERMS} PUID=${PUID} PGID=${PGID}"
 
-  if grep -Eq '^[[:space:]]*address[[:space:]]+' "$conf"; then
-    sed -ri "s|^[[:space:]]*address[[:space:]]+.*$|  address ${bind}:${port}|" "$conf"
+require_port_int "HTTP_PORT" "${HTTP_PORT}"
+require_port_int "ZEO_PORT" "${ZEO_PORT}"
+
+if [[ ! -f "${TEMPLATE}" ]]; then
+  die "Missing ${TEMPLATE}. You must COPY buildout.cfg.template into the image at ${TEMPLATE}"
+fi
+
+# instance precisa do ZEO_ADDRESS
+if [[ "${MODE}" == "instance" || "${MODE}" == "fg" ]]; then
+  [[ -n "${ZEO_ADDRESS}" ]] || die "ZEO_ADDRESS is required in instance mode (e.g. 127.0.0.1:8100)"
+fi
+
+# ---------- prepare dirs ----------
+mkdir -p "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs"
+
+# ---------- optional perms fix ----------
+if is_true "${FIX_PERMS}"; then
+  log "Fixing permissions on data dirs (PUID=${PUID}, PGID=${PGID}) ..."
+  # Só nos diretórios que interessam (sem varrer /data inteiro)
+  chown -R "${PUID}:${PGID}" "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
+  chmod -R u+rwX,g+rwX "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
+fi
+
+# ---------- write buildout.cfg ----------
+# Aqui não "substitui" nada: buildout usa ${ENV:VAR} direto.
+python - <<PY
+open("${CFG}", "w").write(open("${TEMPLATE}", "r").read())
+PY
+
+# ---------- buildout idempotent ----------
+need_buildout=0
+if [[ ! -x "${APP_DIR}/bin/buildout" ]]; then need_buildout=1; fi
+if [[ ! -x "${APP_DIR}/bin/instance" ]]; then need_buildout=1; fi
+if [[ ! -x "${APP_DIR}/bin/zeoserver" ]]; then need_buildout=1; fi
+
+if (( need_buildout == 1 )); then
+  if is_true "${RUN_BUILDOUT}"; then
+    log "Running buildout (bin/* missing)..."
+    # garante toolchain
+    python -c "import zc.buildout" >/dev/null 2>&1 || pip install -q "zc.buildout==2.13.8"
+    buildout -c "${CFG}"
   else
-    echo "  address ${bind}:${port}" >> "$conf"
+    die "bin/* missing but RUN_BUILDOUT=0. Refusing to start."
   fi
-
-  log "[zeo] after:"
-  grep -nE '^[[:space:]]*address[[:space:]]+' "$conf" || true
-
-  # fail-fast se alguém “deixou” 8080
-  if grep -Eq '^[[:space:]]*address[[:space:]]+.*(:8080|[[:space:]]8080)$' "$conf"; then
-    log "[zeo] ERROR: zeo.conf ainda aponta pra 8080 (host-mode vai conflitar)"
-    exit 1
-  fi
-}
-
-maybe_force_unlock() {
-  if [ "${ZEO_FORCE_UNLOCK:-0}" != "1" ]; then
-    return 0
-  fi
-
-  local lock="/data/filestorage/Data.fs.lock"
-  if [ -e "$lock" ]; then
-    log "[zeo] ZEO_FORCE_UNLOCK=1 -> removendo $lock"
-    rm -f "$lock" || true
-  fi
-}
-
-wait_for_zeo() {
-  if [ "${WAIT_FOR_ZEO:-1}" != "1" ]; then
-    return 0
-  fi
-
-  local addr="${ZEO_ADDRESS:-127.0.0.1:8100}"
-  local host="${addr%:*}"
-  local port="${addr##*:}"
-  local timeout="${WAIT_FOR_ZEO_TIMEOUT:-240}"
-  local interval="${WAIT_FOR_ZEO_INTERVAL:-2}"
-
-  log "[web] esperando ZEO em ${host}:${port} timeout=${timeout}s"
-  local start_ts now_ts
-  start_ts="$(date +%s)"
-
-  while true; do
-    if command -v nc >/dev/null 2>&1; then
-      nc -z "$host" "$port" >/dev/null 2>&1 && break
-    else
-      (echo >"/dev/tcp/${host}/${port}") >/dev/null 2>&1 && break || true
-    fi
-
-    now_ts="$(date +%s)"
-    if [ $((now_ts - start_ts)) -ge "$timeout" ]; then
-      log "[web] ERROR: ZEO não abriu ${host}:${port} em ${timeout}s"
-      exit 1
-    fi
-
-    log "[web] ainda não... ${host}:${port}"
-    sleep "$interval"
-  done
-
-  log "[web] ZEO OK em ${host}:${port}"
-}
-
-# -----------------------
-# Routing
-# -----------------------
-if [[ "$ARG1" == zeo* ]]; then
-  force_zeo_address
-  maybe_force_unlock
-  exec gosu senaite "bin/$ARG1" fg
+else
+  log "buildout OK (bin/* exists)."
 fi
 
-if [[ " $START " == *" $ARG1 "* ]]; then
-  wait_for_zeo
-  exec gosu senaite bin/instance console
-fi
-
-if [[ " $COMMANDS " == *" $ARG1 "* ]]; then
-  exec gosu senaite bin/instance "$@"
-fi
-
-exec "$@"
+# ---------- start ----------
+case "${MODE}" in
+  zeo)
+    # ZEO: só servidor
+    log "Starting ZEO server..."
+    exec "${APP_DIR}/bin/zeoserver" fg
+    ;;
+  instance|fg)
+    # Instance: web
+    log "Starting SENAITE instance..."
+    exec "${APP_DIR}/bin/instance" fg
+    ;;
+  check)
+    log "Health check:"
+    log " - buildout cfg: ${CFG}"
+    log " - instance bin: ${APP_DIR}/bin/instance"
+    log " - zeoserver bin: ${APP_DIR}/bin/zeoserver"
+    exit 0
+    ;;
+  *)
+    die "Unknown MODE '${MODE}'. Use: zeo | instance | fg | check"
+    ;;
+esac
