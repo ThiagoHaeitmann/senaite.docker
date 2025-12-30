@@ -70,3 +70,5 @@ senaite.abx = 1.3.0
 senaite.microorganism = 1.2.0
 senaite.panic = 2.1.0
 senaite.lis2a = 2.0.0
+et_xmlfile = 1.1.0
+openpyxl = < 3
