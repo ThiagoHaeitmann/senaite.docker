@@ -1,4 +1,1 @@
-setuptools==44.1.1
-zc.buildout==2.13.8
-wheel
 -r https://dist.plone.org/release/5.2.15/requirements.txt
