@@ -37,9 +37,30 @@ if [ -e "custom.cfg" ]; then
 fi
 
 # ZEO Server
+# ZEO Server
 if [[ "$1" == "zeo"* ]]; then
+  # Em host-mode, não pode ficar prendendo na 8080 do host.
+  # Ajusta o conf REAL usado pelo runzeo (parts/zeo/etc/zeo.conf)
+  ZEO_BIND="${ZEO_BIND:-127.0.0.1}"
+  ZEO_PORT="${ZEO_PORT:-8100}"
+
+  for CONF in \
+    /home/senaite/senaitelims/parts/zeo/etc/zeo.conf \
+    /home/senaite/senaitelims/parts/zeoserver/etc/zeo.conf
+  do
+    if [ -f "$CONF" ]; then
+      # força "address <bind>:<port>" (ou só "<port>", mas no host prefiro bind explícito)
+      if grep -Eq '^[[:space:]]*address[[:space:]]+' "$CONF"; then
+        sed -ri "s|^[[:space:]]*address[[:space:]]+.*$|  address ${ZEO_BIND}:${ZEO_PORT}|" "$CONF"
+      else
+        echo "  address ${ZEO_BIND}:${ZEO_PORT}" >> "$CONF"
+      fi
+    fi
+  done
+
   exec gosu senaite bin/$1 fg
 fi
+
 
 # Instance start
 if [[ $START == *"$1"* ]]; then
