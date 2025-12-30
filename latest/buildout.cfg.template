@@ -1,78 +1,134 @@
-[buildout]
-index = https://pypi.org/simple/
-extends = https://dist.plone.org/release/5.2.15/versions.cfg
-find-links =
-    https://dist.plone.org/release/5.2.15/
-    https://dist.plone.org/thirdparty/
+#!/usr/bin/env bash
+set -euo pipefail
 
-parts =
-    zeoserver
-    instance
+MODE="${1:-${MODE:-instance}}"
 
-eggs =
-    senaite.lims==${env:SENAITE_VERSION}
-    senaite.databox
-    senaite.storage
-    senaite.patient
-    senaite.ldap
-    senaite.jsonapi
-    senaite.impress
-    senaite.app.supermodel
-    senaite.app.spotlight
-    senaite.app.listing
-    senaite.instruments
-    senaite.ast
-    senaite.abx
-    senaite.microorganism
-    senaite.panic
-    senaite.lis2a
-    senaite.queue
-    senaite.health
+: "${SENAITE_VERSION:=2.6.0}"
+: "${HTTP_ADDRESS:=0.0.0.0}"
+: "${HTTP_PORT:=8080}"
 
-eggs-directory = /app/eggs
-download-cache = /app/downloads
+: "${ZEO_LISTEN:=127.0.0.1}"
+: "${ZEO_PORT:=8100}"
+: "${ZEO_ADDRESS:=127.0.0.1:${ZEO_PORT}}"
 
-[zeoserver]
-recipe = plone.recipe.zeoserver
-zeo-address = ${env:ZEO_LISTEN}:${env:ZEO_PORT}
-file-storage = /data/zeo/Data.fs
-blob-storage = /data/blob
-pack-days = 7
+: "${ADMIN_USER:=admin}"
+: "${ADMIN_PASS:=admin}"
 
-[instance]
-recipe = plone.recipe.zope2instance
-http-address = ${env:HTTP_ADDRESS}:${env:HTTP_PORT}
-user = ${env:ADMIN_USER}:${env:ADMIN_PASS}
-wsgi = on
+: "${DATA_ZEO:=/data/zeo}"
+: "${DATA_BLOB:=/data/blob}"
+: "${DATA_VAR:=/data/var}"
 
-# vira client do ZEO
-zeo-client = on
-zeo-address = ${env:ZEO_ADDRESS}
-shared-blob = on
-blob-storage = /data/blob
+: "${RUN_BUILDOUT:=1}"
+: "${FIX_PERMS:=0}"
+: "${PUID:=0}"
+: "${PGID:=0}"
 
-eggs =
-    ${buildout:eggs}
+APP_DIR="/app"
+TEMPLATE="${APP_DIR}/buildout.cfg.template"
+CFG="${APP_DIR}/buildout.cfg"
 
-# opcional: log/var num volume separado
-var = /data/var
+log() { echo "[senaite] $*"; }
+die() { echo "[senaite][FATAL] $*" >&2; exit 1; }
 
-[versions] 
-senaite.databox = 1.5.0
-senaite.storage = 2.6.0
-senaite.patient = 1.5.0
-senaite.ldap = 1.1.0
-senaite.jsonapi = 2.6.0
-senaite.impress = 2.6.0
-senaite.app.supermodel = 2.6.0
-senaite.app.spotlight = 2.6.0
-senaite.app.listing = 2.6.0
-senaite.instruments = 1.0.0
-senaite.ast = 1.2.0
-senaite.abx = 1.3.0
-senaite.microorganism = 1.2.0
-senaite.panic = 2.1.0
-senaite.lis2a = 2.0.0
-senaite.queue = 1.0.3
-senaite.health = 1.2.5
+is_true() {
+  case "${1,,}" in
+    1|true|yes|y|on) return 0 ;;
+    *) return 1 ;;
+  esac
+}
 
+require_port_int() {
+  local name="$1" val="$2"
+  [[ "$val" =~ ^[0-9]+$ ]] || die "${name} must be an integer, got: ${val}"
+  (( val > 0 && val < 65536 )) || die "${name} must be 1-65535, got: ${val}"
+}
+
+log "MODE=${MODE}"
+log "SENAITE_VERSION=${SENAITE_VERSION}"
+log "HTTP=${HTTP_ADDRESS}:${HTTP_PORT}"
+log "ZEO_LISTEN=${ZEO_LISTEN}:${ZEO_PORT}"
+log "ZEO_ADDRESS=${ZEO_ADDRESS}"
+log "ADMIN_USER=${ADMIN_USER}"
+log "DATA_ZEO=${DATA_ZEO} DATA_BLOB=${DATA_BLOB} DATA_VAR=${DATA_VAR}"
+log "RUN_BUILDOUT=${RUN_BUILDOUT} FIX_PERMS=${FIX_PERMS} PUID=${PUID} PGID=${PGID}"
+
+if [[ "${MODE}" == "instance" || "${MODE}" == "fg" ]]; then
+  require_port_int "HTTP_PORT" "${HTTP_PORT}"
+fi
+require_port_int "ZEO_PORT" "${ZEO_PORT}"
+
+[[ -f "${TEMPLATE}" ]] || die "Missing ${TEMPLATE}"
+
+if [[ "${MODE}" == "instance" || "${MODE}" == "fg" ]]; then
+  [[ -n "${ZEO_ADDRESS}" ]] || die "ZEO_ADDRESS is required (e.g. 127.0.0.1:8100)"
+fi
+
+mkdir -p "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs"
+
+if is_true "${FIX_PERMS}"; then
+  log "Fixing permissions (PUID=${PUID}, PGID=${PGID}) ..."
+  chown -R "${PUID}:${PGID}" "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
+  chmod -R u+rwX,g+rwX "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
+fi
+
+# Gera buildout.cfg SEM ${ENV:...} / ${env:...}
+python - <<'PY'
+import os, io
+
+template = "/app/buildout.cfg.template"
+outcfg   = "/app/buildout.cfg"
+
+repl = {
+  "@SENAITE_VERSION@": os.environ.get("SENAITE_VERSION","2.6.0"),
+  "@HTTP_ADDRESS@":    os.environ.get("HTTP_ADDRESS","0.0.0.0"),
+  "@HTTP_PORT@":       os.environ.get("HTTP_PORT","8080"),
+  "@ZEO_LISTEN@":      os.environ.get("ZEO_LISTEN","127.0.0.1"),
+  "@ZEO_PORT@":        os.environ.get("ZEO_PORT","8100"),
+  "@ZEO_ADDRESS@":     os.environ.get("ZEO_ADDRESS","127.0.0.1:8100"),
+  "@ADMIN_USER@":      os.environ.get("ADMIN_USER","admin"),
+  "@ADMIN_PASS@":      os.environ.get("ADMIN_PASS","admin"),
+}
+
+data = io.open(template, "r", encoding="utf-8").read()
+for k,v in repl.items():
+  data = data.replace(k, v)
+
+io.open(outcfg, "w", encoding="utf-8").write(data)
+print("[senaite] buildout.cfg generated:", outcfg)
+PY
+
+need_buildout=0
+[[ -x "${APP_DIR}/bin/buildout"   ]] || need_buildout=1
+[[ -x "${APP_DIR}/bin/instance"   ]] || need_buildout=1
+[[ -x "${APP_DIR}/bin/zeoserver"  ]] || need_buildout=1
+
+if (( need_buildout == 1 )); then
+  if is_true "${RUN_BUILDOUT}"; then
+    log "Running buildout (bin/* missing)..."
+    python -c "import zc.buildout" >/dev/null 2>&1 || pip install -q "zc.buildout==2.13.8"
+    buildout -c "${CFG}"
+  else
+    die "bin/* missing but RUN_BUILDOUT=0"
+  fi
+else
+  log "buildout OK (bin/* exists)."
+fi
+
+case "${MODE}" in
+  zeo)
+    log "Starting ZEO server..."
+    exec "${APP_DIR}/bin/zeoserver" fg
+    ;;
+  instance|fg)
+    log "Starting SENAITE instance..."
+    exec "${APP_DIR}/bin/instance" fg
+    ;;
+  check)
+    log "Health check:"
+    ls -la "${CFG}" "${APP_DIR}/bin/instance" "${APP_DIR}/bin/zeoserver" || true
+    exit 0
+    ;;
+  *)
+    die "Unknown MODE '${MODE}'. Use: zeo | instance | fg | check"
+    ;;
+esac
