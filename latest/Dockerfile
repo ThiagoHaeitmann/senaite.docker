@@ -54,6 +54,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY --from=py2builder /opt/pyenv /opt/pyenv
 
+ENV PYTHON_VERSION=2.7.18
+ENV PATH=/opt/pyenv/versions/${PYTHON_VERSION}/bin:/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+RUN ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/python /usr/local/bin/python \
+ && ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/pip /usr/local/bin/pip \
+ && /opt/pyenv/bin/pyenv rehash || true
+
 WORKDIR /app
 
 # requirements do Plone 5.2.15 (Py2/Py3) — no teu caso Py2, então ele puxa setuptools 42.0.2
