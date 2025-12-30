@@ -27,7 +27,7 @@ RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
  && pyenv global 2.7.18
 
 # toolchain pip/setuptools/buildout compatível py2
-RUN pip install --no-cache-dir "pip<21" \
+RUN pip install --no-cache-dir "pip==20.3.4" \
  && pip install --no-cache-dir "setuptools==42.0.2" "wheel==0.37.1" "zc.buildout==2.13.8"
 
 WORKDIR /app
