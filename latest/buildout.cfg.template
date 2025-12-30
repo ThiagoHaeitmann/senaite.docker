@@ -10,7 +10,7 @@ parts =
     instance
 
 eggs =
-    senaite.lims==${env:SENAITE_VERSION}
+    senaite.lims==${ENV:SENAITE_VERSION}
     senaite.databox
     senaite.storage
     senaite.patient
@@ -34,20 +34,20 @@ download-cache = /app/downloads
 
 [zeoserver]
 recipe = plone.recipe.zeoserver
-zeo-address = ${env:ZEO_LISTEN}:${env:ZEO_PORT}
+zeo-address = ${ENV:ZEO_LISTEN}:${ENV:ZEO_PORT}
 file-storage = /data/zeo/Data.fs
 blob-storage = /data/blob
 pack-days = 7
 
 [instance]
 recipe = plone.recipe.zope2instance
-http-address = ${env:HTTP_ADDRESS}:${env:HTTP_PORT}
-user = ${env:ADMIN_USER}:${env:ADMIN_PASS}
+http-address = ${ENV:HTTP_ADDRESS}:${ENV:HTTP_PORT}
+user = ${ENV:ADMIN_USER}:${ENV:ADMIN_PASS}
 wsgi = on
 
 # vira client do ZEO
 zeo-client = on
-zeo-address = ${env:ZEO_ADDRESS}
+zeo-address = ${ENV:ZEO_ADDRESS}
 shared-blob = on
 blob-storage = /data/blob
 
