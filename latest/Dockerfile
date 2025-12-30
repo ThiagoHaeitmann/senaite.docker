@@ -1,13 +1,14 @@
-# ---- builder: compila python 2.7.18 ----
+# ---- builder: compila Python 2.7.18 em Debian 12 ----
 FROM debian:12-slim AS py2builder
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    LANG=C.UTF-8
+    LANG=C.UTF-8 \
+    PYENV_ROOT=/opt/pyenv \
+    PATH=/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates curl wget git bash patch \
+    ca-certificates curl wget git bash patch xz-utils \
     build-essential make gcc g++ \
-    xz-utils \
     libbz2-dev zlib1g-dev libssl-dev \
     libreadline-dev libsqlite3-dev \
     libffi-dev uuid-dev liblzma-dev \
@@ -18,17 +19,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpcre3-dev libcairo2-dev libpango1.0-dev \
  && rm -rf /var/lib/apt/lists/*
 
-ENV PYENV_ROOT=/opt/pyenv
-ENV PATH=/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
  && pyenv install 2.7.18 \
  && pyenv global 2.7.18
 
+# pip/buildout (Python 2: pip novo quebra)
 RUN pip install --no-cache-dir "pip<21" "setuptools==44.1.1" "zc.buildout==2.13.8" wheel
 
 
-# ---- runtime: Debian novo, só com o python compilado e libs runtime ----
+# ---- runtime: Debian 12-slim, só libs runtime + pyenv já pronto ----
 FROM debian:12-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -38,17 +37,20 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates bash git curl \
-    tini \
-    # libs runtime do python (bz2/zlib/lzma/ssl/sqlite/ffi)
-    libssl3 libffi8 zlib1g libbz2-1.0 liblzma5 libsqlite3-0 \
-    # libs do plone/senaite
+    # libs runtime pro Python 2.7 compilado + Plone stack
+    libbz2-1.0 liblzma5 libreadline8 libsqlite3-0 \
+    libffi8 libncursesw6 libtinfo6 libgdbm6 libuuid1 \
+    libssl3 libnss3 \
+    # libs runtime Plone/SENAITE (cairo/pango etc.)
     libpcre3 libcairo2 libpango-1.0-0 libpangocairo-1.0-0 \
     libxml2 libxslt1.1 libjpeg62-turbo \
+    tini \
  && rm -rf /var/lib/apt/lists/*
 
 COPY --from=py2builder /opt/pyenv /opt/pyenv
 
 WORKDIR /app
+
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir "pip<21" \
  && pip install --no-cache-dir -r /app/requirements.txt \
