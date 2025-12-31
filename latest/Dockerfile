@@ -56,7 +56,7 @@ ENV \
   ADMIN_PASS=admin
 
 # gera buildout.cfg sem ${ENV:} e roda buildout AQUI NO BUILDER
-RUN /entrypoint.sh render-config
+RUN /entrypoint.sh render-config \
  && entrypoint.sh check \
  && buildout -c /app/buildout.cfg \
  && test -x /app/bin/instance \
