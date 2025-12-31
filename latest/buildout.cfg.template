@@ -13,8 +13,6 @@ user=admin:admin
 effective-user = senaite
 buildout-user = senaite
 sources-dir = /app/src
-download-cache = /app/downloads
-eggs-directory=eggs
 sources = sources
 auto-checkout = *
 
