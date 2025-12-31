@@ -22,6 +22,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
 
+# --- cria user senaite no builder ---
+ARG SENAITE_UID=1000
+ARG SENAITE_GID=1000
+
+RUN groupadd -g ${SENAITE_GID} senaite \
+ && useradd -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
+
 # pyenv + python2
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
  && pyenv install 2.7.18 \
@@ -83,6 +90,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tini \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
+
+# --- cria user senaite no runtime ---
+ARG SENAITE_UID=1000
+ARG SENAITE_GID=1000
+
+RUN groupadd -g ${SENAITE_GID} senaite \
+ && useradd -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
 
 # pyenv e python2
 COPY --from=py2builder /opt/pyenv /opt/pyenv
