@@ -109,9 +109,9 @@ senaite.lims = git https://github.com/senaite/senaite.lims.git branch=2.x
 senaite.storage = git https://github.com/senaite/senaite.storage.git branch=2.x
 senaite.patient = git https://github.com/senaite/senaite.patient.git branch=master
 senaite.ldap = git https://github.com/senaite/senaite.ldap.git branch=master
-senaite.ast = https://github.com/senaite/senaite.ast.git branch=master
-senaite.abx = https://github.com/senaite/senaite.abx.git branch=master
-senaite.microorganism = https://github.com/senaite/senaite.microorganism.git branch=master
-senaite.panic = https://github.com/senaite/senaite.panic.git branch=2.x
-senaite.lis2a = https://github.com/senaite/senaite.lis2a.git branch=2.x
-senaite.astm = https://github.com/senaite/senaite.astm.git branch=master
+senaite.ast = git https://github.com/senaite/senaite.ast.git branch=master
+senaite.abx = git https://github.com/senaite/senaite.abx.git branch=master
+senaite.microorganism = git https://github.com/senaite/senaite.microorganism.git branch=master
+senaite.panic = git https://github.com/senaite/senaite.panic.git branch=2.x
+senaite.lis2a = git https://github.com/senaite/senaite.lis2a.git branch=2.x
+senaite.astm = git https://github.com/senaite/senaite.astm.git branch=master
