@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2-dev libxslt1-dev libjpeg-dev \
     libpcre3-dev libcairo2-dev libpango1.0-dev \
     libldap2-dev libsasl2-dev \
- && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* \
+ && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
 
 # pyenv + python2
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
@@ -55,9 +56,12 @@ ENV \
   ADMIN_PASS=admin
 
 # gera buildout.cfg sem ${ENV:} e roda buildout AQUI NO BUILDER
-RUN /entrypoint.sh check \
+RUN /entrypoint.sh render-config
+ && entrypoint.sh check \
  && buildout -c /app/buildout.cfg
-
+ && test -x /app/bin/instance \
+ && test -x /app/bin/zeoserver
+ 
 # ---- runtime: leve, sem gcc, só roda ----
 FROM debian:12-slim AS runtime
 
@@ -76,9 +80,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libldap-2.5-0 libsasl2-2 \
     tini \
  && rm -rf /var/lib/apt/lists/*
+ && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
 
 # pyenv e python2
 COPY --from=py2builder /opt/pyenv /opt/pyenv
+COPY --from=py2builder /app /app
+COPY --from=py2builder /entrypoint.sh /entrypoint.sh
 
 ENV PYTHON_VERSION=2.7.18
 ENV PATH=/opt/pyenv/versions/${PYTHON_VERSION}/bin:/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -86,6 +93,9 @@ ENV PATH=/opt/pyenv/versions/${PYTHON_VERSION}/bin:/opt/pyenv/bin:/opt/pyenv/shi
 RUN ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/python /usr/local/bin/python \
  && ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/pip /usr/local/bin/pip \
  && /opt/pyenv/bin/pyenv rehash || true
+&& chmod +x /entrypoint.sh \
+ && test -x /app/bin/instance \
+ && test -x /app/bin/zeoserver
 
 WORKDIR /app
 
