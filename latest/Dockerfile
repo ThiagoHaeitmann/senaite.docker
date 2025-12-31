@@ -58,7 +58,7 @@ ENV \
 # gera buildout.cfg sem ${ENV:} e roda buildout AQUI NO BUILDER
 RUN /entrypoint.sh render-config
  && entrypoint.sh check \
- && buildout -c /app/buildout.cfg
+ && buildout -c /app/buildout.cfg \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
  
@@ -79,21 +79,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2 libxslt1.1 libjpeg62-turbo \
     libldap-2.5-0 libsasl2-2 \
     tini \
- && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* \
  && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
 
 # pyenv e python2
 COPY --from=py2builder /opt/pyenv /opt/pyenv
-COPY --from=py2builder /app /app
-COPY --from=py2builder /entrypoint.sh /entrypoint.sh
 
 ENV PYTHON_VERSION=2.7.18
 ENV PATH=/opt/pyenv/versions/${PYTHON_VERSION}/bin:/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/python /usr/local/bin/python \
  && ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/pip /usr/local/bin/pip \
- && /opt/pyenv/bin/pyenv rehash || true
-&& chmod +x /entrypoint.sh \
+ && /opt/pyenv/bin/pyenv rehash || true \
+ && chmod +x /entrypoint.sh \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
 
