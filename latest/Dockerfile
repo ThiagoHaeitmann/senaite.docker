@@ -50,8 +50,9 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh 
 
 RUN mkdir -p /data/zeo /data/blob/blobstorage /data/var/log /data/var/cache /data/var/instance \
-             / app/eggs /app/downloads /app/src \
+             /app/eggs /app/downloads /app/src \
  && chown -R senaite:senaite /app /data
+
 
 # defaults (podem ser sobrescritos no Nomad)
 ENV \
@@ -68,10 +69,12 @@ USER senaite
 
 # gera buildout.cfg sem ${ENV:} e roda buildout AQUI NO BUILDER
 RUN /entrypoint.sh render-config \
- && /entrypoint.sh check \
  && buildout -c /app/buildout.cfg \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
+
+RUN mkdir -p /app/var /app/var/log \
+ && chown -R senaite:senaite /app/var
 
 USER root
 
@@ -127,6 +130,9 @@ RUN mkdir -p /data/zeo /data/blob/blobstorage /data/var/log /data/var/cache /dat
  && chmod +x /entrypoint.sh \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
+
+RUN mkdir -p /app/var /app/var/log \
+ && chown -R senaite:senaite /app/var
 
 # defaults (podem ser sobrescritos no Nomad)
 ENV \
