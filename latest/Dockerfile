@@ -79,6 +79,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # libs runtime (sem build-essential)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates bash git curl \
+    gosu \
     zlib1g libexpat1 libcrypt1 \
     tk8.6 \
     libbz2-1.0 liblzma5 libreadline8 libsqlite3-0 \
