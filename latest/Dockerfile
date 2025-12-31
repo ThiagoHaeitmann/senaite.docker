@@ -57,7 +57,7 @@ ENV \
 
 # gera buildout.cfg sem ${ENV:} e roda buildout AQUI NO BUILDER
 RUN /entrypoint.sh render-config \
- && entrypoint.sh check \
+ && /entrypoint.sh check \
  && buildout -c /app/buildout.cfg \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
