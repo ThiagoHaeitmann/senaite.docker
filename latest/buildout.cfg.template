@@ -123,9 +123,9 @@ environment-vars =
 zcml =
 
 [versions]
-et-xmlfile = 1.1.0
-openpyxl = < 3
-magnitude = 0.9.4
+et-xmlfile < 2.0.0
+openpyxl = 2.6.4 
+magnitude = 1.0.1
 
 [sources]
 senaite.instruments = git https://github.com/senaite/senaite.instruments.git branch=master
