@@ -34,7 +34,7 @@ download-cache = /app/downloads
 recipe = plone.recipe.zeoserver
 zeo-address = @ZEO_LISTEN@:@ZEO_PORT@
 file-storage = /data/zeo/Data.fs
-blob-storage = /data/blob
+blob-storage = /data/blob/blobstorage
 pack-days = 7
 
 [instance]
