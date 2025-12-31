@@ -37,7 +37,14 @@ case "${MODE}" in
     ;;
 esac
 
-mkdir -p "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs"
+mkdir -p "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" \
+  "${DATA_VAR}/log" "${DATA_VAR}/cache" "${DATA_VAR}/instance" \
+  "${APP_DIR}/downloads" "${APP_DIR}/eggs"
+
+touch "${DATA_VAR}/log/instance-access.log" \
+      "${DATA_VAR}/log/instance-error.log" \
+      "${DATA_VAR}/log/zeo.log" \
+      "${DATA_VAR}/log/zeo-access.log" || true
 
 [[ -f "${TEMPLATE}" ]] || die "Missing ${TEMPLATE}"
 
