@@ -95,6 +95,11 @@ file-storage = /data/zeo/Data.fs
 blob-storage = /data/blob/blobstorage
 pack-days = 7
 
+var = /data/var
+pid-file = /data/var/zeoserver.pid
+event-log = /data/var/log/zeoserver.log
+access-log = /data/var/log/zeoserver-access.log
+
 [instance]
 recipe = plone.recipe.zope2instance
 http-address = @HTTP_ADDRESS@:@HTTP_PORT@
