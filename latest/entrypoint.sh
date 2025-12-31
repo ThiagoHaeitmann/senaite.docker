@@ -30,6 +30,13 @@ die(){ echo "[senaite][FATAL] $*" >&2; exit 1; }
 
 is_true() { case "${1,,}" in 1|true|yes|y|on) return 0;; *) return 1;; esac; }
 
+case "${MODE}" in
+  instance|zeo|check|render-config) ;;
+  *)
+    exec "$@"
+    ;;
+esac
+
 mkdir -p "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs"
 
 [[ -f "${TEMPLATE}" ]] || die "Missing ${TEMPLATE}"
@@ -61,9 +68,28 @@ io.open(outcfg,"w",encoding="utf-8").write(data)
 print("[senaite] buildout.cfg generated:", outcfg)
 PY
 
+case "${MODE}" in
+  render-config)
+    exit 0
+    ;;
+  check)
+    ls -la "${CFG}" || true
+    # NÃO exige /app/bin aqui.
+    exit 0
+    ;;
+esac
+
+if [ ! -x "${APP_DIR}/bin/instance" ] || [ ! -x "${APP_DIR}/bin/zeoserver" ]; then
+  if is_true "${RUN_BUILDOUT}"; then
+    die "Image missing ${APP_DIR}/bin/* and RUN_BUILDOUT=1. This runtime image has no gcc. Rebuild the image so buildout runs in the builder stage."
+  fi
+  die "Image missing ${APP_DIR}/bin/* (buildout not executed during build). Rebuild the image (builder stage must run buildout)."
+fi
+
 if is_true "${RUN_BUILDOUT}"; then
   log "RUN_BUILDOUT=1 -> running buildout"
   buildout -c "${CFG}"
+  die "RUN_BUILDOUT=1 is not supported in runtime. Rebuild the image; buildout must run in builder stage."
 else
   log "RUN_BUILDOUT=0 -> skipping buildout"
 fi
