@@ -126,7 +126,6 @@ zcml =
 et-xmlfile = 1.1.0
 openpyxl = < 3
 magnitude = 0.9.4
-pyphen = 0.9.5
 
 [sources]
 senaite.instruments = git https://github.com/senaite/senaite.instruments.git branch=master
