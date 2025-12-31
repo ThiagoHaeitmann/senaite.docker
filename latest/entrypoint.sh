@@ -43,7 +43,8 @@ esac
 
 mkdir -p "${DATA_ZEO}" "${DATA_BLOB}/blobstorage" "${DATA_VAR}" \
   "${DATA_VAR}/log" "${DATA_VAR}/cache" "${DATA_VAR}/instance" \
-  "${APP_DIR}/downloads" "${APP_DIR}/eggs"
+  "${APP_DIR}/downloads" "${APP_DIR}/eggs" \
+  /data/var/log /data/var/cache /data/var/instance
 
 touch "${DATA_VAR}/log/instance-access.log" \
       "${DATA_VAR}/log/instance-error.log" \
@@ -116,9 +117,17 @@ if is_true "${RUN_BUILDOUT}"; then
   die "RUN_BUILDOUT=1 is not supported in runtime. Rebuild the image; buildout must run in builder stage."
 fi
 
+run_as_senaite() {
+  if [ "$(id -u)" = "0" ]; then
+    exec gosu senaite "$@"
+  else
+    exec "$@"
+  fi
+}
+
 case "${MODE}" in
-  zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
-  instance) run_as "${APP_DIR}/bin/instance"  fg ;;
+  zeo)      run_as_senaite "${APP_DIR}/bin/zeoserver" fg ;;
+  instance) run_as_senaite "${APP_DIR}/bin/instance"  fg ;;
   check)    ls -la "${CFG}" "${APP_DIR}/bin/instance" "${APP_DIR}/bin/zeoserver" || true; exit 0 ;;
   *)        die "Unknown MODE '${MODE}' (use zeo|instance|check)" ;;
 esac
