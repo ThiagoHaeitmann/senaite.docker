@@ -148,6 +148,7 @@ linecache2 = 1.0.0
 plone.jsonapi.core = 0.7.0
 senaite.api = 1.2.3.post2
 traceback2 = 1.4.0
+xlrd = 2.0.2
 
 [sources]
 senaite.instruments = git https://github.com/senaite/senaite.instruments.git branch=master
