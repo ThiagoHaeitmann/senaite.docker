@@ -37,7 +37,7 @@ case "${MODE}" in
     ;;
 esac
 
-mkdir -p "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" \
+mkdir -p "${DATA_ZEO}" "${DATA_BLOB}/blobstorage" "${DATA_VAR}" \
   "${DATA_VAR}/log" "${DATA_VAR}/cache" "${DATA_VAR}/instance" \
   "${APP_DIR}/downloads" "${APP_DIR}/eggs"
 
