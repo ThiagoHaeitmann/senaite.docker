@@ -55,7 +55,6 @@ eggs-directory = /app/eggs
 download-cache = /app/downloads
 
 [i18ndude]
-unzip = true
 recipe = zc.recipe.egg
 eggs = i18ndude
 
