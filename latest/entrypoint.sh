@@ -87,11 +87,7 @@ if [ ! -x "${APP_DIR}/bin/instance" ] || [ ! -x "${APP_DIR}/bin/zeoserver" ]; th
 fi
 
 if is_true "${RUN_BUILDOUT}"; then
-  log "RUN_BUILDOUT=1 -> running buildout"
-  buildout -c "${CFG}"
   die "RUN_BUILDOUT=1 is not supported in runtime. Rebuild the image; buildout must run in builder stage."
-else
-  log "RUN_BUILDOUT=0 -> skipping buildout"
 fi
 
 case "${MODE}" in
