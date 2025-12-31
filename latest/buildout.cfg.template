@@ -1,18 +1,23 @@
 [buildout]
 versions = versions
 index = https://pypi.org/simple/
-extends = https://dist.plone.org/release/5.2.15/versions.cfg
+extends = https://dist.plone.org/release/5.2-latest/versions.cfg
 find-links =
-    https://dist.plone.org/release/5.2.15/
+    https://dist.plone.org/release/5.2-latest/
     https://dist.plone.org/thirdparty/
 
 extensions =
     mr.developer
 
-user=admin:admin
+show-picked-versions = true
+plone-user = admin:admin
+develop = .
+
 effective-user = senaite
 buildout-user = senaite
+
 sources-dir = /app/src
+
 sources = sources
 auto-checkout = *
 
@@ -21,10 +26,17 @@ parts =
     instance
     console_scripts
     plonesite
+    test
+    omelette
+    i18ndude
+    zopepy
+    update_translations
+    update_sources
+    write_code_headers
 
 eggs =
     senaite.core
-    senaite.lims==@SENAITE_VERSION@
+    senaite.lims
     senaite.databox
     senaite.storage
     senaite.patient
@@ -40,10 +52,49 @@ eggs =
     senaite.panic
     senaite.lis2a
     senaite.instruments
-    senaite.astm
+    plone.reload
+    Products.PrintingMailHost
 
 eggs-directory = /app/eggs
 download-cache = /app/downloads
+
+[i18ndude]
+unzip = true
+recipe = zc.recipe.egg
+eggs = i18ndude
+
+[update_translations]
+recipe = collective.recipe.template
+output = ${buildout:directory}/bin/update_translations
+input = ${buildout:directory}/templates/update_translations.in
+mode = 755
+[update_sources]
+recipe = collective.recipe.template
+output = ${buildout:directory}/bin/update_sources
+input = ${buildout:directory}/templates/update_sources.in
+mode = 755
+
+[write_code_headers]
+recipe = collective.recipe.template
+output = ${buildout:directory}/bin/write_code_headers
+input = ${buildout:directory}/templates/write_code_headers.py.in
+mode = 755
+
+[test]
+recipe = zc.recipe.testrunner
+defaults = ['--auto-color', '--auto-progress']
+eggs =
+    senaite.lims [test]
+
+[omelette]
+recipe = collective.recipe.omelette
+eggs = ${buildout:eggs}
+
+[zopepy]
+recipe = zc.recipe.egg
+eggs = ${instance:eggs}
+interpreter = zopepy
+scripts = zopepy
 
 [console_scripts]
 recipe = zc.recipe.egg:scripts
@@ -82,17 +133,21 @@ shared-blob = on
 blob-storage = /data/blob/blobstorage
 
 eggs =
+    Plone
+    plone.app.upgrade
     ${buildout:eggs}
 
 var = /data/var
+deprecation-warnings = on
+environment-vars =
+    zope_i18n_compile_mo_files true
+zcml =
 
 [versions]
 et-xmlfile = 1.1.0
 openpyxl = < 3
 magnitude = 0.9.4
 pyphen = 0.9.5
-setuptools = 42.0.2
-zc.buildout = 2.13.8
 
 [sources]
 senaite.instruments = git https://github.com/senaite/senaite.instruments.git branch=master
@@ -112,4 +167,3 @@ senaite.abx = git https://github.com/senaite/senaite.abx.git branch=master
 senaite.microorganism = git https://github.com/senaite/senaite.microorganism.git branch=master
 senaite.panic = git https://github.com/senaite/senaite.panic.git branch=2.x
 senaite.lis2a = git https://github.com/senaite/senaite.lis2a.git branch=2.x
-senaite.astm = git https://github.com/senaite/senaite.astm.git branch=master
