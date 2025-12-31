@@ -21,7 +21,6 @@ eggs =
     senaite.app.supermodel
     senaite.app.spotlight
     senaite.app.listing
-    senaite.instruments
     senaite.ast
     senaite.abx
     senaite.microorganism
@@ -47,7 +46,7 @@ wsgi = on
 zeo-client = on
 zeo-address = @ZEO_ADDRESS@
 shared-blob = on
-blob-storage = /data/blob
+blob-storage = /data/blob/blobstorage
 
 eggs =
     ${buildout:eggs}
@@ -64,7 +63,6 @@ senaite.impress = 2.6.0
 senaite.app.supermodel = 2.6.0
 senaite.app.spotlight = 2.6.0
 senaite.app.listing = 2.6.0
-senaite.instruments = 1.0.0
 senaite.ast = 1.2.0
 senaite.abx = 1.3.0
 senaite.microorganism = 1.2.0
