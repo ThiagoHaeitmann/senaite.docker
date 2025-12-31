@@ -10,6 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl wget git bash patch xz-utils \
     build-essential make gcc g++ \
+    dpkg-dev libc6-dev libjpeg62-turbo-dev libopenjp2-7-dev libtiff5-dev \
     libbz2-dev zlib1g-dev libssl-dev \
     libreadline-dev libsqlite3-dev \
     libffi-dev uuid-dev liblzma-dev \
@@ -79,8 +80,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # libs runtime (sem build-essential)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates bash git curl \
-    gosu \
+    gosu lynx procps rsync vim \
     zlib1g libexpat1 libcrypt1 \
+    libgdk-pixbuf2.0-0 libopenjp2-7 libtiff5 \
     tk8.6 \
     libbz2-1.0 liblzma5 libreadline8 libsqlite3-0 \
     libffi8 libncursesw6 libtinfo6 libgdbm6 libuuid1 \
