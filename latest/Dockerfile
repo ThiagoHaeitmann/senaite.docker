@@ -20,13 +20,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2-dev libxslt1-dev libjpeg-dev \
     libpcre3-dev libcairo2-dev libpango1.0-dev \
     libldap2-dev libsasl2-dev \
- && rm -rf /var/lib/apt/lists/* \
- && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
+ && rm -rf /var/lib/apt/lists/*
 
 # --- cria user senaite no builder ---
 ARG SENAITE_UID=1000
 ARG SENAITE_GID=1000
-
 RUN groupadd -g ${SENAITE_GID} senaite \
  && useradd -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
 
@@ -49,8 +47,11 @@ RUN pip install --no-cache-dir -r /app/requirements.txt \
 # buildout template + entrypoint
 COPY buildout.cfg.template /app/buildout.cfg.template
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh \
- && mkdir -p /data/zeo /data/blob /data/var /app/eggs /app/downloads
+RUN chmod +x /entrypoint.sh 
+
+RUN mkdir -p /data/zeo /data/blob/blobstorage /data/var/log /data/var/cache /data/var/instance \
+             / app/eggs /app/downloads /app/src \
+ && chown -R senaite:senaite /app /data
 
 # defaults (podem ser sobrescritos no Nomad)
 ENV \
@@ -63,12 +64,19 @@ ENV \
   ADMIN_USER=admin \
   ADMIN_PASS=admin
 
+USER senaite
+
 # gera buildout.cfg sem ${ENV:} e roda buildout AQUI NO BUILDER
 RUN /entrypoint.sh render-config \
  && /entrypoint.sh check \
  && buildout -c /app/buildout.cfg \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
+
+USER root
+
+
+
  
 # ---- runtime: leve, sem gcc, só roda ----
 FROM debian:12-slim AS runtime
@@ -91,13 +99,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2 libxslt1.1 libjpeg62-turbo \
     libldap-2.5-0 libsasl2-2 \
     tini \
- && rm -rf /var/lib/apt/lists/* \
- && rm -rf /usr/share/man/* /usr/share/doc/* /usr/share/info/*
+ && rm -rf /var/lib/apt/lists/*
 
 # --- cria user senaite no runtime ---
 ARG SENAITE_UID=1000
 ARG SENAITE_GID=1000
-
 RUN groupadd -g ${SENAITE_GID} senaite \
  && useradd -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
 
@@ -113,7 +119,9 @@ WORKDIR /app
 COPY --from=py2builder /app /app
 COPY --from=py2builder /entrypoint.sh /entrypoint.sh
 
-RUN ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/python /usr/local/bin/python \
+RUN mkdir -p /data/zeo /data/blob/blobstorage /data/var/log /data/var/cache /data/var/instance \
+ && chown -R senaite:senaite /app /data \
+ && ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/python /usr/local/bin/python \
  && ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/pip /usr/local/bin/pip \
  && /opt/pyenv/bin/pyenv rehash || true \
  && chmod +x /entrypoint.sh \
