@@ -72,4 +72,4 @@ senaite.panic = 2.1.0
 senaite.lis2a = 2.0.0
 et-xmlfile = 1.1.0
 openpyxl = < 3
-magnitude = 1.1.2
+magnitude = 0.9.4
