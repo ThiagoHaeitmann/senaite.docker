@@ -21,6 +21,10 @@ MODE="${1:-${MODE:-instance}}"
 : "${PUID:=0}"
 : "${PGID:=0}"
 
+: "${RUN_AS_USER:=senaite}"
+: "${RUN_AS_GROUP:=senaite}"
+
+
 APP_DIR="/app"
 TEMPLATE="${APP_DIR}/buildout.cfg.template"
 CFG="${APP_DIR}/buildout.cfg"
@@ -49,9 +53,24 @@ touch "${DATA_VAR}/log/instance-access.log" \
 [[ -f "${TEMPLATE}" ]] || die "Missing ${TEMPLATE}"
 
 if is_true "${FIX_PERMS}"; then
-  chown -R "${PUID}:${PGID}" "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
+  chown -R "${RUN_AS_USER}:${RUN_AS_GROUP}" "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
   chmod -R u+rwX,g+rwX "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
 fi
+
+run_as() {
+  # Se não for root, roda normal
+  if [ "$(id -u)" -ne 0 ]; then
+    exec "$@"
+  fi
+
+  # Se for root e existir gosu, roda como senaite
+  if command -v gosu >/dev/null 2>&1; then
+    exec gosu "${RUN_AS_USER}:${RUN_AS_GROUP}" "$@"
+  fi
+
+  # fallback (menos elegante, mas funciona)
+  exec su -s /bin/bash -c "$(printf '%q ' "$@")" "${RUN_AS_USER}"
+}
 
 # Gera buildout.cfg sem ${ENV:...}
 python - <<'PY'
@@ -98,8 +117,9 @@ if is_true "${RUN_BUILDOUT}"; then
 fi
 
 case "${MODE}" in
-  zeo)      exec "${APP_DIR}/bin/zeoserver" fg ;;
-  instance) exec "${APP_DIR}/bin/instance"  fg ;;
+  zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
+  instance) run_as "${APP_DIR}/bin/instance"  fg ;;
   check)    ls -la "${CFG}" "${APP_DIR}/bin/instance" "${APP_DIR}/bin/zeoserver" || true; exit 0 ;;
   *)        die "Unknown MODE '${MODE}' (use zeo|instance|check)" ;;
 esac
+
