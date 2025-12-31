@@ -130,6 +130,24 @@ zcml =
 et-xmlfile = 1.1.0
 openpyxl = 2.6.4 
 magnitude = 1.0.1
+Werkzeug = 1.0.1
+cairocffi = 0.9.0
+collective.recipe.plonesite = 1.12.0
+cssselect2 = 0.2.2
+more-itertools = 5.0.0
+node.ext.ugm = 1.1
+pdfrw = 0.4
+plumber = 1.7
+tinycss2 = 0.6.1
+unittest2 = 1.1.0
+Products.DataGridField = 1.9.6
+argparse = 1.4.0
+dicttoxml = 1.7.16
+jdcal = 1.4.1
+linecache2 = 1.0.0
+plone.jsonapi.core = 0.7.0
+senaite.api = 1.2.3.post2
+traceback2 = 1.4.0
 
 [sources]
 senaite.instruments = git https://github.com/senaite/senaite.instruments.git branch=master
