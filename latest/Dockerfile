@@ -72,6 +72,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # libs runtime (sem build-essential)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates bash git curl \
+    zlib1g libexpat1 libcrypt1 \
+    tk8.6 \
     libbz2-1.0 liblzma5 libreadline8 libsqlite3-0 \
     libffi8 libncursesw6 libtinfo6 libgdbm6 libuuid1 \
     libssl3 libnss3 \
@@ -88,19 +90,18 @@ COPY --from=py2builder /opt/pyenv /opt/pyenv
 ENV PYTHON_VERSION=2.7.18
 ENV PATH=/opt/pyenv/versions/${PYTHON_VERSION}/bin:/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
+WORKDIR /app
+
+# copia /app pronto do builder
+COPY --from=py2builder /app /app
+COPY --from=py2builder /entrypoint.sh /entrypoint.sh
+
 RUN ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/python /usr/local/bin/python \
  && ln -sf /opt/pyenv/versions/${PYTHON_VERSION}/bin/pip /usr/local/bin/pip \
  && /opt/pyenv/bin/pyenv rehash || true \
  && chmod +x /entrypoint.sh \
  && test -x /app/bin/instance \
  && test -x /app/bin/zeoserver
-
-WORKDIR /app
-
-# copia /app pronto do builder
-COPY --from=py2builder /app /app
-COPY --from=py2builder /entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
 
 # defaults (podem ser sobrescritos no Nomad)
 ENV \
