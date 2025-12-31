@@ -54,8 +54,9 @@ touch "${DATA_VAR}/log/instance-access.log" \
 [[ -f "${TEMPLATE}" ]] || die "Missing ${TEMPLATE}"
 
 if is_true "${FIX_PERMS}"; then
-  chown -R "${RUN_AS_USER}:${RUN_AS_GROUP}" "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
-  chmod -R u+rwX,g+rwX "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" "${APP_DIR}/downloads" "${APP_DIR}/eggs" || true
+  mkdir -p "${DATA_VAR}/log"
+  chown -R "${RUN_AS_USER}:${RUN_AS_GROUP}" "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" || true
+  chmod -R u+rwX,g+rwX "${DATA_ZEO}" "${DATA_BLOB}" "${DATA_VAR}" || true
 fi
 
 run_as() {
@@ -117,18 +118,11 @@ if is_true "${RUN_BUILDOUT}"; then
   die "RUN_BUILDOUT=1 is not supported in runtime. Rebuild the image; buildout must run in builder stage."
 fi
 
-run_as_senaite() {
-  if [ "$(id -u)" = "0" ]; then
-    exec gosu senaite "$@"
-  else
-    exec "$@"
-  fi
-}
-
 case "${MODE}" in
-  zeo)      run_as_senaite "${APP_DIR}/bin/zeoserver" fg ;;
-  instance) run_as_senaite "${APP_DIR}/bin/instance"  fg ;;
+  zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
+  instance) run_as "${APP_DIR}/bin/instance"  fg ;;
   check)    ls -la "${CFG}" "${APP_DIR}/bin/instance" "${APP_DIR}/bin/zeoserver" || true; exit 0 ;;
   *)        die "Unknown MODE '${MODE}' (use zeo|instance|check)" ;;
 esac
+
 
