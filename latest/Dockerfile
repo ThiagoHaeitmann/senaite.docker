@@ -84,15 +84,29 @@ RUN mkdir -p /app/var /app/var/log \
 
 USER root
 
-RUN for d in /app/src/senaite.*; do \
-      name=$(basename $d); \
-      if [ -d /tmp/i18n/app/src/$name ]; then \
-        cp -r /tmp/i18n/app/src/$name/src/* $d/src/; \
-        find $d/src -path "*/locales/pt_BR/LC_MESSAGES/*.po" | while read po; do \
-          msgfmt "$po" -o "$(dirname "$po")/$(basename "$po" .po).mo"; \
-        done; \
-      fi; \
-    done
+# ---- aplica traduções PT-BR direto nos EGGS instalados ----
+RUN set -e; \
+  echo "==> Aplicando traduções PT-BR nos eggs instalados"; \
+  for egg in /app/eggs/senaite.*-py2.7.egg; do \
+    [ -d "$egg" ] || continue; \
+    pkg="$(basename "$egg" | sed 's/-[0-9].*$//')"; \
+    src_i18n="/tmp/i18n/app/src/$pkg/src"; \
+    if [ ! -d "$src_i18n" ]; then \
+      echo ">> Sem traduções para $pkg (ignorado)"; \
+      continue; \
+    fi; \
+    echo ">> Processando $pkg"; \
+    find "$src_i18n" -path "*/locales/pt_BR/LC_MESSAGES/*.po" | while read -r po; do \
+      rel="$(echo "$po" | sed "s|$src_i18n/||")"; \
+      dest="$egg/$(dirname "$rel")"; \
+      mkdir -p "$dest"; \
+      cp "$po" "$dest/"; \
+      msgfmt "$dest/$(basename "$po")" \
+        -o "$dest/$(basename "$po" .po).mo"; \
+      echo "   + $(basename "$po") -> $(basename "$egg")"; \
+    done; \
+  done
+
 
 RUN chown -R senaite:senaite /app/src
  
