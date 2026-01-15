@@ -10,6 +10,9 @@ parts =
     zeoserver
     plonesite
 
+develop =
+    senaite-i18n-pt-br
+
 eggs =
     senaite.core
     senaite.lims
@@ -34,6 +37,7 @@ eggs =
     pas.plugins.headers
     dm.zope.saml2
     dm.saml2
+    senaite-i18n-pt-br
 
 eggs-directory = /app/eggs
 download-cache = /app/downloads
