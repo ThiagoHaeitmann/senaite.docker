@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl wget git bash patch xz-utils \
     build-essential make gcc g++ \
     gettext \
+    pkg-config \
+    libxmlsec1-dev \
+    libxmlsec1-openssl \
     dpkg-dev libc6-dev libjpeg62-turbo-dev libopenjp2-7-dev libtiff-dev \
     libbz2-dev zlib1g-dev libssl-dev \
     libreadline-dev libsqlite3-dev \
