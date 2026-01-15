@@ -8,7 +8,6 @@ find-links =
 parts =
     instance
     zeoserver
-    plonesite
 
 eggs =
     senaite.core
@@ -59,15 +58,6 @@ senaite.ast = git https://github.com/senaite/senaite.ast.git branch=master
 senaite.abx = git https://github.com/senaite/senaite.abx.git branch=master
 senaite.microorganism = git https://github.com/senaite/senaite.microorganism.git branch=master
 senaite.panic = git https://github.com/senaite/senaite.panic.git branch=2.x
-
-[plonesite]
-recipe = collective.recipe.plonesite
-instance = instance
-site-id = senaite
-profiles-initial = Products.CMFPlone:dependencies
-profiles =
-    senaite.lims:default
-enabled = True
 
 [zeoserver]
 recipe = plone.recipe.zeoserver
