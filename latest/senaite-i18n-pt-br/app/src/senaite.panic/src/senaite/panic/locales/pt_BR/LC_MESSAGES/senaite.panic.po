@@ -1,0 +1,137 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: senaite.panic\n"
+"POT-Creation-Date: 2026-01-15 17:45+0000\n"
+"PO-Revision-Date: 2026-01-15 17:48+0000\n"
+"Last-Translator: Gemini AI\n"
+"Language-Team: Portuguese (Brazil)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language-Code: pt_BR\n"
+"Language-Name: Portuguese (Brazil)\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: senaite.panic\n"
+"Language: pt_BR\n"
+
+#: senaite/panic/adapters/content.py:158
+msgid "'{}' value must be above '{}' or empty"
+msgstr "O valor de '{}' deve estar acima de '{}' ou estar vazio"
+
+#: senaite/panic/adapters/content.py:149
+msgid "'{}' value must be below '{}' or empty"
+msgstr "O valor de '{}' deve estar abaixo de '{}' ou estar vazio"
+
+#: senaite/panic/adapters/content.py:145
+msgid "'{}' value must be numeric or empty"
+msgstr "O valor de '{}' deve ser numérico ou estar vazio"
+
+#: senaite/panic/browser/templates/panic_alert_email.pt:16
+msgid "Alert client"
+msgstr "Alertar cliente"
+
+#: senaite/panic/browser/templates/panic_alert_viewlet.pt:27
+msgid "Alert client about panic levels exceeded"
+msgstr "Alertar cliente sobre níveis de pânico excedidos"
+
+#: senaite/panic/browser/templates/panic_alert_viewlet.pt:21
+msgid "An email alert has been sent already."
+msgstr "Um e-mail de alerta já foi enviado."
+
+#: senaite/panic/browser/templates/panic_alert_email.pt:49
+msgid "Body"
+msgstr "Corpo"
+
+#: senaite/panic/controlpanel.py:43
+msgid "Email alert body template"
+msgstr "Modelo do corpo do e-mail de alerta"
+
+#: senaite/panic/controlpanel.py:34
+msgid "Email alert subject"
+msgstr "Assunto do e-mail de alerta"
+
+#: senaite/panic/adapters/content.py:159
+msgid "Max"
+msgstr "Máx"
+
+#: senaite/panic/adapters/content.py:75
+msgid "Max panic"
+msgstr "Pânico Máximo"
+
+#: senaite/panic/adapters/content.py:150
+msgid "Min"
+msgstr "Mín"
+
+#: senaite/panic/adapters/content.py:74
+msgid "Min panic"
+msgstr "Pânico Mínimo"
+
+#: senaite/panic/adapters/listing.py:55
+msgid "Panic < Min"
+msgstr "Pânico < Mín"
+
+#: senaite/panic/adapters/listing.py:58
+msgid "Panic > Max"
+msgstr "Pânico > Máx"
+
+#: senaite/panic/profiles/default/controlpanel.xml
+msgid "Panic Settings"
+msgstr "Configurações de Pânico"
+
+#: senaite/panic/configure.zcml:35
+msgid "Panic level alerts for SENAITE"
+msgstr "Alertas de nível de pânico para SENAITE"
+
+#: senaite/panic/browser/views.py:242
+msgid "Panic notification email sent"
+msgstr "E-mail de notificação de pânico enviado"
+
+#: senaite/panic/adapters/listing.py:119
+msgid "Panic result"
+msgstr "Resultado de pânico"
+
+#: senaite/panic/configure.zcml:35
+msgid "SENAITE PANIC"
+msgstr "SENAITE PANIC"
+
+#: senaite/panic/configure.zcml:51
+msgid "SENAITE PANIC (uninstall)"
+msgstr "SENAITE PANIC (desinstalar)"
+
+#: senaite/panic/controlpanel.py:58
+msgid "SENAITE PANIC Settings"
+msgstr "Configurações do SENAITE PANIC"
+
+#: senaite/panic/browser/templates/panic_alert_viewlet.pt:18
+msgid "Some results exceeded the panic levels"
+msgstr "Alguns resultados excederam os níveis de pânico"
+
+#: senaite/panic/controlpanel.py:38
+msgid "Some results from Sample ${sample_id} exceeded panic range"
+msgstr "Alguns resultados da Amostra ${sample_id} excederam a faixa de pânico"
+
+#: senaite/panic/browser/templates/panic_alert_email.pt:19
+msgid "Some values exceeded the panic levels. Send an email to the clinic or close this window if you want to re-test to confirm the panic value."
+msgstr "Alguns valores excederam os níveis de pânico. Envie um e-mail para a clínica ou feche esta janela se desejar repetir o teste para confirmar o valor crítico."
+
+#: senaite/panic/browser/templates/panic_alert_email.pt:32
+msgid "Subject"
+msgstr "Assunto"
+
+#: senaite/panic/controlpanel.py:44
+msgid "Template text for the panic alert email's body. The accepted wildcards are: ${analyses}, ${lab_address}, ${sample_id}, {client_sample_id}, ${client_id} and ${sample_url}"
+msgstr "Texto do modelo para o corpo do e-mail de alerta de pânico. Os curingas aceitos são: ${analyses}, ${lab_address}, ${sample_id}, {client_sample_id}, ${client_id} e ${sample_url}"
+
+#: senaite/panic/controlpanel.py:35
+msgid "Template text for the panic alert email's subject. The accepted wildcards are: ${sample_id}, {client_sample_id} and ${client_id}"
+msgstr "Texto do modelo para o assunto do e-mail de alerta de pânico. Os curingas aceitos são: ${sample_id}, {client_sample_id} e ${client_id}"
+
+#: senaite/panic/browser/templates/panic_alert_email.pt:40
+msgid "To"
+msgstr "Para"
+
+#: senaite/panic/browser/views.py:233
+msgid "Unable to send an email to alert client that some results exceeded the panic levels"
+msgstr "Não foi possível enviar o e-mail para alertar o cliente de que alguns resultados excederam os níveis de pânico"
