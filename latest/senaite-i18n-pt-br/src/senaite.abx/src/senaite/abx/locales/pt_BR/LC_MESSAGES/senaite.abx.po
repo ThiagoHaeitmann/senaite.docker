@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-04-04 11:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: pt_BR\n"
+"Language-Name: Português\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: senaite/abx/browser/content/antibioticfolder.py:65
+#: senaite/abx/content/antibiotic.py:71
+msgid "Abbreviation"
+msgstr "Abreviação"
+
+#: senaite/abx/content/antibiotic.py:123
+msgid "Abbreviation must be unique"
+msgstr "A abreviação deve ser única"
+
+#: senaite/abx/browser/content/antibioticclassfolder.py:66
+msgid "Active"
+msgstr "Ativo"
+
+#: senaite/abx/browser/content/antibioticclassfolder.py:45
+msgid "Add"
+msgstr "Adicionar"
+
+#: senaite/abx/browser/content/antibioticclassfolder.py:78
+msgid "All"
+msgstr "Todos"
+
+#: senaite/abx/config.py:25
+msgid "Aminoglycosides"
+msgstr "Aminoglicosídeos"
+
+#: senaite/abx/profiles/default/types/Antibiotic.xml
+msgid "Antibiotic"
+msgstr "Antibiótico"
+
+#: senaite/abx/content/antibiotic.py:76
+#: senaite/abx/profiles/default/types/AntibioticClass.xml
+msgid "Antibiotic class"
+msgstr "Classe de antibiótico"
+
+#: senaite/abx/profiles/default/types/AntibioticClassFolder.xml
+msgid "Antibiotic classes"
+msgstr "Classes de antibióticos"
+
+#: senaite/abx/profiles/default/types/AntibioticFolder.xml
+msgid "Antibiotics"
+msgstr "Antibióticos"
+
+#: senaite/abx/configure.zcml:28
+msgid "Antibiotics handling for SENAITE"
+msgstr "Gerenciamento de antibióticos para SENAITE"
+
+#: senaite/abx/config.py:26
+msgid "Carbapenems"
+msgstr "Carbapenêmicos"
+
+#: senaite/abx/config.py:27
+msgid "Cephalosporins"
+msgstr "Cefalosporinas"
+
+#: senaite/abx/browser/content/antibioticfolder.py:68
+msgid "Class"
+msgstr "Classe"
+
+#: senaite/abx/browser/content/antibioticclassfolder.py:58
+msgid "Description"
+msgstr "Descrição"
+
+#: senaite/abx/config.py:28
+msgid "Fluoroquinolones"
+msgstr "Fluoroquinolonas"
+
+#: senaite/abx/browser/content/antibioticclassfolder.py:72
+msgid "Inactive"
+msgstr "Inativo"
+
+#: senaite/abx/config.py:29
+msgid "Macrolides"
+msgstr "Macrolídeos"
+
+#: senaite/abx/config.py:30
+msgid "Monobactams"
+msgstr "Monobactâmicos"
+
+#: senaite/abx/browser/content/antibioticfolder.py:133
+#: senaite/abx/config.py:33
+msgid "Other"
+msgstr "Outros"
+
+#: senaite/abx/config.py:31
+msgid "Penicillins"
+msgstr "Penicilinas"
+
+#: senaite/abx/configure.zcml:28
+msgid "SENAITE ABX"
+msgstr "SENAITE ABX"
+
+#: senaite/abx/configure.zcml:46
+msgid "SENAITE ABX (uninstall)"
+msgstr "SENAITE ABX (desinstalar)"
+
+#: senaite/abx/config.py:32
+msgid "Tetracyclines"
+msgstr "Tetraciclinas"
+
+#: senaite/abx/browser/content/antibioticclassfolder.py:54
+msgid "Title"
+msgstr "Título"
+
+#: senaite/abx/content/antibiotic.py:110
+msgid "Title must be unique"
+msgstr "O título deve ser único"
+
+#. Default: "Title"
+#: senaite/abx/content/antibiotic.py:95
+msgid "column_label_title"
+msgstr "Título"
