@@ -8,6 +8,7 @@ find-links =
 parts =
     instance
     zeoserver
+    plonesite
 
 eggs =
     senaite.core
@@ -25,11 +26,15 @@ eggs =
     senaite.abx
     senaite.microorganism
     senaite.panic
-    senaite.lis2a
-    collective.oidc
+    pas.plugins.oidc
+    pas.plugins.authomatic
     plone.restapi
     plone.session
     Products.GenericSetup
+    collective.saml2
+    pas.plugins.headers
+    dm.zope.saml2
+    dm.saml2
 
 eggs-directory = /app/eggs
 download-cache = /app/downloads
@@ -55,7 +60,6 @@ senaite.ast = git https://github.com/senaite/senaite.ast.git branch=master
 senaite.abx = git https://github.com/senaite/senaite.abx.git branch=master
 senaite.microorganism = git https://github.com/senaite/senaite.microorganism.git branch=master
 senaite.panic = git https://github.com/senaite/senaite.panic.git branch=2.x
-senaite.lis2a = git https://github.com/senaite/senaite.lis2a.git branch=2.x
 
 [plonesite]
 recipe = collective.recipe.plonesite
@@ -129,3 +133,6 @@ plone.jsonapi.core = 0.7.0
 senaite.api = 1.2.3.post2
 traceback2 = 1.4.0
 xlrd = 2.0.2
+pas.plugins.oidc = 1.0.0
+pas.plugins.authomatic = 1.0.0
+plone.restapi = 7.9.1
