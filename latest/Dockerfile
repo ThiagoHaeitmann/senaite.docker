@@ -10,6 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl wget git bash patch xz-utils \
     build-essential make gcc g++ \
+    gettext \
     dpkg-dev libc6-dev libjpeg62-turbo-dev libopenjp2-7-dev libtiff-dev \
     libbz2-dev zlib1g-dev libssl-dev \
     libreadline-dev libsqlite3-dev \
@@ -53,6 +54,8 @@ RUN mkdir -p /data/zeo /data/blob/blobstorage /data/var/log /data/var/cache /dat
              /app/eggs /app/downloads /app/src \
  && chown -R senaite:senaite /app /data
 
+# depois do buildout
+COPY senaite-i18n-pt-br /tmp/i18n
 
 # defaults (podem ser sobrescritos no Nomad)
 ENV \
@@ -78,8 +81,17 @@ RUN mkdir -p /app/var /app/var/log \
 
 USER root
 
+RUN for d in /app/src/senaite.*; do \
+      name=$(basename $d); \
+      if [ -d /tmp/i18n/app/src/$name ]; then \
+        cp -r /tmp/i18n/app/src/$name/src/* $d/src/; \
+        find $d/src -path "*/locales/pt_BR/LC_MESSAGES/*.po" | while read po; do \
+          msgfmt "$po" -o "$(dirname "$po")/$(basename "$po" .po).mo"; \
+        done; \
+      fi; \
+    done
 
-
+RUN chown -R senaite:senaite /app/src
  
 # ---- runtime: leve, sem gcc, só roda ----
 FROM debian:12-slim AS runtime
