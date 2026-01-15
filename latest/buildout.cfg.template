@@ -141,3 +141,4 @@ oic = 0.15.1
 pas.plugins.headers = 1.5.0
 dm.zope.saml2 = 5.0.1
 dm.saml2 = 3.2.3
+dm.xmlsec.binding = 2.2
