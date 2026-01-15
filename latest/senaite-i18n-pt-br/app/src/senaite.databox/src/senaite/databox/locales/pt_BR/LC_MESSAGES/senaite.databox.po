@@ -1,0 +1,311 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2024-01-03 21:02+0000\n"
+"PO-Revision-Date: 2020-07-09 07:13+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/senaite/teams/111490/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Language: pt_BR\n"
+
+#: senaite/databox/browser/templates/databox_controls.pt:243
+msgid "(catalog brain of the databox query type),"
+msgstr "(cérebro do catálogo do tipo de consulta do databox),"
+
+#: senaite/databox/browser/templates/databox_controls.pt:244
+msgid "(content object of the databox query type),"
+msgstr "(objeto de conteúdo do tipo de consulta do databox),"
+
+#: senaite/databox/browser/templates/databox_controls.pt:241
+msgid "(the current column context),"
+msgstr "(o contexto atual da coluna),"
+
+#: senaite/databox/browser/templates/databox_controls.pt:245
+msgid "(the senaite API module)."
+msgstr "(módulo da API do Senaite)."
+
+#: senaite/databox/browser/templates/databox_controls.pt:242
+msgid "(wrapped senaite.supermodel context),"
+msgstr "(contexto {wrapped senaite.supermodel}),"
+
+#: senaite/databox/browser/templates/databox_controls.pt:206
+msgid "="
+msgstr "="
+
+#: senaite/databox/profiles/default/workflows/senaite_databox_workflow/definition.xml
+msgid "Activate"
+msgstr "Ativar"
+
+#: senaite/databox/browser/folder_view.py:75
+#: senaite/databox/profiles/default/workflows/senaite_databox_workflow/definition.xml
+msgid "Active"
+msgstr "Ativo"
+
+#: senaite/databox/browser/folder_view.py:46
+msgid "Add"
+msgstr "Adicionar"
+
+#: senaite/databox/behaviors/configure.zcml:18
+msgid "Adds databox behavior"
+msgstr "Adiciona comportamento ao databox"
+
+#: senaite/databox/behaviors/databox.py:88
+#: senaite/databox/browser/templates/databox_controls.pt:27
+msgid "Advanced Query"
+msgstr "Consulta Avançada"
+
+#: senaite/databox/browser/folder_view.py:85
+#: senaite/databox/browser/view.py:78
+msgid "All"
+msgstr "Todos"
+
+#: senaite/databox/browser/templates/databox_controls.pt:240
+msgid "Available variables are"
+msgstr "Variáveis disponíveis são"
+
+#: senaite/databox/browser/templates/databox_controls.pt:422
+msgid "Catalog"
+msgstr "Catálogo"
+
+#: senaite/databox/browser/templates/databox_controls.pt:432
+msgid "Catalog Query"
+msgstr "Consulta de Catálogo"
+
+#: senaite/databox/browser/templates/databox_controls.pt:261
+msgid "Caution:"
+msgstr "Aviso:"
+
+#: senaite/databox/browser/templates/databox_controls.pt:358
+msgid "Code"
+msgstr "Código"
+
+#: senaite/databox/behaviors/databox.py:76
+msgid "Column"
+msgstr "Coluna"
+
+#: senaite/databox/behaviors/databox.py:74
+msgid "Column Config"
+msgstr "Configuração da Coluna"
+
+#: senaite/databox/behaviors/databox.py:72
+#: senaite/databox/browser/templates/databox_controls.pt:37
+msgid "Columns"
+msgstr "Colunas"
+
+#: senaite/databox/browser/templates/databox_controls.pt:374
+msgid "Converter"
+msgstr "Converter"
+
+#: senaite/databox/behaviors/configure.zcml:18
+msgid "DataBox"
+msgstr "Caixa de Dados"
+
+#: senaite/databox/profiles/default/types/DataBox.xml
+msgid "Databox"
+msgstr "Caixa de Dados"
+
+#: senaite/databox/profiles/default/types/DataBoxFolder.xml
+msgid "Databoxes"
+msgstr "Caixas de Dados"
+
+#: senaite/databox/browser/templates/databox_controls.pt:143
+msgid "Date From"
+msgstr "Data De"
+
+#: senaite/databox/browser/templates/databox_controls.pt:125
+msgid "Date Index"
+msgstr "Índice de Data"
+
+#: senaite/databox/browser/templates/databox_controls.pt:158
+msgid "Date To"
+msgstr "Data Até"
+
+#: senaite/databox/profiles/default/workflows/senaite_databox_workflow/definition.xml
+msgid "Deactivate"
+msgstr "Desativar"
+
+#: senaite/databox/browser/templates/databox_controls.pt:60
+msgid "Define basic query options."
+msgstr "Define opções básicas de consulta."
+
+#: senaite/databox/browser/templates/databox_controls.pt:232
+msgid "Define display columns for the search results."
+msgstr "Define colunas de exibição para os resultados da pesquisa."
+
+#: senaite/databox/browser/templates/databox_controls.pt:173
+msgid "Define one or more explicit values for catalog indexes to refine the query."
+msgstr "Define um ou mais valores explícitos para índices de catálogo para refinar a consulta."
+
+#: senaite/databox/browser/templates/databox_controls.pt:219
+msgid "Delete"
+msgstr "Excluir"
+
+#: senaite/databox/browser/templates/databox_controls.pt:342
+msgid "Delete column"
+msgstr "Excluir coluna"
+
+#: senaite/databox/browser/folder_view.py:65
+msgid "Description"
+msgstr "Descrição"
+
+#: senaite/databox/browser/templates/databox_controls.pt:248
+msgid "Examples:"
+msgstr "Exemplos:"
+
+#: senaite/databox/profiles/default/types/DataBox.xml
+msgid "Export CSV"
+msgstr "Exportar CSV"
+
+#: senaite/databox/profiles/default/types/DataBox.xml
+msgid "Export Excel"
+msgstr "Exportar Excel"
+
+#: senaite/databox/browser/templates/databox_controls.pt:296
+msgid "Field"
+msgstr "Campo"
+
+#: senaite/databox/browser/folder_view.py:80
+#: senaite/databox/profiles/default/workflows/senaite_databox_workflow/definition.xml
+msgid "Inactive"
+msgstr "Inativo"
+
+#: senaite/databox/browser/templates/databox_controls.pt:187
+msgid "Index"
+msgstr "Índice"
+
+#: senaite/databox/browser/templates/databox_controls.pt:47
+msgid "Info"
+msgstr "Informações"
+
+#: senaite/databox/configure.zcml:73
+msgid "Installs SENAITE DATABOX"
+msgstr "Instala o SENAITE DATABOX"
+
+#: senaite/databox/browser/templates/databox_controls.pt:280
+msgid "Label"
+msgstr "Rótulo"
+
+#: senaite/databox/behaviors/databox.py:121
+#: senaite/databox/browser/templates/databox_controls.pt:87
+msgid "Limit"
+msgstr "Limite"
+
+#: senaite/databox/behaviors/databox.py:122
+msgid "Limit Search Results"
+msgstr "Limitar Resultados da Pesquisa"
+
+#: senaite/databox/browser/templates/databox_controls.pt:413
+msgid "Portal Type"
+msgstr "Tipo de Portal"
+
+#: senaite/databox/browser/templates/databox_controls.pt:17
+msgid "Query"
+msgstr "Consulta"
+
+#: senaite/databox/behaviors/databox.py:90
+msgid "Query Index"
+msgstr "Índice de Consulta"
+
+#: senaite/databox/behaviors/databox.py:63
+msgid "Query Type"
+msgstr "Tipo de Consulta"
+
+#: senaite/databox/behaviors/databox.py:92
+msgid "Query Value"
+msgstr "Valor da Consulta"
+
+#: senaite/databox/behaviors/databox.py:98
+msgid "Query date index"
+msgstr "Índice de data da consulta"
+
+#: senaite/databox/behaviors/databox.py:108
+msgid "Query from date"
+msgstr "Consulta a partir da data"
+
+#: senaite/databox/behaviors/databox.py:115
+msgid "Query to date"
+msgstr "Consulta até a data"
+
+#: senaite/databox/browser/templates/databox_controls.pt:256
+msgid "Retrieve the review state of the current context"
+msgstr "Recuperar o estado de revisão do contexto atual"
+
+#: senaite/databox/browser/templates/databox_controls.pt:252
+msgid "Retrieve the title of the parent object"
+msgstr "Recuperar o título do objeto pai"
+
+#: senaite/databox/browser/templates/databox_controls.pt:112
+msgid "Reversed order"
+msgstr "Ordem inversa"
+
+#: senaite/databox/configure.zcml:73
+msgid "SENAITE DATABOX"
+msgstr "SENAITE DATABOX"
+
+#: senaite/databox/browser/templates/databox_controls.pt:69
+msgid "Sort on"
+msgstr "Ordenar por"
+
+#: senaite/databox/behaviors/databox.py:131
+msgid "Sort the databox on this index"
+msgstr "Ordenar o DataBox por este índice"
+
+#: senaite/databox/behaviors/databox.py:138
+msgid "Sort the results in reversed order"
+msgstr "Ordenar os resultados em ordem inversa"
+
+#: senaite/databox/behaviors/databox.py:99
+msgid "The date index to query"
+msgstr "O índice de data para consulta"
+
+#: senaite/databox/behaviors/databox.py:64
+msgid "The type to query"
+msgstr "O tipo para consulta"
+
+#: senaite/databox/browser/folder_view.py:62
+#: senaite/databox/browser/view.py:260
+msgid "Title"
+msgstr "Título"
+
+#: senaite/databox/browser/folder_view.py:68
+msgid "Type"
+msgstr "Tipo"
+
+#: senaite/databox/configure.zcml:83
+msgid "Uninstalls SENAITE DATABOX"
+msgstr "Desinstala o SENAITE DATABOX"
+
+#: senaite/databox/browser/templates/databox_controls.pt:235
+msgid "Use the code line below to retrieve a value by a Python expression instead using the field."
+msgstr "Use a linha de código abaixo para recuperar um valor por uma expressão Python em vez de usar o campo."
+
+#: senaite/databox/browser/templates/databox_controls.pt:262
+msgid "Using the code field executes the Python code without restrictions and can potentially damage data."
+msgstr "Usar o campo de código executa o código Python sem restrições e pode potencialmente danificar os dados."
+
+#: senaite/databox/browser/templates/databox_controls.pt:337
+msgid "add"
+msgstr "adicionar"
+
+#. Default: "Sort on"
+#: senaite/databox/behaviors/databox.py:130
+msgid "label_sort_on"
+msgstr "ordenar_por"
+
+#. Default: "Reversed order"
+#: senaite/databox/behaviors/databox.py:137
+msgid "label_sort_reversed"
+msgstr "Ordenar inversamente"
+
+#. Default: "Required"
+#: senaite/databox/browser/templates/databox_edit.pt:39
+msgid "title_required"
+msgstr "Título obrigatório"
