@@ -110,6 +110,7 @@ environment-vars =
 
 
 [versions]
+senaite.core = 2.6.0
 et-xmlfile = 1.1.0
 openpyxl = 2.6.4
 magnitude = 1.0.1
@@ -142,3 +143,7 @@ pas.plugins.headers = 1.5.0
 dm.zope.saml2 = 5.0.1
 dm.saml2 = 3.2.3
 dm.xmlsec.binding = 2.2
+zope.app.form = 6.1
+zope.app.component = 5.0
+
+
