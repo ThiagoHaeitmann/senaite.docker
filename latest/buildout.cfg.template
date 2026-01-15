@@ -10,9 +10,6 @@ parts =
     zeoserver
     plonesite
 
-develop =
-    senaite-i18n-pt-br
-
 eggs =
     senaite.core
     senaite.lims
@@ -37,7 +34,6 @@ eggs =
     pas.plugins.headers
     dm.zope.saml2
     dm.saml2
-    senaite-i18n-pt-br
 
 eggs-directory = /app/eggs
 download-cache = /app/downloads
@@ -110,8 +106,8 @@ eggs =
 
 deprecation-warnings = off
 environment-vars =
-    zope_i18n_compile_mo_files true
     TZ America/Sao_Paulo
+
 
 [versions]
 et-xmlfile = 1.1.0
