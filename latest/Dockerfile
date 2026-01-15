@@ -109,6 +109,8 @@ RUN set -e; \
 
 
 RUN chown -R senaite:senaite /app/src
+RUN chown -R senaite:senaite /app/eggs
+
  
 # ---- runtime: leve, sem gcc, só roda ----
 FROM debian:12-slim AS runtime
