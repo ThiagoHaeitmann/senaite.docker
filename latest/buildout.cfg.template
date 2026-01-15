@@ -145,5 +145,8 @@ dm.saml2 = 3.2.3
 dm.xmlsec.binding = 2.2
 zope.app.form = 6.1
 zope.app.component = 5.0
+five.formlib = 3.0
+plone.app.jquerytools = 1.9.5
+pycryptodomex = 3.23.0
 
 
