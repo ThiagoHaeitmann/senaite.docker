@@ -27,7 +27,6 @@ eggs =
     senaite.microorganism
     senaite.panic
     pas.plugins.oidc
-    pas.plugins.authomatic
     plone.restapi
     plone.session
     Products.GenericSetup
@@ -134,5 +133,4 @@ senaite.api = 1.2.3.post2
 traceback2 = 1.4.0
 xlrd = 2.0.2
 pas.plugins.oidc = 1.0.0
-pas.plugins.authomatic = 1.0.0
 plone.restapi = 7.9.1
