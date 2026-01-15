@@ -134,3 +134,4 @@ traceback2 = 1.4.0
 xlrd = 2.0.2
 pas.plugins.oidc = 1.0.0
 plone.restapi = 7.9.1
+BTree = 4.11.3
