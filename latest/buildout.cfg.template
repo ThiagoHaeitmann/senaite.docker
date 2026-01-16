@@ -69,8 +69,7 @@ pack-days = 7
 
 var = /data/var
 pid-file = /data/var/zeoserver.pid
-event-log = /data/var/log/zeoserver.log
-access-log = /data/var/log/zeoserver-access.log
+zeo-log = /data/var/log/zeoserver.log
 
 [instance]
 recipe = plone.recipe.zope2instance
@@ -101,16 +100,10 @@ environment-vars =
 
 [backup]
 recipe = collective.recipe.backup
-# Onde os dados do banco (.fs) serão salvos no host
 location = /data/backups/filestorage
-# Onde os laudos e anexos (Blobs) serão salvos
 blobbackuplocation = /data/backups/blobstorage
-# Mantém os últimos 14 backups (2 semanas de histórico para Compliance)
-keep = 14
-# Compacta para economizar espaço no SharePoint
-compress = true
-# Garante que o backup use o repozo que o buildout gerou
-repozo = ${buildout:bin-directory}/repozo
+keep = 5
+gzip = true
 
 [versions]
 senaite.core = 2.6.0
@@ -142,4 +135,13 @@ PyXB = 1.2.3
 dm.zope.saml2 = 5.0.1
 dm.saml2 = 3.2.3
 dm.xmlsec.binding = 2.2
-collective.recipe.backup = 4.1.1
+collective.recipe.backup = 4.2.0
+collective.saml2 = 1.5
+dm.reuse = 2.2
+dm.zope.schema = 4.0.1
+pas.plugins.headers = 1.5.0
+zope.app.container = 5.0
+zope.app.pagetemplate = 5.0
+five.formlib = 3.0
+zope.app.component = 5.0
+zope.app.form = 6.1
