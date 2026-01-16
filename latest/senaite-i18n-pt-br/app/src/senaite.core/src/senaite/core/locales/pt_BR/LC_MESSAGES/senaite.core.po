@@ -162,7 +162,7 @@ msgstr "<i class='fas fa-link' aria-hidden='true' /> Ir para configuração do m
 
 #: bika/lims/browser/templates/senaite-frontpage.pt:15
 msgid "<img src=\"${DYNAMIC_CONTENT}\" /> Welcome to SENAITE"
-msgstr "<img src=\'${DYNAMIC_CONTENT}\' /> Bem-vindo ao SENAITE"
+msgstr "<img src='${DYNAMIC_CONTENT}' /> Bem-vindo ao SENAITE"
 
 #: bika/lims/content/calculation.py:133
 msgid "<p>The formula you type here will be dynamically calculated when an analysis using this calculation is displayed.</p><p>To enter a Calculation, use standard maths operators,  + - * / ( ), and all keywords available, both from other Analysis Services and the Interim Fields specified here, as variables. Enclose them in square brackets [ ].</p><p>E.g, the calculation for Total Hardness, the total of Calcium (ppm) and Magnesium (ppm) ions in water, is entered as [Ca] + [Mg], where Ca and MG are the keywords for those two Analysis Services.</p>"
@@ -6517,7 +6517,7 @@ msgstr "Você pode alterar a visibilidade de um campo selecionando ou desmarcand
 
 #: senaite/core/browser/viewlets/templates/auditlog_disabled.pt:17
 msgid "You can enable the global Audit Log again in the <a href=\"${DYNAMIC_CONTENT}\">Setup</a>"
-msgstr "Você pode ativar o Log de Auditoria global novamente em <a href=\'${DYNAMIC_CONTENT}\'>Configuração</a>"
+msgstr "Você pode ativar o Log de Auditoria global novamente em <a href='${DYNAMIC_CONTENT}'>Configuração</a>"
 
 #: senaite/core/browser/viewlets/templates/attachments.pt:291
 msgid "You can use the browse button to select and upload a new attachment."
