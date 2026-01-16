@@ -127,8 +127,8 @@ pas.plugins.oidc = 1.0.0
 plone.restapi = 7.9.1
 BTree = 4.11.3
 PyXB = 1.2.3
-mako = 1.1.6
-oic = 1.2.1
+mako = 1.0.14
+oic = 1.1.2
 pas.plugins.headers = 1.5.0
 dm.zope.saml2 = 5.0.1
 dm.saml2 = 3.2.3
@@ -139,5 +139,6 @@ five.formlib = 3.0
 plone.app.jquerytools = 1.9.5
 pycryptodomex = 3.23.0
 defusedxml = 0.7.1
+pyjwkest = 1.4.2
 
 
