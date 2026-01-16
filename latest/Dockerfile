@@ -26,11 +26,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libldap2-dev libsasl2-dev \
  && rm -rf /var/lib/apt/lists/*
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # --- cria user senaite no builder ---
 ARG SENAITE_UID=1000
 ARG SENAITE_GID=1000
 RUN groupadd -g ${SENAITE_GID} senaite \
- && useradd -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
+ && useradd -l -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
 
 # pyenv + python2
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
@@ -84,29 +86,23 @@ RUN mkdir -p /app/var /app/var/log \
 
 USER root
 
-# ---- aplica traduções PT-BR em EGGS e no SRC ----
 RUN set -e; \
   echo "==> Aplicando e Compilando traduções PT-BR"; \
   [ -d "/tmp/i18n" ] || (echo "Erro: /tmp/i18n não encontrado" && exit 1); \
   \
-  for target_dir in /app/eggs /app/src; do \
+  for target_dir in "/app/eggs" "/app/src"; do \
     echo ">> Verificando diretório: $target_dir"; \
-    for pkg_path in $target_dir/senaite.*; do \
+    for pkg_path in "$target_dir"/senaite.*; do \
       [ -d "$pkg_path" ] || continue; \
       \
-      # Extrai o nome base (ex: senaite.core)
       pkg_name=$(basename "$pkg_path" | sed 's/-[0-9].*$//'); \
       src_po_dir="/tmp/i18n/app/src/$pkg_name/src"; \
       \
       if [ -d "$src_po_dir" ]; then \
         echo "   + Processando: $pkg_name"; \
         find "$src_po_dir" -path "*/locales/pt_BR/LC_MESSAGES/*.po" | while read -r po_file; do \
-          # rel_path será algo como 'senaite/core/locales/...' ou 'bika/lims/locales/...'
           rel_path=$(echo "$po_file" | sed "s|$src_po_dir/||"); \
           \
-          # Define o destino correto: 
-          # No SRC, o código fica em pkg/src/senaite/...
-          # Nos EGGS, o código fica na raiz do egg senaite/...
           if [ "$target_dir" = "/app/src" ]; then \
              dest_dir="$pkg_path/src/$(dirname "$rel_path")"; \
           else \
@@ -115,15 +111,12 @@ RUN set -e; \
           \
           mkdir -p "$dest_dir"; \
           cp "$po_file" "$dest_dir/"; \
-          \
-          # Compila o .mo no destino correto
           msgfmt "$dest_dir/$(basename "$po_file")" \
                  -o "$dest_dir/$(basename "$po_file" .po).mo"; \
-          echo "     * OK: $(basename "$po_file" .po).mo criado em $(basename "$target_dir")"; \
         done; \
       fi; \
     done; \
-  done
+  done;
 
 RUN chown -R senaite:senaite /app/src
 RUN chown -R senaite:senaite /app/eggs
@@ -160,7 +153,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ARG SENAITE_UID=1000
 ARG SENAITE_GID=1000
 RUN groupadd -g ${SENAITE_GID} senaite \
- && useradd -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
+ && useradd -l -m -u ${SENAITE_UID} -g ${SENAITE_GID} -s /bin/bash senaite
 
 # pyenv e python2
 COPY --from=py2builder /opt/pyenv /opt/pyenv
