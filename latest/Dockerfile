@@ -26,8 +26,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libldap2-dev libsasl2-dev \
  && rm -rf /var/lib/apt/lists/*
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
 # --- cria user senaite no builder ---
 ARG SENAITE_UID=1000
 ARG SENAITE_GID=1000
