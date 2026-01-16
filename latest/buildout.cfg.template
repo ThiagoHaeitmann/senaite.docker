@@ -98,6 +98,12 @@ deprecation-warnings = off
 environment-vars =
     TZ America/Sao_Paulo
 
+zcml =
+    dm.zope.saml2
+    dm.zope.schema
+    collective.saml2
+    pas.plugins.headers
+
 [backup]
 recipe = collective.recipe.backup
 location = /data/backups/filestorage
