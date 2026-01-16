@@ -84,29 +84,46 @@ RUN mkdir -p /app/var /app/var/log \
 
 USER root
 
-# ---- aplica traduções PT-BR direto nos EGGS instalados ----
+# ---- aplica traduções PT-BR em EGGS e no SRC ----
 RUN set -e; \
-  echo "==> Aplicando traduções PT-BR nos eggs instalados"; \
-  for egg in /app/eggs/senaite.*-py2.7.egg; do \
-    [ -d "$egg" ] || continue; \
-    pkg="$(basename "$egg" | sed 's/-[0-9].*$//')"; \
-    src_i18n="/tmp/i18n/app/src/$pkg/src"; \
-    if [ ! -d "$src_i18n" ]; then \
-      echo ">> Sem traduções para $pkg (ignorado)"; \
-      continue; \
-    fi; \
-    echo ">> Processando $pkg"; \
-    find "$src_i18n" -path "*/locales/pt_BR/LC_MESSAGES/*.po" | while read -r po; do \
-      rel="$(echo "$po" | sed "s|$src_i18n/||")"; \
-      dest="$egg/$(dirname "$rel")"; \
-      mkdir -p "$dest"; \
-      cp "$po" "$dest/"; \
-      msgfmt "$dest/$(basename "$po")" \
-        -o "$dest/$(basename "$po" .po).mo"; \
-      echo "   + $(basename "$po") -> $(basename "$egg")"; \
+  echo "==> Aplicando e Compilando traduções PT-BR"; \
+  [ -d "/tmp/i18n" ] || (echo "Erro: /tmp/i18n não encontrado" && exit 1); \
+  \
+  for target_dir in /app/eggs /app/src; do \
+    echo ">> Verificando diretório: $target_dir"; \
+    for pkg_path in $target_dir/senaite.*; do \
+      [ -d "$pkg_path" ] || continue; \
+      \
+      # Extrai o nome base (ex: senaite.core)
+      pkg_name=$(basename "$pkg_path" | sed 's/-[0-9].*$//'); \
+      src_po_dir="/tmp/i18n/app/src/$pkg_name/src"; \
+      \
+      if [ -d "$src_po_dir" ]; then \
+        echo "   + Processando: $pkg_name"; \
+        find "$src_po_dir" -path "*/locales/pt_BR/LC_MESSAGES/*.po" | while read -r po_file; do \
+          # rel_path será algo como 'senaite/core/locales/...' ou 'bika/lims/locales/...'
+          rel_path=$(echo "$po_file" | sed "s|$src_po_dir/||"); \
+          \
+          # Define o destino correto: 
+          # No SRC, o código fica em pkg/src/senaite/...
+          # Nos EGGS, o código fica na raiz do egg senaite/...
+          if [ "$target_dir" = "/app/src" ]; then \
+             dest_dir="$pkg_path/src/$(dirname "$rel_path")"; \
+          else \
+             dest_dir="$pkg_path/$(dirname "$rel_path")"; \
+          fi; \
+          \
+          mkdir -p "$dest_dir"; \
+          cp "$po_file" "$dest_dir/"; \
+          \
+          # Compila o .mo no destino correto
+          msgfmt "$dest_dir/$(basename "$po_file")" \
+                 -o "$dest_dir/$(basename "$po_file" .po).mo"; \
+          echo "     * OK: $(basename "$po_file" .po).mo criado em $(basename "$target_dir")"; \
+        done; \
+      fi; \
     done; \
   done
-
 
 RUN chown -R senaite:senaite /app/src
 RUN chown -R senaite:senaite /app/eggs
