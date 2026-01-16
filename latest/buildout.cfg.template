@@ -34,6 +34,7 @@ eggs =
     dm.zope.saml2
     dm.saml2
 
+auto-checkout = *
 eggs-directory = /app/eggs
 download-cache = /app/downloads
 extensions = mr.developer
@@ -139,5 +140,6 @@ five.formlib = 3.0
 plone.app.jquerytools = 1.9.5
 pycryptodomex = 3.23.0
 pyjwkest = 1.4.2
+MarkupSafe = 1.1.1
 
 
