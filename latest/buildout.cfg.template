@@ -8,6 +8,7 @@ find-links =
 parts =
     instance
     zeoserver
+    backup
 
 eggs =
     senaite.core
@@ -99,6 +100,18 @@ deprecation-warnings = off
 environment-vars =
     TZ America/Sao_Paulo
 
+[backup]
+recipe = collective.recipe.backup
+# Onde os dados do banco (.fs) serão salvos no host
+location = /data/backups/filestorage
+# Onde os laudos e anexos (Blobs) serão salvos
+blobbackuplocation = /data/backups/blobstorage
+# Mantém os últimos 14 backups (2 semanas de histórico para Compliance)
+keep = 14
+# Compacta para economizar espaço no SharePoint
+compress = true
+# Garante que o backup use o repozo que o buildout gerou
+repozo = ${buildout:bin-directory}/repozo
 
 [versions]
 senaite.core = 2.6.0
@@ -141,5 +154,4 @@ plone.app.jquerytools = 1.9.5
 pycryptodomex = 3.23.0
 pyjwkest = 1.4.2
 MarkupSafe = 1.1.1
-
-
+collective.recipe.backup = 4.1.1
