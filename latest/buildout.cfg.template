@@ -100,7 +100,6 @@ environment-vars =
 
 zcml =
     dm.zope.saml2
-    dm.zope.schema
     collective.saml2
     pas.plugins.headers
 
