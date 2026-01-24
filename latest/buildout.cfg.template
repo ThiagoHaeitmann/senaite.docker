@@ -29,10 +29,8 @@ eggs =
     plone.restapi
     plone.session
     Products.GenericSetup
-    collective.saml2
     pas.plugins.headers
-    dm.zope.saml2
-    dm.saml2
+    ftw.oidcauth
 
 auto-checkout = *
 eggs-directory = /app/eggs
@@ -99,8 +97,8 @@ environment-vars =
     TZ America/Sao_Paulo
 
 zcml =
-    dm.zope.saml2
     pas.plugins.headers
+    ftw.oidcauth
 
 [backup]
 recipe = collective.recipe.backup
@@ -135,17 +133,11 @@ traceback2 = 1.4.0
 xlrd = 2.0.2
 plone.restapi = 7.9.1
 BTree = 4.11.3
-PyXB = 1.2.3
-dm.zope.saml2 = 5.0.1
-dm.saml2 = 3.2.3
-dm.xmlsec.binding = 2.2
 collective.recipe.backup = 4.2.0
-collective.saml2 = 1.5
-dm.reuse = 2.2
-dm.zope.schema = 4.0.1
 pas.plugins.headers = 1.5.0
 zope.app.container = 4.0.0
 zope.app.pagetemplate = 4.0.0
 five.formlib = 2.2
 zope.app.component = 4.1.0
 zope.app.form = 5.1.0
+ftw.oidcauth = 1.0.2
