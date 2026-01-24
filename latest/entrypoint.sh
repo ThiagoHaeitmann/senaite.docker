@@ -6,9 +6,9 @@ MODE="${1:-${MODE:-instance}}"
 : "${SENAITE_VERSION:=2.6.0}"
 : "${HTTP_ADDRESS:=0.0.0.0}"
 : "${HTTP_PORT:=8080}"
-: "${ZEO_LISTEN:=127.0.0.1}"
+: "${ZEO_LISTEN:=10.40.40.10}"
 : "${ZEO_PORT:=8100}"
-: "${ZEO_ADDRESS:=127.0.0.1:${ZEO_PORT}}"
+: "${ZEO_ADDRESS:=10.40.40.10:${ZEO_PORT}}"
 : "${ADMIN_USER:=admin}"
 : "${ADMIN_PASS:=admin}"
 
@@ -83,9 +83,9 @@ repl={
   "@SENAITE_VERSION@": os.environ.get("SENAITE_VERSION","2.6.0"),
   "@HTTP_ADDRESS@":    os.environ.get("HTTP_ADDRESS","0.0.0.0"),
   "@HTTP_PORT@":       os.environ.get("HTTP_PORT","8080"),
-  "@ZEO_LISTEN@":      os.environ.get("ZEO_LISTEN","127.0.0.1"),
+  "@ZEO_LISTEN@":      os.environ.get("ZEO_LISTEN","10.40.40.10"),
   "@ZEO_PORT@":        os.environ.get("ZEO_PORT","8100"),
-  "@ZEO_ADDRESS@":     os.environ.get("ZEO_ADDRESS","127.0.0.1:8100"),
+  "@ZEO_ADDRESS@":     os.environ.get("ZEO_ADDRESS","10.40.40.10:8100"),
   "@ADMIN_USER@":      os.environ.get("ADMIN_USER","admin"),
   "@ADMIN_PASS@":      os.environ.get("ADMIN_PASS","admin"),
 }
@@ -116,6 +116,12 @@ fi
 
 if is_true "${RUN_BUILDOUT}"; then
   die "RUN_BUILDOUT=1 is not supported in runtime. Rebuild the image; buildout must run in builder stage."
+fi
+
+# Sobrescreve o endereço do ZEO no arquivo de configuração real do Zope antes de iniciar
+if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
+    log "Atualizando zope.conf com ZEO_ADDRESS: ${ZEO_ADDRESS}"
+    sed -i "s|address .*|address ${ZEO_ADDRESS}|g" "${APP_DIR}/parts/instance/etc/zope.conf"
 fi
 
 case "${MODE}" in
