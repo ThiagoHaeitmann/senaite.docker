@@ -10,10 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl wget git bash patch xz-utils \
     build-essential make gcc g++ \
-    gettext \
-    pkg-config \
-    libxmlsec1-dev \
-    libxmlsec1-openssl \
+    gettext libfreetype6-dev \
+    pkg-config liblcms2-dev \
     dpkg-dev libc6-dev libjpeg62-turbo-dev libopenjp2-7-dev libtiff-dev \
     libbz2-dev zlib1g-dev libssl-dev \
     libreadline-dev libsqlite3-dev \
@@ -135,10 +133,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zlib1g libexpat1 libcrypt1 \
     libgdk-pixbuf2.0-0 libopenjp2-7 libtiff6 \
     gettext \
-    pkg-config \
-    libxmlsec1-dev \
-    libxmlsec1-openssl \
-    tk8.6 \
+    pkg-config locales \
+    liblcms2-2 \
+    tk8.6 libfreetype6 \
     libbz2-1.0 liblzma5 libreadline8 libsqlite3-0 \
     libffi8 libncursesw6 libtinfo6 libgdbm6 libuuid1 \
     libssl3 libnss3 \
@@ -147,6 +144,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libldap-2.5-0 libsasl2-2 \
     tini \
  && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+ENV LANG pt_BR.UTF-8
+ENV LANGUAGE pt_BR:pt
+ENV LC_ALL pt_BR.UTF-8
 
 # --- cria user senaite no runtime ---
 ARG SENAITE_UID=1000
