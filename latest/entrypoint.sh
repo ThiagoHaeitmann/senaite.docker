@@ -24,6 +24,8 @@ MODE="${1:-${MODE:-instance}}"
 : "${RUN_AS_USER:=senaite}"
 : "${RUN_AS_GROUP:=senaite}"
 
+export ZEO_ADDRESS="${ZEO_ADDRESS:-10.40.40.10:8100}"
+export HTTP_PORT="${HTTP_PORT:-8080}"
 
 APP_DIR="/app"
 TEMPLATE="${APP_DIR}/buildout.cfg.template"
@@ -61,17 +63,11 @@ fi
 
 run_as() {
   # Se não for root, roda normal
-  if [ "$(id -u)" -ne 0 ]; then
-    exec "$@"
-  fi
-
-  # Se for root e existir gosu, roda como senaite
+  if [ "$(id -u)" -ne 0 ]; then exec "$@"; fi
   if command -v gosu >/dev/null 2>&1; then
     exec gosu "${RUN_AS_USER}:${RUN_AS_GROUP}" "$@"
   fi
-
-  # fallback (menos elegante, mas funciona)
-  exec su -s /bin/bash -c "$(printf '%q ' "$@")" "${RUN_AS_USER}"
+ exec su -p -s /bin/bash -c "$(printf '%q ' "$@")" "${RUN_AS_USER}"
 }
 
 # Gera buildout.cfg sem ${ENV:...}
@@ -120,8 +116,10 @@ fi
 
 # Sobrescreve o endereço do ZEO no arquivo de configuração real do Zope antes de iniciar
 if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
-    log "Atualizando zope.conf com ZEO_ADDRESS: ${ZEO_ADDRESS}"
-    sed -i "s|address .*|address ${ZEO_ADDRESS}|g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    log "Configurando ZEO_ADDRESS: ${ZEO_ADDRESS}"
+    # Altera apenas o address que estiver próximo ao zeoclient
+    sed -i "s|address 127.0.0.1:8100|address ${ZEO_ADDRESS}|g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    sed -i "s|address 8100|address ${ZEO_ADDRESS}|g" "${APP_DIR}/parts/instance/etc/zope.conf"
 fi
 
 case "${MODE}" in
