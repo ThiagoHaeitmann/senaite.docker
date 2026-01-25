@@ -26,7 +26,6 @@ eggs =
     senaite.abx
     senaite.microorganism
     senaite.panic
-    plone.restapi
     plone.session
     Products.GenericSetup
     pas.plugins.headers
