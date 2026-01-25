@@ -6,9 +6,9 @@ MODE="${1:-${MODE:-instance}}"
 : "${SENAITE_VERSION:=2.6.0}"
 : "${HTTP_ADDRESS:=0.0.0.0}"
 : "${HTTP_PORT:=8080}"
-: "${ZEO_LISTEN:=10.40.40.10}"
+: "${ZEO_LISTEN:=0.0.0.0}"
 : "${ZEO_PORT:=8100}"
-: "${ZEO_ADDRESS:=10.40.40.10:${ZEO_PORT}}"
+: "${ZEO_ADDRESS:=127.0.0.1:${ZEO_PORT}}"
 : "${ADMIN_USER:=admin}"
 : "${ADMIN_PASS:=admin}"
 
@@ -118,15 +118,23 @@ fi
 if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
   log "Forçando ZEO_ADDRESS=${ZEO_ADDRESS} em zope.conf"
 
+  # Caso antigo (address)
   sed -i '/<zeoclient>/,/<\/zeoclient>/ {
     s/^[[:space:]]*address[[:space:]].*/  address '"${ZEO_ADDRESS}"'/
   }' "${APP_DIR}/parts/instance/etc/zope.conf"
 
-  if ! grep -q "address ${ZEO_ADDRESS}" "${APP_DIR}/parts/instance/etc/zope.conf"; then
-    log "FATAL: zope.conf não foi atualizado com ZEO_ADDRESS"
+  # Caso Plone 5 / wsgi (server)
+  sed -i '/<zeoclient>/,/<\/zeoclient>/ {
+    s/^[[:space:]]*server[[:space:]].*/    server '"${ZEO_ADDRESS}"'/
+  }' "${APP_DIR}/parts/instance/etc/zope.conf"
+
+  if ! grep -E "server ${ZEO_ADDRESS}|address ${ZEO_ADDRESS}" \
+       "${APP_DIR}/parts/instance/etc/zope.conf" >/dev/null; then
+    log "FATAL: zope.conf não contém ZEO_ADDRESS após patch"
     exit 1
   fi
 fi
+
 
 case "${MODE}" in
   zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
