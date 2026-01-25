@@ -116,10 +116,16 @@ fi
 
 # Sobrescreve o endereço do ZEO no arquivo de configuração real do Zope antes de iniciar
 if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
-    log "Configurando ZEO_ADDRESS: ${ZEO_ADDRESS}"
-    # Altera apenas o address que estiver próximo ao zeoclient
-    sed -i "s|address 127.0.0.1:8100|address ${ZEO_ADDRESS}|g" "${APP_DIR}/parts/instance/etc/zope.conf"
-    sed -i "s|address 8100|address ${ZEO_ADDRESS}|g" "${APP_DIR}/parts/instance/etc/zope.conf"
+  log "Forçando ZEO_ADDRESS=${ZEO_ADDRESS} em zope.conf"
+
+  sed -i '/<zeoclient>/,/<\/zeoclient>/ {
+    s/^[[:space:]]*address[[:space:]].*/  address '"${ZEO_ADDRESS}"'/
+  }' "${APP_DIR}/parts/instance/etc/zope.conf"
+
+  if ! grep -q "address ${ZEO_ADDRESS}" "${APP_DIR}/parts/instance/etc/zope.conf"; then
+    log "FATAL: zope.conf não foi atualizado com ZEO_ADDRESS"
+    exit 1
+  fi
 fi
 
 case "${MODE}" in
