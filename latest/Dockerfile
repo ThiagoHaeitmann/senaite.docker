@@ -133,14 +133,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zlib1g libexpat1 libcrypt1 \
     libgdk-pixbuf2.0-0 libopenjp2-7 libtiff6 \
     gettext \
-    pkg-config locales \
+    locales \
     liblcms2-2 \
     tk8.6 libfreetype6 \
     libbz2-1.0 liblzma5 libreadline8 libsqlite3-0 \
     libffi8 libncursesw6 libtinfo6 libgdbm6 libuuid1 \
     libssl3 libnss3 \
     libpcre3 libcairo2 libpango-1.0-0 libpangocairo-1.0-0 \
-    libxml2-dev libxml2 libxslt1.1 libjpeg62-turbo \
+    libxml2 libxslt1.1 libjpeg62-turbo \
     libldap-2.5-0 libsasl2-2 \
     tini \
  && rm -rf /var/lib/apt/lists/*
