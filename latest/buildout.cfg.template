@@ -130,7 +130,6 @@ plone.jsonapi.core = 0.7.0
 senaite.api = 1.2.3.post2
 traceback2 = 1.4.0
 xlrd = 2.0.2
-plone.restapi = 7.9.1
 BTree = 4.11.3
 collective.recipe.backup = 4.2.0
 pas.plugins.headers = 1.5.0
