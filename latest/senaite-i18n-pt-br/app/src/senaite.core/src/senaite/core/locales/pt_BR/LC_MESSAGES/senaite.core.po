@@ -7048,147 +7048,147 @@ msgstr "Selecione o método de preservação necessário para esta amostra"
 #. Default: "Select a sample to create a secondary Sample"
 #: bika/lims/content/analysisrequest.py:278
 msgid "description_sample_primary"
-msgstr "descrição_amostra_primária"
+msgstr "Selecione uma amostra para criar uma amostra secundária"
 
 #. Default: "Select an analysis profile for this sample"
 #: bika/lims/content/analysisrequest.py:404
 msgid "description_sample_profiles"
-msgstr "descrição_perfis_de_amostras"
+msgstr "Selecione um perfil de análise para esta amostra"
 
 #. Default: "Select an analysis specification that should be used in the sample publication report"
 #: bika/lims/content/analysisrequest.py:720
 msgid "description_sample_publicationspecification"
-msgstr "descrição_da_especificação_de_publicação_da_amostra"
+msgstr "Selecione uma especificação de análise que deve ser usada no relatório de publicação de amostra"
 
 #. Default: "Reference to retracted sample"
 #: bika/lims/content/analysisrequest.py:1292
 msgid "description_sample_retracted"
-msgstr "descrição_amostra_retraída"
+msgstr "Referência à amostra retratada"
 
 #. Default: "The condition of the sample"
 #: bika/lims/content/analysisrequest.py:883
 msgid "description_sample_samplecondition"
-msgstr "descrição_condição_da_amostra"
+msgstr "A condição da amostra"
 
 #. Default: "Location where the sample was taken"
 #: bika/lims/content/analysisrequest.py:753
 msgid "description_sample_samplepoint"
-msgstr "descrição_amostra_pontoamostra"
+msgstr "Local onde a amostra foi coletada"
 
 #. Default: "Select the sample type of this sample"
 #: bika/lims/content/analysisrequest.py:524
 msgid "description_sample_sampletype"
-msgstr "descrição_amostra_tipo_amostra"
+msgstr "Selecione o tipo de amostra desta amostra"
 
 #. Default: "The date when the sample will be taken"
 #: bika/lims/content/analysisrequest.py:499
 msgid "description_sample_samplingdate"
-msgstr "descrição_data_de_coleta_da_amostra"
+msgstr "A data em que a amostra será coletada"
 
 #. Default: "Deviation between the sample and how it was sampled"
 #: bika/lims/content/analysisrequest.py:855
 msgid "description_sample_samplingdeviation"
-msgstr "descrição_desvio_amostragem_da_amostra"
+msgstr "Desvio entre a amostra e a forma como foi amostrada"
 
 #. Default: "Select an analysis specification for this sample"
 #: bika/lims/content/analysisrequest.py:676
 msgid "description_sample_specification"
-msgstr "descrição_especificação_da_amostra"
+msgstr "Selecione uma especificação de análise para esta amostra"
 
 #. Default: "Location where the sample is kept"
 #: bika/lims/content/analysisrequest.py:777
 msgid "description_sample_storagelocation"
-msgstr "descrição_local_de_armazenamento_da_amostra"
+msgstr "Local onde a amostra é armazenada"
 
 #. Default: "The assigned batch sub group of this request"
 #: bika/lims/content/analysisrequest.py:349
 msgid "description_sample_subgroup"
-msgstr "descrição_subgrupo_de_amostra"
+msgstr "O subgrupo de lote atribuído desta solicitação"
 
 #. Default: "Select an analysis template for this sample"
 #: bika/lims/content/analysisrequest.py:376
 msgid "description_sample_template"
-msgstr "descrição_do_modelo_de_amostra"
+msgstr "Selecione um modelo de análise para esta amostra"
 
 #. Default: "Check this box if the samples taken at this point are 'composite' and put together from more than one sub sample, e.g. several surface samples from a dam mixed together to be a representative sample for the dam. The default, unchecked, indicates 'grab' samples"
 #: senaite/core/content/samplepoint.py:147
 msgid "description_samplepoint_composite"
-msgstr "descrição_pontoamostra_composto"
+msgstr "Marque esta caixa se as amostras coletadas neste ponto forem 'compostas' e formadas a partir de mais de uma subamostra, por exemplo, várias amostras de superfície de uma barragem misturadas para formar uma amostra representativa da barragem. O padrão, desmarcado, indica amostras 'pontuais'."
 
 #. Default: "The height or depth at which the sample has to be taken"
 #: senaite/core/content/samplepoint.py:91
 msgid "description_samplepoint_elevation"
-msgstr "descrição_elevação_ponto_de_amostra"
+msgstr "A altura ou profundidade em que a amostra deve ser coletada"
 
 #. Default: "The geographical point or area from which samples are taken for further analysis. It plays a pivotal role in research as it can significantly influence the results and conclusions drawn from the study."
 #: senaite/core/content/samplepoint.py:76
 msgid "description_samplepoint_location"
-msgstr "descrição_localização_ponto_de_amostra"
+msgstr "O ponto ou área geográfica de onde as amostras são coletadas para análises posteriores. Desempenha um papel fundamental na pesquisa, pois pode influenciar significativamente os resultados e as conclusões do estudo."
 
 #. Default: "The list of sample types that can be collected at this sample point. The field for the selection of a sample point in sample creation and edit forms will be filtered in accordance. Still, sample points that do not have any sample type assigned will always be available for selection, regardless of the type."
 #: bika/lims/content/samplepoint.py:98
 msgid "description_samplepoint_sampletypes"
-msgstr "descrição_pontoamostragem_tiposdeamostras"
+msgstr "A lista de tipos de amostra que podem ser coletados neste ponto de amostragem. O campo para a seleção de um ponto de amostragem nos formulários de criação e edição de amostras será filtrado de acordo. Ainda assim, os pontos de amostragem que não tiverem nenhum tipo de amostra atribuído estarão sempre disponíveis para seleção, independentemente do tipo."
 
 #. Default: "If a sample is taken periodically at this sample point, enter frequency here, e.g. weekly"
 #: senaite/core/content/samplepoint.py:103
 msgid "description_samplepoint_sampling_frequency"
-msgstr "descrição_frequência_de_amostragem_do_ponto_de_amostragem"
+msgstr "Se uma amostra for coletada periodicamente neste ponto de amostragem, insira a frequência aqui, por exemplo, semanalmente"
 
 #. Default: "The list of sample types that can be collected at this sample point. The field for the selection of a sample point in sample creation and edit forms will be filtered in accordance. Still, sample points that do not have any sample type assigned will always be available for selection, regardless of the type."
 #: senaite/core/content/samplepoint.py:126
 msgid "description_samplepoint_sampling_sample_types"
-msgstr "descrição_tipos_de_amostras_do_ponto_de_coleta"
+msgstr "A lista de tipos de amostra que podem ser coletados neste ponto de amostragem. O campo para a seleção de um ponto de amostragem nos formulários de criação e edição de amostras será filtrado de acordo. Ainda assim, os pontos de amostragem que não tiverem nenhum tipo de amostra atribuído estarão sempre disponíveis para seleção, independentemente do tipo."
 
 #. Default: "Automatically redirect the user to the partitions view when the sample is received"
 #: senaite/core/content/sampletemplate.py:258
 msgid "description_sampletemplate_auto_partition"
-msgstr "descrição_partição_automática_modelo_de_amostra"
+msgstr "Redirecionar automaticamente o usuário para a visualização de partições quando a amostra for recebida"
 
 #. Default: "Select if the sample is a mix of sub samples"
 #: senaite/core/content/sampletemplate.py:219
 msgid "description_sampletemplate_composite"
-msgstr "descrição_modeloamostracompósito"
+msgstr "Selecione se a amostra é uma mistura de subamostras"
 
 #. Default: "Each line defines a new partition identified by the 'Partition ID'"
 #: senaite/core/content/sampletemplate.py:245
 msgid "description_sampletemplate_partitions"
-msgstr "descrição_das_partições_do_modelo_de_amostra"
+msgstr "Cada linha define uma nova partição identificada pelo 'ID da partição"
 
 #. Default: "Select the sample point for this template"
 #: senaite/core/content/sampletemplate.py:187
 msgid "description_sampletemplate_samplepoint"
-msgstr "descrição_ponto_de_amostra_do_modelo_de_amostra"
+msgstr "Selecione o ponto de amostra para este modelo"
 
 #. Default: "Select the sample type for this template"
 #: senaite/core/content/sampletemplate.py:209
 msgid "description_sampletemplate_sampletype"
-msgstr "descrição_modelodeamostra_tipodeamostra"
+msgstr "Selecione o tipo de amostra para este modelo"
 
 #. Default: "Enable sampling workflow for the created samples"
 #: senaite/core/content/sampletemplate.py:228
 msgid "description_sampletemplate_sampling_required"
-msgstr "Descrição da amostra - Coleta obrigatória"
+msgstr "Ativar fluxo de trabalho de amostragem para as amostras criadas"
 
 #. Default: "Select the services for this template"
 #: senaite/core/content/sampletemplate.py:273
 msgid "description_sampletemplate_services"
-msgstr "descrição_modelodeamostras_serviços"
+msgstr "Selecione os serviços para este modelo"
 
 #. Default: "Defines the stickers to use for this sample type."
 #: senaite/core/content/sampletype.py:253
 msgid "description_sampletype_admitted_stickers_templates"
-msgstr "descrição_modelos_de_etiquetas_admitidas_para_tipo_de_amostra"
+msgstr "Define os adesivos a serem usados ​​para este tipo de amostra."
 
 #. Default: "The default container type. New sample partitions are automatically assigned a container of this type, unless it has been specified in more details per analysis service"
 #: senaite/core/content/sampletype.py:230
 msgid "description_sampletype_containertype"
-msgstr "descrição_tipoamostra_tipocontenedor"
+msgstr "O tipo de recipiente padrão. Novas partições de amostra recebem automaticamente um recipiente deste tipo, a menos que tenha sido especificado com mais detalhes por serviço de análise."
 
 #. Default: "The period for which unpreserved samples of this type can be kept before they expire and cannot be analysed any further"
 #: senaite/core/content/sampletype.py:146
 msgid "description_sampletype_duration_period"
-msgstr "descrição_duração_tipo_de_amostra_período"
+msgstr "O período durante o qual amostras não preservadas deste tipo podem ser mantidas antes de expirarem e não poderem mais ser analisadas."
 
 #. Default: "Samples of this type should be treated as hazardous"
 #: senaite/core/content/sampletype.py:159
@@ -7198,102 +7198,102 @@ msgstr "Descrição do tipo de amostra perigosa"
 #. Default: "The minimum sample volume required for analysis eg. '10 ml' or '1 kg'."
 #: senaite/core/content/sampletype.py:207
 msgid "description_sampletype_min_volume"
-msgstr "descrição_volume_mínimo_tipo_de_amostra"
+msgstr "O volume mínimo de amostra necessário para análise, por exemplo, '10 ml' ou '1 kg'."
 
 #. Default: "Please provide a unique profile keyword"
 #: senaite/core/content/sampletype.py:194
 msgid "description_sampletype_prefix"
-msgstr "prefixo_descrição_tipo_de_amostra"
+msgstr "Forneça uma palavra-chave de perfil exclusiva"
 
 #. Default: "Select the sample matrix for this sample type"
 #: senaite/core/content/sampletype.py:180
 msgid "description_sampletype_samplematrix"
-msgstr "descrição_tipo_de_amostra_matriz_da_amostra"
+msgstr "Selecione a matriz de amostra para este tipo de amostra"
 
 #. Default: "If this option is activated, the result capture date can be entered manually for analyses"
 #: senaite/core/content/senaitesetup.py:174
 msgid "description_senaitesetup_allow_manual_result_capture_date"
-msgstr "Permitir captura manual da data de resultado"
+msgstr "Se esta opção estiver ativada, a data de captura dos resultados poderá ser inserida manualmente para as análises."
 
 #. Default: "When selected, the responsible persons of all involved lab departments will receive publication emails."
 #: senaite/core/content/senaitesetup.py:101
 msgid "description_senaitesetup_always_cc_responsibles_in_report_emails"
-msgstr "description_senaitesetup_sempre_copiar_responsaveis_emails_de_relatorios"
+msgstr "Quando selecionado, os responsáveis ​​de todos os departamentos de laboratório envolvidos receberão e-mails com as publicações."
 
 #. Default: "Group analyses by category for samples"
 #: senaite/core/content/senaitesetup.py:153
 msgid "description_senaitesetup_categorizesampleanalyses"
-msgstr "description_senaitesetup_categorizesampleanalyses: descreve como as análises de amostras são categorizadas no sistema SENAITE."
+msgstr "Agrupar análises por categoria para amostras"
 
 #. Default: "Select this to make DateSampled field required on sample creation. This functionality only takes effect when 'Sampling workflow' is not active"
 #: senaite/core/content/senaitesetup.py:199
 msgid "description_senaitesetup_date_sampled_required"
-msgstr "descrição_data_de_coleta_necessária"
+msgstr "Selecione esta opção para tornar o campo Data Amostrada obrigatório na criação da amostra. Essa funcionalidade só entra em vigor quando o 'Fluxo de trabalho de amostragem' não estiver ativo."
 
 #. Default: "E-mail to use as the 'From' address for outgoing e-mails when publishing results reports. This address overrides the value set at portal's 'Mail settings'."
 #: senaite/core/content/senaitesetup.py:73
 msgid "description_senaitesetup_email_from_sample_publication"
-msgstr "Descrição do e-mail de publicação da amostra do SENAITE Setup"
+msgstr "E-mail a ser usado como endereço 'De' para e-mails enviados ao publicar relatórios de resultados. Este endereço substitui o valor definido nas 'Configurações de e-mail' do portal."
 
 #. Default: "Allow the user to directly enter results after sample creation, e.g. to enter field results immediately, or lab results, when the automatic sample reception is activated."
 #: senaite/core/content/senaitesetup.py:142
 msgid "description_senaitesetup_immediateresultsentry"
-msgstr "entrada_imediata_de_resultados_description_senaitesetup"
+msgstr "Permitir que o usuário insira os resultados diretamente após a criação da amostra, por exemplo, para inserir resultados de campo imediatamente ou resultados de laboratório, quando a recepção automática de amostras estiver ativada."
 
 #. Default: "Maximum number of samples that can be created in accordance with the value set for the field 'Number of samples' on the sample registration form"
 #: senaite/core/content/senaitesetup.py:186
 msgid "description_senaitesetup_maxnumberofsamplesadd"
-msgstr "descrição_senaitesetup_númeromáximodeamostrasadicionar"
+msgstr "Número máximo de amostras que podem ser criadas de acordo com o valor definido no campo 'Número de amostras' no formulário de registro de amostras"
 
 #. Default: "Set the email body text to be used by default when sending out result reports to the selected recipients. You can use reserved keywords: $client_name, $recipients, $lab_name, $lab_address"
 #: senaite/core/content/senaitesetup.py:87
 msgid "description_senaitesetup_publication_email_text"
-msgstr "Descrição do texto de e-mail da publicação do SENAITESetup"
+msgstr "Defina o texto do corpo do e-mail a ser usado por padrão ao enviar relatórios de resultados aos destinatários selecionados. Você pode usar palavras-chave reservadas: $client_name, $recipients, $lab_name, $lab_address"
 
 #. Default: "Analyses are required for sample registration"
 #: senaite/core/content/senaitesetup.py:163
 msgid "description_senaitesetup_sampleanalysesrequired"
-msgstr "descrição_da_configuração_senaitesetup_analisesdeamostrasobrigatórias"
+msgstr "Análises são necessárias para o registro da amostra"
 
 #. Default: "When selected, the laboratory name will be displayedin the login page, above the access credentials."
 #: senaite/core/content/senaitesetup.py:212
 msgid "description_senaitesetup_show_lab_name_in_login"
-msgstr "description_senaitesetup_mostrar_nome_do_laboratório_no_login"
+msgstr "Quando selecionado, o nome do laboratório será exibido na página de login, acima das credenciais de acesso."
 
 #. Default: "The landing page is shown for non-authenticated users if the Dashboard is not selected as the default front page. If no landing page is selected, the default frontpage is displayed."
 #: bika/lims/content/bikasetup.py:526
 msgid "description_setup_landingpage"
-msgstr "descrição_configuração_página_de_destino"
+msgstr "A página inicial é exibida para usuários não autenticados se o Painel de Controle não estiver selecionado como página inicial padrão. Se nenhuma página inicial for selecionada, a página inicial padrão será exibida."
 
 #. Default: "Code for the location"
 #: senaite/core/content/storagelocation.py:106
 msgid "description_storagelocation_location_code"
-msgstr "descrição_código_localização_armazenamento"
+msgstr "Codifique a Localização"
 
 #. Default: "Description of the location"
 #: senaite/core/content/storagelocation.py:118
 msgid "description_storagelocation_location_description"
-msgstr "descrição_localdearmazenamento_descrição_localização"
+msgstr "Descriçao da Localização"
 
 #. Default: "Title of location"
 #: senaite/core/content/storagelocation.py:94
 msgid "description_storagelocation_location_title"
-msgstr "descrição_localização_armazenamento_título"
+msgstr "Título da Localização"
 
 #. Default: "Type of location"
 #: senaite/core/content/storagelocation.py:130
 msgid "description_storagelocation_location_type"
-msgstr "descrição_tipo_localização_do_local_de_armazenamento"
+msgstr "Tipo de localização"
 
 #. Default: "Code the the shelf"
 #: senaite/core/content/storagelocation.py:154
 msgid "description_storagelocation_shelf_code"
-msgstr "descrição_do_código_da_prateleira_da_localização_de_armazenamento"
+msgstr "Codifique a prateleira"
 
 #. Default: "Description of the shelf"
 #: senaite/core/content/storagelocation.py:166
 msgid "description_storagelocation_shelf_description"
-msgstr "descrição_localdea_armazenamento_prateleira_descrição"
+msgstr "Descrição da prateleira"
 
 #. Default: "Title of the shelf"
 #: senaite/core/content/storagelocation.py:142
@@ -7303,127 +7303,127 @@ msgstr "Título da prateleira da localização de armazenamento"
 #. Default: "Code for the site"
 #: senaite/core/content/storagelocation.py:70
 msgid "description_storagelocation_site_code"
-msgstr "descrição_código_do_sítio_de_localização_de_armazenamento"
+msgstr "Código para o site"
 
 #. Default: "Description of the site"
 #: senaite/core/content/storagelocation.py:82
 msgid "description_storagelocation_site_description"
-msgstr "descrição_localdarmazenamento_descriçãodosite"
+msgstr "Descrição do Site"
 
 #. Default: "Title of the site"
 #: senaite/core/content/storagelocation.py:58
 msgid "description_storagelocation_site_title"
-msgstr "Descrição do local de armazenamento (site)"
+msgstr "Título do Site"
 
 #. Default: "Float value from 0.0 - 1000.0 indicating the sort order. Duplicate values are ordered alphabetically."
 #: senaite/core/content/subgroup.py:60
 msgid "description_subgroup_sort_key"
-msgstr "chave_de_ordenacao_do_subgrupo_de_descricao"
+msgstr "Valor decimal de 0,0 a 1000,0 que indica a ordem de classificação. Valores duplicados são ordenados alfabeticamente."
 
 #. Default: "International Bank Account Number"
 #: senaite/core/content/supplier.py:100
 msgid "description_supplier_iban"
-msgstr "descrição_fornecedor_iban"
+msgstr "Número de conta bancária"
 
 #. Default: "National Identification Bank Account Number"
 #: senaite/core/content/supplier.py:88
 msgid "description_supplier_nib"
-msgstr "descrição_fornecedor_nib"
+msgstr "Número da Conta Bancária de Identificação Nacional"
 
 #. Default: "User is linked to a contact. Please change your settings in the contact profile."
 #: senaite/core/browser/user/userdatapanel.py:81
 msgid "description_user_contact"
-msgstr "descrição_contato_usuario"
+msgstr "O usuário está vinculado a um contato. Altere suas configurações no perfil do contato."
 
 #. Default: "Select the preferred instrument"
 #: senaite/core/content/worksheettemplate.py:266
 msgid "description_worksheettemplate_instrument"
-msgstr "Descrição do modelo de planilha do instrumento"
+msgstr "Selecione a planilha preferida"
 
 #. Default: "Restrict the available analysis services and instruments to those with the selected method.<br/>In order to apply this change to the services list, you should save the change first."
 #: senaite/core/content/worksheettemplate.py:240
 msgid "description_worksheettemplate_restrict_to_method"
-msgstr "Descrição_worksheettemplate_restringir_ao_método"
+msgstr "Restringe os serviços e instrumentos de análise disponíveis àqueles com o método selecionado.<br/>Para aplicar essa alteração à lista de serviços, você deve salvá-la primeiro."
 
 #. Default: "Select which Analyses should be included on the Worksheet"
 #: senaite/core/content/worksheettemplate.py:350
 msgid "description_worksheettemplate_services"
-msgstr "descrição_modelodeplanilhas_serviços"
+msgstr "Selecione quais análises devem ser incluídas na planilha"
 
 #. Default: "Specify the size of the Worksheet, e.g. corresponding to a specific instrument's tray size. Then select an Analysis 'type' per Worksheet position. Where QC samples are selected, also select which Reference Sample should be used. If a duplicate analysis is selected, indicate which sample position it should be a duplicate of"
 #: senaite/core/content/worksheettemplate.py:315
 msgid "description_worksheettemplate_template_layout"
-msgstr "descrição_layout_do_modelo_da_folha_de_trabalho"
+msgstr "Especifique o tamanho da planilha, por exemplo, correspondente ao tamanho da bandeja de um instrumento específico. Em seguida, selecione um 'tipo' de análise para cada posição da planilha. Quando amostras de controle de qualidade forem selecionadas, selecione também qual amostra de referência deve ser usada. Se uma análise duplicada for selecionada, indique de qual posição da amostra ela deve ser duplicada."
 
 #. Default: "Not found Analysis position for duplicate."
 #: senaite/core/browser/form/adapters/worksheettemplate.py:115
 msgid "duplicate_reference_not_found"
-msgstr "referência_duplicada_não_encontrada"
+msgstr "Posição de análise não encontrada para duplicado."
 
 #. Default: "Duplicate in position ${dup} references this, so it must be a routine analysis."
 #: senaite/core/browser/form/adapters/worksheettemplate.py:165
 msgid "duplicate_reference_this_position"
-msgstr "duplicar_referencia_esta_posicao"
+msgstr "Duplicado na posição ${dup} faz referência a isto, portanto deve ser uma análise de rotina."
 
 #. Default: "Contents of the file"
 #: senaite/core/browser/controlpanel/dynamicanalysisspecs/dynamicanalysisspec.py:44
 msgid "dynamic_analysisspec_description"
-msgstr "descrição_da_especificaçãodeanálise_dinâmica"
+msgstr "Conteúdo do arquivo"
 
 #. Default: "The number of samples to create for the record 'Sample ${record_index}' (${num_samples}) is above ${max_num_samples}"
 #: bika/lims/browser/analysisrequest/add2.py:1844
 msgid "error_analyssirequest_numsamples_above_max"
-msgstr "erro_analiserequisição_númerodeamostras_acima_do_máximo"
+msgstr "O número de amostras a serem criadas para o registro 'Amostra ${record_index}' (${num_samples}) é superior a ${max_num_samples}"
 
 #. Default: "${name} is after ${max_date}, please correct."
 #: senaite/core/browser/fields/datetime.py:120
 msgid "error_datetime_after_max"
-msgstr "Erro: data e hora posterior ao máximo permitido"
+msgstr "${name} é depois de ${max_date}, por favor, corrija!"
 
 #. Default: "${name} is before ${min_date}, please correct."
 #: senaite/core/browser/fields/datetime.py:94
 msgid "error_datetime_before_min"
-msgstr "Erro: a data e hora está antes do mínimo permitido"
+msgstr "${name} é antes de ${min_date}, por favor, corrija!"
 
 #. Default: "Location"
 #: senaite/core/content/samplepoint.py:48
 msgid "fieldset_samplepoint_location"
-msgstr "grupo_de_campos_localização_do_ponto_de_amostragem"
+msgstr "Localização"
 
 #. Default: "Analyses"
 #: senaite/core/content/sampletemplate.py:152
 msgid "fieldset_sampletemplate_analyses"
-msgstr "conjunto_de_campos_modelo_de_amostra_análises"
+msgstr "Análises"
 
 #. Default: "Partitions"
 #: senaite/core/content/sampletemplate.py:141
 msgid "fieldset_sampletemplate_partitions"
-msgstr "conjunto_de_campos_partições_do_modelo_de_amostra"
+msgstr "Partições"
 
 #. Default: "No Instrument"
 #: senaite/core/browser/form/adapters/worksheettemplate.py:228
 msgid "form_widget_instrument_title"
-msgstr "título_do_widget_do_instrumento"
+msgstr "Sem instrumento"
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
 #: senaite/core/browser/user/passwordpanel.py:44
 msgid "help_confirm_password"
-msgstr "ajuda_confirmar_senha"
+msgstr "Insira novamente a senha. Tenha certeza que são identicos"
 
 #. Default: "Enter full name, e.g. John Smith."
 #: senaite/core/browser/user/userdatapanel.py:64
 msgid "help_full_name_creation"
-msgstr "ajuda_criação_nome_completo"
+msgstr "Insira seu Nome Completo. Exemplo: John Smith"
 
 #. Default: "Enter your new password."
 #: senaite/core/browser/user/passwordpanel.py:37
 msgid "help_new_password"
-msgstr "Ajuda_nova_senha"
+msgstr "Insira sua nova senha"
 
 #. Default: "Your time zone"
 #: senaite/core/browser/user/personalpreferences.py:39
 msgid "help_timezone"
-msgstr "ajuda_fuso_horário"
+msgstr "Seu Fuso horário"
 
 #: bika/lims/controlpanel/bika_analysisservices.py:285
 msgid "hours"
@@ -7436,17 +7436,17 @@ msgstr "em"
 #. Default: "Labels"
 #: senaite/core/behaviors/label.py:117
 msgid "label_Labels"
-msgstr "rótulos_Rótulos"
+msgstr "Rótulos"
 
 #. Default: "Add to the following groups:"
 #: bika/lims/browser/templates/login_details.pt:276
 msgid "label_add_to_groups"
-msgstr "adiciona_rótulo_para_grupos"
+msgstr "Adicionar para o(s) seguinte(s) grupo(s):"
 
 #. Default: "Analysis Category"
 #: bika/lims/content/abstractbaseanalysis.py:511
 msgid "label_analysis_category"
-msgstr "categoria_de_análise"
+msgstr "Categoria de Análises"
 
 #. Default: "Department"
 #: bika/lims/content/abstractbaseanalysis.py:569
