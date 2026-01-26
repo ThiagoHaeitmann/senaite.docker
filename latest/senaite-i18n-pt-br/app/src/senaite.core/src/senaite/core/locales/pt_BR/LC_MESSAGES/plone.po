@@ -307,7 +307,7 @@ msgstr "Não há nenhum grupo ou usuário associado a este grupo."
 #. Default: "Use the form below to define, change or remove content rules. Rules will automatically perform actions on content when certain triggers take place. After defining rules, you may want to go to a folder to assign them, using the \"rules\" item in the actions menu."
 #: senaite/core/browser/contentrules/templates/controlpanel.pt:24
 msgid "description-contentrules-controlpanel"
-msgstr "Use o formulário abaixo para definir, alterar ou remover regras de conteúdo. As regras executarão ações automaticamente no conteúdo quando determinados gatilhos forem acionados. Depois de definir as regras, você pode acessar uma pasta para atribuí-las, usando o item "regras" no menu de ações."
+msgstr "Use o formulário abaixo para definir, alterar ou remover regras de conteúdo. As regras executarão ações automaticamente no conteúdo quando determinados gatilhos forem acionados. Depois de definir as regras, você pode acessar uma pasta para atribuí-las, usando o item 'regras' no menu de ações."
 
 #. Default: "The languages in which the site should be translatable."
 #: senaite/core/profiles/default/registry.xml
@@ -337,7 +337,7 @@ msgstr "Necessário para que o seletor de idioma seja exibido."
 #. Default: "You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, stop the server, set 'debug-mode=off' in your buildout.cfg, re-run bin/buildout and then restart the server process."
 #: senaite/core/browser/controlpanel/templates/overview.pt:167
 msgid "description_debug_mode"
-msgstr "Você está executando no "modo de depuração". Este modo destina-se a sites que estão em desenvolvimento. Ele permite que muitas alterações de configuração sejam imediatamente visíveis, mas fará com que seu site funcione mais lentamente. Para desativar o modo de depuração, pare o servidor, defina 'debug-mode=off' em seu buildout.cfg, execute bin/buildout novamente e reinicie o processo do servidor."
+msgstr "Você está executando no 'modo de depuração'. Este modo destina-se a sites que estão em desenvolvimento. Ele permite que muitas alterações de configuração sejam imediatamente visíveis, mas fará com que seu site funcione mais lentamente. Para desativar o modo de depuração, pare o servidor, defina 'debug-mode=off' em seu buildout.cfg, execute bin/buildout novamente e reinicie o processo do servidor."
 
 #. Default: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
 #: senaite/core/browser/usergroup/templates/usergroups_groupmembership.pt:78
@@ -389,7 +389,7 @@ msgstr "Você está executando no modo de produção". Este é o modo de operaç
 #. Default: "Grant access for users or groups <div class=\"font-italic\"> Access should be granted only to the client group below. <br /> Client contacts which are linked to a user account will be automatically added to this group and have therefore the same roles granted immediately. <br /> Other granted access to users or groups will only affect new created contents. </div>"
 #: senaite/core/browser/sharing/templates/client_sharing.pt:43
 msgid "description_sharing_control"
-msgstr "Conceder acesso para usuários ou grupos <div class="font-italic"> O acesso deve ser concedido apenas ao grupo de clientes abaixo. <br /> Os contatos do cliente que estiverem vinculados a uma conta de usuário serão adicionados automaticamente a este grupo e, portanto, terão as mesmas funções concedidas imediatamente. <br /> Outros acessos concedidos a usuários ou grupos afetarão apenas os novos conteúdos criados. </div>"
+msgstr "Conceder acesso para usuários ou grupos <div class=\"font-italic\"> O acesso deve ser concedido apenas ao grupo de clientes abaixo. <br /> Os contatos do cliente que estiverem vinculados a uma conta de usuário serão adicionados automaticamente a este grupo e, portanto, terão as mesmas funções concedidas imediatamente. <br /> Outros acessos concedidos a usuários ou grupos afetarão apenas os novos conteúdos criados. </div>"
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
 #: senaite/core/browser/login/templates/login.pt:20
