@@ -7631,27 +7631,27 @@ msgstr "Serviços Dependentes do Cálculo"
 #. Default: "Department"
 #: bika/lims/content/analysiscategory.py:59
 msgid "label_category_department"
-msgstr "categoria_etiqueta_departamento"
+msgstr "Departamento"
 
 #. Default: "Default categories"
 #: bika/lims/content/client.py:108
 msgid "label_client_defaultcategories"
-msgstr "categoria_padrão_cliente"
+msgstr "Categorias Padrão"
 
 #. Default: "Restrict categories"
 #: bika/lims/content/client.py:132
 msgid "label_client_restrictcategories"
-msgstr "label_cliente_restringircategorias"
+msgstr "Categorias Restritas"
 
 #. Default: "Confirm password"
 #: senaite/core/browser/user/passwordpanel.py:43
 msgid "label_confirm_password"
-msgstr "confirmar_senha"
+msgstr "Confirmar Senha"
 
 #. Default: "Contacts to CC"
 #: bika/lims/content/contact.py:55
 msgid "label_contact_cccontact"
-msgstr "rótulo_contato_cccontact"
+msgstr "Contatos para CC"
 
 #. Default: "Preservation"
 #: bika/lims/content/container.py:97
@@ -7661,7 +7661,7 @@ msgstr "Preservação do recipiente"
 #. Default: "Container Type"
 #: bika/lims/content/container.py:54
 msgid "label_container_type"
-msgstr "rótulo_tipo_de_container"
+msgstr "Tipo de Container"
 
 #. Default: "Manager"
 #: senaite/core/content/department.py:101
@@ -7671,12 +7671,12 @@ msgstr "Gerente do Departamento"
 #. Default: "Bank Details"
 #: senaite/core/content/supplier.py:72
 msgid "label_fieldset_supplier_bank_details"
-msgstr "rótulo_conjunto_de_campos_detalhes_bancários_do_fornecedor"
+msgstr "Detalhes do Banco"
 
 #. Default: "Analyses"
 #: senaite/core/content/worksheettemplate.py:332
 msgid "label_fieldset_worksheettemplate_analyses"
-msgstr "Rótulo_do_grupo_de_campo_modelo_de_planilha_análises"
+msgstr "Análises"
 
 #. Default: "Layout"
 #: senaite/core/content/worksheettemplate.py:275
@@ -7686,12 +7686,12 @@ msgstr "Configuração do modelo da planilha"
 #. Default: "Location"
 #: bika/lims/content/instrument.py:319
 msgid "label_instrument_instrumentlocation"
-msgstr "Etiqueta_LocalizaçãoDoInstrumento"
+msgstr "Localização"
 
 #. Default: "Instrument type"
 #: bika/lims/content/instrument.py:79
 msgid "label_instrument_instrumenttype"
-msgstr "rótulo_instrumento_tipo_instrumento"
+msgstr "Tipo de Instrumento"
 
 #. Default: "Manufacturer"
 #: bika/lims/content/instrument.py:99
@@ -7701,12 +7701,12 @@ msgstr "Fabricante do instrumento"
 #. Default: "Supported methods"
 #: bika/lims/content/instrument.py:172
 msgid "label_instrument_methods"
-msgstr "rótulo_métodos_instrumento"
+msgstr "Métodos Suportados"
 
 #. Default: "Result files folders"
 #: bika/lims/content/instrument.py:265
 msgid "label_instrument_result_file_folder"
-msgstr "Etiqueta_da_pasta_de_arquivos_de_resultados_do_instrumento"
+msgstr "Pasta de Arquivos de Resultados"
 
 #. Default: "Supplier"
 #: bika/lims/content/instrument.py:119
@@ -7726,12 +7726,12 @@ msgstr "Preparador da Certificação do Instrumento"
 #. Default: "Approved by"
 #: bika/lims/content/instrumentcertification.py:170
 msgid "label_instrumentcertification_validator"
-msgstr "validador_de_certificação_do_instrumento"
+msgstr "Aprovado por"
 
 #. Default: "Performed by"
 #: bika/lims/content/instrumentvalidation.py:109
 msgid "label_instrumentvalidation_worker"
-msgstr "validacao_do_instrumento_trabalhador"
+msgstr "Realizado por"
 
 #. Default: "Default Department"
 #: bika/lims/content/labcontact.py:86
@@ -7751,72 +7751,72 @@ msgstr "Supervisor do Laboratório"
 #. Default: "New password"
 #: senaite/core/browser/user/passwordpanel.py:36
 msgid "label_new_password"
-msgstr "nova_senha"
+msgstr "Nova Senha"
 
 #. Default: "SENAITE is powered by"
 #: senaite/core/browser/viewlets/templates/colophon.pt:11
 msgid "label_powered_by"
-msgstr "rótulo_alimentado_por"
+msgstr "SENAITE Powered by"
 
 #. Default: "Plone & Python"
 #: senaite/core/browser/viewlets/templates/colophon.pt:12
 msgid "label_powered_by_plone"
-msgstr "rótulo_alimentado_por_plone"
+msgstr "Plone 5.2"
 
 #. Default: "Blank"
 #: bika/lims/content/referencedefinition.py:68
 msgid "label_referencedefinition_blank"
-msgstr "definição_de_referência_em_branco"
+msgstr "Branco"
 
 #. Default: "Hazardous"
 #: bika/lims/content/referencedefinition.py:82
 msgid "label_referencedefinition_hazardous"
-msgstr "Label_DefiniçãoDeReferência_Perigoso"
+msgstr "Perigoso"
 
 #. Default: "Reference Values"
 #: bika/lims/content/referencedefinition.py:46
 msgid "label_referencedefinition_referencevalues"
-msgstr "Valores de referência da definição de referência"
+msgstr "Valores de referência"
 
 #. Default: "Manufacturer"
 #: bika/lims/content/referencesample.py:94
 msgid "label_referencesample_manufacturer"
-msgstr "rótulo_amostrapadrao_fabricante"
+msgstr "Fabricante"
 
 #. Default: "Reference Definition"
 #: bika/lims/content/referencesample.py:57
 msgid "label_referencesample_referencedefinition"
-msgstr "rotulo_amostra_referencia_definicao_referencia"
+msgstr "Definição de referência"
 
 #. Default: "Catalog mappings"
 #: senaite/core/registry/schema.py:339
 msgid "label_registry_catalog_mappings"
-msgstr "mapeamentos_do_registro_de_rótulos_do_catálogo"
+msgstr "Mapeamento de Catálogo"
 
 #. Default: "Portal type"
 #: senaite/core/registry/schema.py:351
 msgid "label_registry_catalog_mappings_key"
-msgstr "mapa_de_chaves_do_catálogo_de_registros_de_rótulos"
+msgstr "Tipo de Portal"
 
 #. Default: "Catalogs"
 #: senaite/core/registry/schema.py:358
 msgid "label_registry_catalog_mappings_value"
-msgstr "mapeamentos_de_valores_do_catálogo_de_registro_de_rótulos"
+msgstr "Catálogos"
 
 #. Default: "Catalogs"
 #: senaite/core/registry/schema.py:330
 msgid "label_registry_catalogs_fieldset"
-msgstr "conjunto_de_campos_de_catálogos_do_registrador_de_etiquetas"
+msgstr "Catálogos"
 
 #. Default: "Client landing page"
 #: senaite/core/registry/schema.py:62
 msgid "label_registry_client_landing_page"
-msgstr "rótulo_página_inicial_cliente_registro"
+msgstr "Landpage do Cliente"
 
 #. Default: "Portal types to skip on content structure export"
 #: senaite/core/registry/schema.py:299
 msgid "label_registry_generic_setup_skip_export_types"
-msgstr "pular_exportação_de_tipos_no_registro_genérico"
+msgstr "Tipos de portal para serem puladas a exportação de conteúdo"
 
 #. Default: "Allow multi paste"
 #: senaite/core/registry/schema.py:384
@@ -7826,12 +7826,12 @@ msgstr "Permitir múltiplas colagens em campos ao adicionar amostra no registro"
 #. Default: "Samples"
 #: senaite/core/registry/schema.py:374
 msgid "label_registry_samples"
-msgstr "rótulo_registro_de_amostras"
+msgstr "Amostras"
 
 #. Default: "Batch"
 #: bika/lims/content/analysisrequest.py:311
 msgid "label_sample_batch"
-msgstr "rótulo_lote_de_amostras"
+msgstr "Lote"
 
 #. Default: "CC Contact"
 #: bika/lims/content/analysisrequest.py:186
@@ -7841,22 +7841,22 @@ msgstr "Rótulo do contato CC da amostra"
 #. Default: "Client"
 #: bika/lims/content/analysisrequest.py:238
 msgid "label_sample_client"
-msgstr "rótulo_amostra_cliente"
+msgstr "Cliente"
 
 #. Default: "Contact"
 #: bika/lims/content/analysisrequest.py:151
 msgid "label_sample_contact"
-msgstr "rótulo_contato_da_amostra"
+msgstr "Contato"
 
 #. Default: "Container"
 #: bika/lims/content/analysisrequest.py:549
 msgid "label_sample_container"
-msgstr "rótulo_do_conteiner_de_amostra"
+msgstr "Container"
 
 #. Default: "Date Sampled"
 #: bika/lims/content/analysisrequest.py:432
 msgid "label_sample_datesampled"
-msgstr "Data da Amostra"
+msgstr "Data da Amostragem"
 
 #. Default: "Detached from sample"
 #: bika/lims/content/analysisrequest.py:1261
@@ -7866,7 +7866,7 @@ msgstr "rótulo_${sample}_desvinculado_de"
 #. Default: "Invoice"
 #: bika/lims/content/analysisrequest.py:1029
 msgid "label_sample_invoice"
-msgstr "Etiqueta da fatura da amostra"
+msgstr "Fatura da amostra"
 
 #. Default: "Parent sample"
 #: bika/lims/content/analysisrequest.py:1235
@@ -7881,77 +7881,77 @@ msgstr "Etiqueta de preservação da amostra"
 #. Default: "Primary Sample"
 #: bika/lims/content/analysisrequest.py:275
 msgid "label_sample_primary"
-msgstr "rótulo_amostra_primária"
+msgstr "Amostra Primária"
 
 #. Default: "Analysis Profiles"
 #: bika/lims/content/analysisrequest.py:401
 msgid "label_sample_profiles"
-msgstr "perfil_de_amostras"
+msgstr "Perfil de Análise"
 
 #. Default: "Publication Specification"
 #: bika/lims/content/analysisrequest.py:717
 msgid "label_sample_publicationspecification"
-msgstr "rótulo_especificaçãopublicaçãoamostra"
+msgstr "Especificação da Publicação"
 
 #. Default: "Retest from sample"
 #: bika/lims/content/analysisrequest.py:1289
 msgid "label_sample_retracted"
-msgstr "Etiqueta de amostra retirada"
+msgstr "Reteste da amostra"
 
 #. Default: "Sample Condition"
 #: bika/lims/content/analysisrequest.py:880
 msgid "label_sample_samplecondition"
-msgstr "Etiqueta de condição da amostra"
+msgstr "Condições da amostra"
 
 #. Default: "Sample Point"
 #: bika/lims/content/analysisrequest.py:750
 msgid "label_sample_samplepoint"
-msgstr "rótulo_da_amostra_ponto_de_amostragem"
+msgstr "Ponto da Amostra"
 
 #. Default: "Sample Type"
 #: bika/lims/content/analysisrequest.py:521
 msgid "label_sample_sampletype"
-msgstr "rótulo_amostra_tipo_de_amostra"
+msgstr "Tipo de Amostra"
 
 #. Default: "Expected Sampling Date"
 #: bika/lims/content/analysisrequest.py:495
 msgid "label_sample_samplingdate"
-msgstr "Etiqueta de Data de Amostragem"
+msgstr "Data Prevista de Amostragem"
 
 #. Default: "Sampling Deviation"
 #: bika/lims/content/analysisrequest.py:852
 msgid "label_sample_samplingdeviation"
-msgstr "Desvio na Amostragem da Amostra"
+msgstr "Desvio na Amostragem"
 
 #. Default: "Analysis Specification"
 #: bika/lims/content/analysisrequest.py:673
 msgid "label_sample_specification"
-msgstr "rótulo_especificação_da_amostra"
+msgstr "Especificação da Análise"
 
 #. Default: "Storage Location"
 #: bika/lims/content/analysisrequest.py:774
 msgid "label_sample_storagelocation"
-msgstr "Etiqueta de Localização de Armazenamento da Amostra"
+msgstr "Localização de Armazenamento"
 
 #. Default: "Batch Sub-group"
 #: bika/lims/content/analysisrequest.py:346
 msgid "label_sample_subgroup"
-msgstr "rótulo_subgrupo_de_amostra"
+msgstr "Sub-grupo do Lote"
 
 #. Default: "Sample Template"
 #: bika/lims/content/analysisrequest.py:373
 msgid "label_sample_template"
-msgstr "modelo_de_etiqueta_de_amostra"
+msgstr "Modelo de Amostra"
 
 #. Default: "Sample Types"
 #: bika/lims/content/samplepoint.py:95
 msgid "label_samplepoint_sampletypes"
-msgstr "rótulo_tipos_de_amostras_ponto_de_amostragem"
+msgstr "Tipos de Amostra"
 
 #. Default: "Category"
 #: senaite/core/content/samplepreservation.py:55
 msgid "label_samplepreservation_category"
-msgstr "categoria_de_preservação_da_amostra"
+msgstr "Categoria"
 
 #. Default: "Container"
 #: senaite/core/content/sampletemplate.py:81
@@ -7961,32 +7961,32 @@ msgstr "rótulo_contêiner_partição_modelo_de_amostra"
 #. Default: "Partition ID"
 #: senaite/core/content/sampletemplate.py:60
 msgid "label_sampletemplate_partition_part_id"
-msgstr "rótulo_id_partição_modelo_amostra"
+msgstr "ID da Partição"
 
 #. Default: "Preservation"
 #: senaite/core/content/sampletemplate.py:103
 msgid "label_sampletemplate_partition_preservation"
-msgstr "Preservação do modelo de partição de amostra"
+msgstr "Preservação"
 
 #. Default: "Sample Type"
 #: senaite/core/content/sampletemplate.py:125
 msgid "label_sampletemplate_partition_sampletype"
-msgstr "rótulo_modeloamostrapartição_tipoamostra"
+msgstr "Tipo de Amostra"
 
 #. Default: "Partitions"
 #: senaite/core/content/sampletemplate.py:243
 msgid "label_sampletemplate_partitions"
-msgstr "Rótulo_partições_do_modelo_de_amostra"
+msgstr "Partições"
 
 #. Default: "Sample Point"
 #: senaite/core/content/sampletemplate.py:185
 msgid "label_sampletemplate_samplepoint"
-msgstr "Etiqueta do ponto de amostra do modelo"
+msgstr "Ponto de Amostra"
 
 #. Default: "Sample Type"
 #: senaite/core/content/sampletemplate.py:207
 msgid "label_sampletemplate_sampletype"
-msgstr "rótulo_modelo_de_amostra_tipo_de_amostra"
+msgstr "Tipo de Amostra"
 
 #. Default: "Admitted stickers for the sample type"
 #: senaite/core/content/sampletype.py:91
@@ -8001,32 +8001,32 @@ msgstr "rótulos_modelos_de_adesivos_de_tipo_de_amostra_admitidos"
 #. Default: "Default Container Type"
 #: senaite/core/content/sampletype.py:226
 msgid "label_sampletype_containertype"
-msgstr "Tipo do recipiente do tipo de amostra"
+msgstr "Tipo do recipiente padrão"
 
 #. Default: "Description"
 #: senaite/core/content/sampletype.py:133
 msgid "label_sampletype_description"
-msgstr "descrição_do_tipo_de_amostra"
+msgstr "Descrição"
 
 #. Default: "Default large sticker"
 #: senaite/core/content/sampletype.py:111
 msgid "label_sampletype_large_default"
-msgstr "Rótulo de tipo de amostra grande padrão"
+msgstr "Etiqueta Larga Padrão"
 
 #. Default: "Sample Matrix"
 #: senaite/core/content/sampletype.py:176
 msgid "label_sampletype_samplematrix"
-msgstr "rótulo_tipoamostra_matrizamostra"
+msgstr "Matrix da amostra"
 
 #. Default: "Default small sticker"
 #: senaite/core/content/sampletype.py:102
 msgid "label_sampletype_small_default"
-msgstr "rótulo_tipo_de_amostra_pequeno_padrão"
+msgstr "Etiqueta Pequena Padrão"
 
 #. Default: "Name"
 #: senaite/core/content/sampletype.py:125
 msgid "label_sampletype_title"
-msgstr "Título do tipo de amostra"
+msgstr "Nome"
 
 #. Default: "Save"
 #: senaite/core/browser/viewlets/templates/sampleheader.pt:170
@@ -8036,7 +8036,7 @@ msgstr "Salvar"
 #. Default: "SENAITE LIMS"
 #: senaite/core/browser/viewlets/templates/footer.pt:14
 msgid "label_senaite"
-msgstr "rótulo_senaite"
+msgstr "SENAITE LIMS"
 
 #. Default: "Analyses"
 #: senaite/core/content/senaitesetup.py:233
@@ -8046,12 +8046,12 @@ msgstr "Análises"
 #. Default: "Samples"
 #: senaite/core/content/senaitesetup.py:225
 msgid "label_senaitesetup_fieldset_samples"
-msgstr "fieldset_de_amostras_do_senaitesetup"
+msgstr "Amostras"
 
 #. Default: "Maximum value for 'Number of samples' field on registration"
 #: senaite/core/content/senaitesetup.py:181
 msgid "label_senaitesetup_maxnumberofsamplesadd"
-msgstr "Adicionar número máximo de amostras"
+msgstr "Adicionar número máximo de amostras no campo de Registro"
 
 #. Default: "Landing Page"
 #: bika/lims/content/bikasetup.py:523
@@ -8061,53 +8061,53 @@ msgstr "Configurar página inicial"
 #. Default: "Item"
 #: senaite/core/browser/controlpanel/templates/setupview.pt:78
 msgid "label_setupview_item"
-msgstr "configurar_visualização_item"
+msgstr "Item"
 
 #. Default: "Items"
 #: senaite/core/browser/controlpanel/templates/setupview.pt:81
 msgid "label_setupview_items"
-msgstr "itens_de_configuração_da_visualização"
+msgstr "Items"
 
 #. Default: "Out of range comment"
 #: bika/lims/browser/fields/resultrangefield.py:42
 #: bika/lims/browser/widgets/analysisspecificationwidget.py:130
 msgid "label_specs_rangecomment"
-msgstr "Comentário do intervalo das especificações"
+msgstr "Fora da Faixa Comentada"
 
 #. Default: "Time zone"
 #: senaite/core/browser/user/personalpreferences.py:38
 msgid "label_timezone"
-msgstr "rótulo_fuso_horário"
+msgstr "Fuso horário"
 
 #. Default: "Title"
 #: senaite/core/browser/install/templates/senaite-addsite.pt:62
 msgid "label_title"
-msgstr "Título_rótulo"
+msgstr "Título"
 
 #. Default: "Upgrade…"
 #: senaite/core/browser/install/templates/senaite-overview.pt:67
 msgid "label_upgrade_hellip"
-msgstr "rótulo_atualizar_hellip"
+msgstr "Atualizar..."
 
 #. Default: "Contact"
 #: senaite/core/browser/user/userdatapanel.py:80
 msgid "label_user_contact"
-msgstr "Etiqueta de contato do usuário"
+msgstr "Contato"
 
 #. Default: "Email"
 #: senaite/core/browser/user/userdatapanel.py:69
 msgid "label_user_email"
-msgstr "rótulo_email_do_usuário"
+msgstr "E-mail"
 
 #. Default: "Full Name"
 #: senaite/core/browser/user/userdatapanel.py:63
 msgid "label_user_full_name"
-msgstr "Nome completo do usuário"
+msgstr "Nome completo"
 
 #. Default: "Preferred instrument"
 #: senaite/core/content/worksheettemplate.py:262
 msgid "label_worksheettemplate_instrument"
-msgstr "Etiqueta do template de planilha do instrumento"
+msgstr "Instrumento preferido"
 
 #. Default: "Restrict to Method"
 #: senaite/core/content/worksheettemplate.py:236
@@ -8117,52 +8117,52 @@ msgstr "Restringir ao método"
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:50
 msgid "listing_analysiscategories_action_add"
-msgstr "listar_categorias_de_análise_ação_adicionar"
+msgstr "Adicionar"
 
 #. Default: "Department"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:80
 msgid "listing_analysiscategories_column_department"
-msgstr "Coluna_setor_da_lista_de_categorias_de_análise"
+msgstr "Departamento"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:72
 msgid "listing_analysiscategories_column_description"
-msgstr "Descrição da coluna de categorias de análise da listagem"
+msgstr "Descrição"
 
 #. Default: "Sort Key"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:87
 msgid "listing_analysiscategories_column_sort_key"
-msgstr "chave_de_ordenacao_da_coluna_categorias_de_analise_na_lista"
+msgstr "Ordenação"
 
 #. Default: "Category"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:66
 msgid "listing_analysiscategories_column_title"
-msgstr "Título da Coluna das Categorias de Análise"
+msgstr "Categoria"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:98
 msgid "listing_analysiscategories_state_active"
-msgstr "listagem_categoriasdeanalise_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:114
 msgid "listing_analysiscategories_state_all"
-msgstr "listar_todas_as_categorias_de_análise_por_estado"
+msgstr "Tudo"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:106
 msgid "listing_analysiscategories_state_inactive"
-msgstr "listando_categoriasdeanalise_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Analysis Categories"
 #: senaite/core/browser/controlpanel/analysiscategories/view.py:57
 msgid "listing_analysiscategories_title"
-msgstr "Listagem de Categorias de Análise"
+msgstr "Categorias de Análise"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:54
 msgid "listing_analysisprofiles_action_add"
-msgstr "adicionar_perfis_de_analise_na_lista"
+msgstr "Adicionar"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:76
@@ -8172,137 +8172,137 @@ msgstr "Descrição"
 #. Default: "Profile Key"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:83
 msgid "listing_analysisprofiles_column_profilekey"
-msgstr "listar_perfisdeanalise_coluna_chaveperfil"
+msgstr "Chave do Perfil"
 
 #. Default: "Sample Types"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:91
 msgid "listing_analysisprofiles_column_sampletypes"
-msgstr "tipos_de_amostra_da_coluna_de_listagem_de_perfis_de_análise"
+msgstr "Tipos de amostras"
 
 #. Default: "Profile"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:69
 msgid "listing_analysisprofiles_column_title"
-msgstr "Título da coluna de perfis de análise listados"
+msgstr "Perfil"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:103
 msgid "listing_analysisprofiles_state_active"
-msgstr "listar_perfis_de_análise_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:119
 msgid "listing_analysisprofiles_state_all"
-msgstr "listar_todos_os_perfis_de_análise_por_estado"
+msgstr "Tudo"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:111
 msgid "listing_analysisprofiles_state_inactive"
-msgstr "listagem_perfisdeanálise_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Analysis Profiles"
 #: senaite/core/browser/controlpanel/analysisprofiles/view.py:61
 msgid "listing_analysisprofiles_title"
-msgstr "Lista de Perfis de Análise"
+msgstr "Perfis de Análise"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:50
 msgid "listing_attachmenttypes_action_add"
-msgstr "adicionar_tipo_de_anexo_na_lista"
+msgstr "Adicionar"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:73
 msgid "listing_attachmenttypes_column_description"
-msgstr "Descrição da coluna de tipos de anexos na listagem"
+msgstr "Descrição"
 
 #. Default: "Title"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:67
 msgid "listing_attachmenttypes_column_title"
-msgstr "Tipo de anexo (lista)"
+msgstr "Título"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:83
 msgid "listing_attachmenttypes_state_active"
-msgstr "lista_tipos_de_anexos_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:99
 msgid "listing_attachmenttypes_state_all"
-msgstr "listando_todos_os_tipos_de_anexos_estado"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:91
 msgid "listing_attachmenttypes_state_inactive"
-msgstr "listagem_tipos_de_arquivo_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Attachment Types"
 #: senaite/core/browser/controlpanel/attachmenttypes/view.py:57
 msgid "listing_attachmenttypes_title"
-msgstr "Listando tipos de anexos"
+msgstr "Tipos de anexos"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:50
 msgid "listing_batchlabels_action_add"
-msgstr "adicionar_etiquetas_lote_listagem"
+msgstr "Adicionar"
 
 #. Default: "Title"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:67
 msgid "listing_batchlabels_column_title"
-msgstr "Título da coluna de etiquetas do lote"
+msgstr "Título"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:77
 msgid "listing_batchlabels_state_active"
-msgstr "listagem_etiquetas_lote_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:93
 msgid "listing_batchlabels_state_all"
-msgstr "listar_todos_os_status_etiquetas_de_lote"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:85
 msgid "listing_batchlabels_state_inactive"
-msgstr "listando_etiquetas_de_lote_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Batch Labels"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:57
 msgid "listing_batchlabels_title"
-msgstr "Título da lista de etiquetas de lote"
+msgstr "Etiquetas de Lote"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/containertypes/view.py:51
 msgid "listing_containertypes_action_add"
-msgstr "adicionar_tipo_de_contêiner_na_lista"
+msgstr "Adicionar"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/containertypes/view.py:72
 msgid "listing_containertypes_column_description"
-msgstr "Descrição da coluna dos tipos de container na listagem"
+msgstr "Descrição"
 
 #. Default: "Title"
 #: senaite/core/browser/controlpanel/containertypes/view.py:66
 msgid "listing_containertypes_column_title"
-msgstr "Título da Coluna dos Tipos de Contêiner na Listagem"
+msgstr "Título"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/containertypes/view.py:82
 msgid "listing_containertypes_state_active"
-msgstr "listagem_tiposdeconteiner_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/containertypes/view.py:98
 msgid "listing_containertypes_state_all"
-msgstr "listagem_tiposdecontenedores_estado_todos"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/containertypes/view.py:90
 msgid "listing_containertypes_state_inactive"
-msgstr "listar_tipos_de_conteiner_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Container Types"
 #: senaite/core/browser/controlpanel/containertypes/view.py:58
 msgid "listing_containertypes_title"
-msgstr "Tipos de Conteúdo na Listagem"
+msgstr "Tipo de "
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/dynamicanalysisspecs/view.py:52
@@ -8382,12 +8382,12 @@ msgstr "Listagem de locais de instrumentos"
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:49
 msgid "listing_instrumenttypes_action_add"
-msgstr "adicionar_tipo_de_instrumento_lista"
+msgstr "Adicionar"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:72
 msgid "listing_instrumenttypes_column_description"
-msgstr "Descrição da coluna de tipos de instrumento na listagem"
+msgstr "Descrição"
 
 #. Default: "Title"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:65
@@ -8397,22 +8397,22 @@ msgstr "Tipo de Instrumento"
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:83
 msgid "listing_instrumenttypes_state_active"
-msgstr "listando_tipos_de_instrumentos_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:101
 msgid "listing_instrumenttypes_state_all"
-msgstr "listando_todos_os_estados_tipos_de_instrumentos"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:92
 msgid "listing_instrumenttypes_state_inactive"
-msgstr "listagem_tiposdeinstrumentos_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Instrument Types"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:56
 msgid "listing_instrumenttypes_title"
-msgstr "Listagem de Tipos de Instrumentos"
+msgstr "Tipos de Instrumentos"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:52
@@ -8427,202 +8427,202 @@ msgstr "Descrição"
 #. Default: "Sample Types"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:81
 msgid "listing_interpretationtemplates_column_sampletypes"
-msgstr "listar_interpretacao_modelos_coluna_tipos_de_amostra"
+msgstr "Tipos de Amostra"
 
 #. Default: "Text"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:88
 msgid "listing_interpretationtemplates_column_text"
-msgstr "Texto da coluna de listagem de modelos de interpretação"
+msgstr "Texto"
 
 #. Default: "Title"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:68
 msgid "listing_interpretationtemplates_column_title"
-msgstr "Modelos de Interpretação na Lista"
+msgstr "Título"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:99
 msgid "listing_interpretationtemplates_state_active"
-msgstr "listando_modelosdeinterpretação_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:115
 msgid "listing_interpretationtemplates_state_all"
-msgstr "listar_todos_os_estados_dos_modelos_de_interpretação"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:107
 msgid "listing_interpretationtemplates_state_inactive"
-msgstr "listagem_modelosdeinterpretacao_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Interpretation Templates"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:58
 msgid "listing_interpretationtemplates_title"
-msgstr "Listando Modelos de Interpretação"
+msgstr "Modelos de Interpretação"
 
 #. Default: "Add"
 #: view.py:49
 msgid "listing_labproduct_action_add"
-msgstr "adicionar_ação_lista_produto_laboratorial"
+msgstr "Adcionar"
 
 #. Default: "Price"
 #: view.py:87
 msgid "listing_labproducts_column_price"
-msgstr "coluna_de_preço_dos_produtos_do_laboratório"
+msgstr "Preço"
 
 #. Default: "Product"
 #: view.py:66
 msgid "listing_labproducts_column_title"
-msgstr "Título da Coluna de Produtos do Laboratório"
+msgstr "Produto"
 
 #. Default: "Total Price"
 #: view.py:102
 msgid "listing_labproducts_column_total_price"
-msgstr "coluna_listagem_produtos_laboratorio_preco_total"
+msgstr "Preço Total"
 
 #. Default: "Unit"
 #: view.py:80
 msgid "listing_labproducts_column_unit"
-msgstr "Coluna de Unidade dos Produtos do Laboratório"
+msgstr "Unidade"
 
 #. Default: "VAT Amount"
 #: view.py:95
 msgid "listing_labproducts_column_vatamount"
-msgstr "coluna_listagem_produtos_lab_valor_iva"
+msgstr "Imposto Total"
 
 #. Default: "Volume"
 #: view.py:73
 msgid "listing_labproducts_column_volume"
-msgstr "listar_produtos_de_laboratório_coluna_volume"
+msgstr "Volume"
 
 #. Default: "Active"
 #: view.py:114
 msgid "listing_labproducts_state_active"
-msgstr "listagem_produtos_de_laboratorio_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: view.py:132
 msgid "listing_labproducts_state_all"
-msgstr "listando_todos_os_estados_dos_produtos_de_laboratório"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: view.py:123
 msgid "listing_labproducts_state_inactive"
-msgstr "lista_produtos_laboratório_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Lab Products"
 #: view.py:56
 msgid "listing_labproducts_title"
-msgstr "Listagem de Produtos do Laboratório"
+msgstr "Produtos do Laboratório"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:51
 msgid "listing_manufacturers_action_add"
-msgstr "ação_de_adicionar_fabricantes_da_listagem"
+msgstr "Adicionar"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:80
 msgid "listing_manufacturers_column_description"
-msgstr "Descrição da coluna de listagem de fabricantes"
+msgstr "Descrição"
 
 #. Default: "Title"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:74
 msgid "listing_manufacturers_column_title"
-msgstr "Título da Coluna Fabricantes na Lista"
+msgstr "Título"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:91
 msgid "listing_manufacturers_state_active"
-msgstr "listando_fabricantes_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:107
 msgid "listing_manufacturers_state_all"
-msgstr "listando_todos_os_fabricantes_estado"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:99
 msgid "listing_manufacturers_state_inactive"
-msgstr "listagem_fabricantes_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Manufacturers"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:58
 msgid "listing_manufacturers_title"
-msgstr "listagem_de_fabricantes_título"
+msgstr "Fabricante"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/suppliers/referencesamples.py:36
 msgid "listing_referencesamples_action_add"
-msgstr "listar_amostrasreferencia_acao_adicionar"
+msgstr "Adicionar"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:51
 msgid "listing_sampleconatiners_action_add"
-msgstr "listar_acao_adicionar_amuletas"
+msgstr "Adicionar"
 
 #. Default: "Capacity"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:86
 msgid "listing_sampleconatiners_column_capacity"
-msgstr "listagem_amostrasrecipientes_coluna_capacidade"
+msgstr "Capacidade"
 
 #. Default: "Container Type"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:79
 msgid "listing_sampleconatiners_column_containertype"
-msgstr "coluna_de_listagem_de_ameações_tipo_de_conteiner"
+msgstr "Tipo de Recipiente"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:72
 msgid "listing_sampleconatiners_column_description"
-msgstr "Descrição da coluna de recipientes de amostra na listagem"
+msgstr "Descrição"
 
 #. Default: "Pre-preserved"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:93
 msgid "listing_sampleconatiners_column_pre_preserved"
-msgstr "listagem_amuletas_coluna_pre_preservadas"
+msgstr "Pré-preservada"
 
 #. Default: "Security seal intact"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:100
 msgid "listing_sampleconatiners_column_security_seal_intact"
-msgstr "coluna_lista_conteineres_amostras_selo_de_segurança_intacto"
+msgstr "Selo de segurança intacto"
 
 #. Default: "Container"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:65
 msgid "listing_sampleconatiners_column_title"
-msgstr "Título da coluna de listagem de recipientes de amostras"
+msgstr "Recipiente"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:111
 msgid "listing_sampleconatiners_state_active"
-msgstr "listagem_amostras_recipientas_estado_ativo"
+msgstr "Ativo"
 
 #. Default: "All"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:127
 msgid "listing_sampleconatiners_state_all"
-msgstr "listar_todos_os_estados_de_amuletas"
+msgstr "Todos"
 
 #. Default: "Inactive"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:119
 msgid "listing_sampleconatiners_state_inactive"
-msgstr "listando_estoque_de_amostras_estado_inativo"
+msgstr "Inativo"
 
 #. Default: "Sample Containers"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:56
 msgid "listing_sampleconatiners_title"
-msgstr "listagem_de_ameastras_titulos"
+msgstr "Recipiente Amostra"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/sampleconditions/view.py:47
 msgid "listing_sampleconditions_action_add"
-msgstr "adicionar_condição_da_amostra_lista"
+msgstr "Adicionar"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/sampleconditions/view.py:68
 msgid "listing_sampleconditions_column_description"
-msgstr "Descrição da coluna das condições da amostra na listagem"
+msgstr "Descrição"
 
 #. Default: "Sample Condition"
 #: senaite/core/browser/controlpanel/sampleconditions/view.py:62
 msgid "listing_sampleconditions_column_title"
-msgstr "Condições da Amostra na Lista"
+msgstr "Condições da Amostra"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/sampleconditions/view.py:78
