@@ -380,4 +380,4 @@ msgstr "Recuperar primário"
 #. Default: "Auto-store primary sample"
 #: senaite/storage/browser/controlpanel.py:34
 msgid "label_storage_settings_store_primary"
-msgstr "armazenar_primário_nas_configurações_de_armazenamento"
+msgstr "Armazenar automaticamente a amostra primária"
