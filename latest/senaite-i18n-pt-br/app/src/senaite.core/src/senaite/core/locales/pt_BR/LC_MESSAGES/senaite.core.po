@@ -5005,7 +5005,7 @@ msgstr "Selecione uma interface de exportação para este instrumento."
 
 #: bika/lims/content/instrument.py:236
 msgid "Select an Import interface for this instrument."
-msgstr "Selecione uma interface de Importação para este instrumento."
+msgstr "Selecione uma interface de importação para este instrumento."
 
 #: bika/lims/content/artemplate.py:288
 msgid "Select analyses to include in this template"
@@ -5013,7 +5013,7 @@ msgstr "Selecione as análises a incluir neste modelo"
 
 #: bika/lims/browser/worksheet/templates/worksheets.pt:41
 msgid "Select analyst"
-msgstr "Selecionar Analista"
+msgstr "Selecionar analista"
 
 #: senaite/core/browser/install/templates/senaite-addsite.pt:203
 msgid "Select any add-ons you want to activate immediately. You can also activate add-ons after the site has been created using the Add-ons control panel."
@@ -5029,11 +5029,11 @@ msgstr "Selecione se for um certificado de calibração interno"
 
 #: bika/lims/content/analysisservice.py:88
 msgid "Select if the calculation to be used is the calculation set by default in the default method. If unselected, the calculation can be selected manually"
-msgstr "Selecione se o cálculo a ser utilizado no conjunto de cálculos definidos por padrão no método padrão. Se não selecionado, o cálculo pode ser selecionado manualmente"
+msgstr "Selecione se o cálculo a ser utilizado é o definido por padrão no método padrão. Se não selecionado, o cálculo pode ser selecionado manualmente"
 
 #: bika/lims/content/pricelist.py:76
 msgid "Select if the descriptions should be included"
-msgstr "Selecione caso as descrições devem ser incluídas"
+msgstr "Selecione caso as descrições devam ser incluídas"
 
 #: bika/lims/content/abstractbaseanalysis.py:374
 msgid "Select if the results for tests of this type of analysis can be set by using an instrument. If disabled, no instruments will be available for tests of this type of analysis in manage results view, even though the method selected for the test has instruments assigned."
@@ -5041,7 +5041,7 @@ msgstr "Selecione se os resultados para os testes deste tipo de análise podem s
 
 #: bika/lims/browser/worksheet/templates/worksheets.pt:71
 msgid "Select instrument"
-msgstr "Selecionar Instrumento"
+msgstr "Selecionar instrumento"
 
 #: senaite/core/browser/viewlets/templates/resultsinterpretation.pt:76
 msgid "Select template"
@@ -5049,7 +5049,7 @@ msgstr "Selecionar modelo"
 
 #: bika/lims/content/bikasetup.py:245
 msgid "Select the country the site will show by default"
-msgstr "Selecione o pais que o site vai ser mostrado como padrão"
+msgstr "Selecione o país que o site será mostrado como padrão"
 
 #: bika/lims/content/bikasetup.py:233
 msgid "Select the currency the site will use to display prices."
@@ -5061,7 +5061,7 @@ msgstr "Selecione o recipiente padrão a ser usado por este serviço de análise
 
 #: bika/lims/profiles/default/registry.xml
 msgid "Select the default landing page. This is used when a Client user logs into the system, or when a client is selected from the client folder listing."
-msgstr "Seleccione a página inicial padrão. Isso é usado quando um usuário cliente registra no sistema, ou quando um cliente é selecionado a partir da listagem pasta do cliente."
+msgstr "Selecione a página inicial padrão. Isso é usado quando um usuário cliente registra no sistema, ou quando um cliente é selecionado a partir da listagem pasta do cliente."
 
 #: bika/lims/content/bikasetup.py:837
 msgid "Select the default sticker template used for automatic printing.<br/>"
@@ -5400,7 +5400,7 @@ msgstr "Subgrupos"
 
 #: bika/lims/content/subgroup.py:39
 msgid "Subgroups are sorted with this key in group views"
-msgstr "Subgrupos são classificadas com esta tecla em grupos vistos"
+msgstr "Os subgrupos são classificados com esta chave nas visualizações de grupo"
 
 #: bika/lims/browser/publish/templates/email.pt:115
 #: bika/lims/browser/templates/analysisreport_info.pt:165
@@ -5440,7 +5440,7 @@ msgstr "Fornecedor"
 
 #: senaite/core/profiles/default/types/Suppliers.xml
 msgid "Suppliers"
-msgstr "Fornecedor"
+msgstr "Fornecedores"
 
 #: bika/lims/browser/worksheet/views/referencesamples.py:75
 msgid "Supported Services"
@@ -5586,7 +5586,7 @@ msgstr "A data em que a amostra foi recebida"
 
 #: bika/lims/content/client.py:153
 msgid "The decimal mark selected in Bika Setup will be used."
-msgstr "O marcador decimal nas configurações Bika serão usados."
+msgstr "O marcador decimal definido nas configurações do Bika será usado."
 
 #: senaite/core/browser/install/templates/senaite-addsite.pt:113
 msgid "The default timezone setting of the portal. Users will be able to set their own timezone, if available timezones are defined in the date and time settings."
@@ -5643,7 +5643,7 @@ msgstr "O número do modelo do instrumento"
 
 #: bika/lims/content/instrumentcertification.py:111
 msgid "The interval is calculated from the 'From' field and defines when the certificate expires in days. Setting this inverval overwrites the 'To' field on save."
-msgstr "O intervalo é calculado a partir do campo 'De' e define quando o certificado expira em dias. Definir esta inversão sobrescreve o campo 'Fazer' em salvar."
+msgstr "O intervalo é calculado a partir do campo 'De' e define quando o certificado expira em dias. Definir este intervalo sobrescreve o campo 'Até' ao salvar."
 
 #: bika/lims/browser/accreditation.py:71
 msgid "The lab is not accredited, or accreditation has not been configured. "
@@ -5763,7 +5763,7 @@ msgstr "Essas razões serão exibidas para sua seleção durante o processo de r
 
 #: bika/lims/browser/viewlets/templates/invalid_ar_viewlet.pt:15
 msgid "These results have been withdrawn and are listed here for trace-ability purposes. Please follow the link to the retest"
-msgstr "Estes resultados tem sido retirados e estão aqui listados para propósitos de rastreabilidade. Por favor, siga o enlace para retestar"
+msgstr "Estes resultados foram retirados e estão aqui listados para propósitos de rastreabilidade. Por favor, siga o enlace para retestar"
 
 #: bika/lims/browser/viewlets/templates/dynamic_specs_viewlet.pt:14
 msgid "This Analysis Specification has a Dynamic Specification assigned"
@@ -5819,11 +5819,11 @@ msgstr "Este valor é reportado no final dos Laudos publicados"
 
 #: bika/lims/browser/worksheet/tools.py:84
 msgid "This worksheet has been created to replace the rejected worksheet at ${ws_id}"
-msgstr "Essa planilha foi criada para substituir a planilha rejeitada em $ {} WSID"
+msgstr "Essa planilha foi criada para substituir a planilha rejeitada em ${ws_id}"
 
 #: bika/lims/browser/worksheet/tools.py:77
 msgid "This worksheet has been rejected.  The replacement worksheet is ${ws_id}"
-msgstr "Essa planilha foi rejeitada. A planilha de substituição é a de R $ {} ws_id"
+msgstr "Essa planilha foi rejeitada. A planilha de substituição é ${ws_id}"
 
 #: bika/lims/config.py:97
 msgid "Thursday"
@@ -5962,7 +5962,7 @@ msgstr "Tipos com rótulos"
 
 #: bika/lims/browser/worksheet/views/printview.py:142
 msgid "Unable to load the template"
-msgstr "Não foi possível carregar o template"
+msgstr "Não foi possível carregar o modelo"
 
 #: senaite/core/profiles/default/workflows/senaite_analysis_workflow/definition.xml
 msgid "Unassign"
@@ -5993,7 +5993,7 @@ msgstr "Unidade"
 
 #: senaite/core/content/supplier.py:156
 msgid "Unknown IBAN country %s"
-msgstr "IBAN países desconhecidos %s"
+msgstr "País IBAN desconhecido: %s"
 
 #: bika/lims/browser/templates/login_details.pt:108
 msgid "Unlink User"
