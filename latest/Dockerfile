@@ -34,6 +34,15 @@ RUN groupadd -g ${SENAITE_GID} senaite \
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
  && pyenv install 2.7.18 \
  && pyenv global 2.7.18
+ 
+ENV PYTHON_VERSION=2.7.18
+ENV LANG pt_BR.UTF-8
+ENV LANGUAGE pt_BR:pt
+ENV LC_ALL pt_BR.UTF-8
+
+# --- INJEÇÃO DE VANGUARDA PARA PYTHON 2.7 ---
+# Força o interpretador a aceitar UTF-8 como padrão global
+RUN echo "import sys; sys.setdefaultencoding('utf-8')" > /opt/pyenv/versions/${PYTHON_VERSION}/lib/python2.7/sitecustomize.py
 
 # toolchain pip/setuptools/buildout compatível py2
 RUN pip install --no-cache-dir "pip==20.3.4" \
