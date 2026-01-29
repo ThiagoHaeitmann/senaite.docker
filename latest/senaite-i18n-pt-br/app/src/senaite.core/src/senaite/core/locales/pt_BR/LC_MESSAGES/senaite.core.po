@@ -6018,7 +6018,7 @@ msgid "Unrecognized file format ${format}"
 msgstr "Formato do arquivo não reconhecido ${format}"
 
 #: senaite/core/browser/samples/view.py:431
-msgid "Unassigned"
+msgid "Unsassigned"
 msgstr "Não atribuído"
 
 #: bika/lims/skins/bika/bika_widgets/scheduleinputwidget.pt:63
