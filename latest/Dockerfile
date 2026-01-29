@@ -35,10 +35,10 @@ RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv \
  && pyenv install 2.7.18 \
  && pyenv global 2.7.18
  
-ENV PYTHON_VERSION=2.7.18
-ENV LANG pt_BR.UTF-8
-ENV LANGUAGE pt_BR:pt
-ENV LC_ALL pt_BR.UTF-8
+ENV PYTHON_VERSION=2.7.18 \
+    LANG=pt_BR.UTF-8 \
+    LANGUAGE=pt_BR:pt \
+    LC_ALL=pt_BR.UTF-8
 
 # --- INJEÇÃO DE VANGUARDA PARA PYTHON 2.7 ---
 # Força o interpretador a aceitar UTF-8 como padrão global
@@ -156,9 +156,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
-ENV LANG pt_BR.UTF-8
-ENV LANGUAGE pt_BR:pt
-ENV LC_ALL pt_BR.UTF-8
+    
+ENV PYTHON_VERSION=2.7.18 \
+    LANG=pt_BR.UTF-8 \
+    LANGUAGE=pt_BR:pt \
+    LC_ALL=pt_BR.UTF-8 \
+    PYTHONIOENCODING=utf-8
 
 # --- cria user senaite no runtime ---
 ARG SENAITE_UID=1000
@@ -169,7 +172,6 @@ RUN groupadd -g ${SENAITE_GID} senaite \
 # pyenv e python2
 COPY --from=py2builder /opt/pyenv /opt/pyenv
 
-ENV PYTHON_VERSION=2.7.18
 ENV PATH=/opt/pyenv/versions/${PYTHON_VERSION}/bin:/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 WORKDIR /app
