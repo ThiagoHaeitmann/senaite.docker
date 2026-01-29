@@ -3631,7 +3631,7 @@ msgstr "Nenhum item novo foi criado"
 
 #: senaite/core/browser/samples/partition_magic.py:111
 msgid "No partitions were created"
-msgstr "Nenhuma partição foi criada"
+msgstr "Nenhum fracionamento foi criado"
 
 #: bika/lims/browser/publish/emailview.py:176
 msgid "No reports found"
@@ -3866,7 +3866,7 @@ msgstr "Formato de papel"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:130
 msgid "Partition"
-msgstr "Partição"
+msgstr "Fracionamento"
 
 #: senaite/core/browser/samples/partition_magic.py:120
 msgid "Partitioning canceled"
@@ -4985,7 +4985,7 @@ msgstr "Selecionar Interface de Importação"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:215
 msgid "Select Partition Analyses"
-msgstr "Selecionar Análises de Partição"
+msgstr "Selecionar Análises de Fracionamentos"
 
 #: bika/lims/content/analysisservice.py:146
 msgid "Select a default preservation for this analysis service. If the preservation depends on the sample type combination, specify a preservation per sample type in the table below"
@@ -5265,11 +5265,11 @@ msgstr "Assinatura"
 
 #: bika/lims/content/storagelocation.py:43
 msgid "Site Code"
-msgstr "Código do Site"
+msgstr "Código do Local"
 
 #: bika/lims/content/storagelocation.py:48
 msgid "Site Description"
-msgstr "Descrição do Site"
+msgstr "Descrição do Local"
 
 #: senaite/core/content/senaitesetup.py:126
 msgid "Site Logo"
@@ -5281,7 +5281,7 @@ msgstr "CSS do Logo do Site"
 
 #: bika/lims/content/storagelocation.py:38
 msgid "Site Title"
-msgstr "Título do Site"
+msgstr "Título do Local"
 
 #: senaite/core/browser/viewlets/templates/attachments.pt:65
 msgid "Size"
@@ -5779,7 +5779,7 @@ msgstr "Esta Amostra foi rejeitada devido às seguintes razões:"
 
 #: bika/lims/browser/viewlets/templates/partition_ar_viewlet.pt:14
 msgid "This is a Partition from Sample"
-msgstr "Esta é uma Partição da Amostra"
+msgstr "Esta é um Fracionamento da Amostra"
 
 #: bika/lims/browser/viewlets/templates/secondary_ar_viewlet.pt:15
 msgid "This is a Secondary Sample of"
@@ -5787,7 +5787,7 @@ msgstr "Esta é uma Amostra Secundária de"
 
 #: bika/lims/browser/viewlets/templates/detached_partition_viewlet.pt:15
 msgid "This is a detached partition from Sample"
-msgstr "Esta é uma partição destacada da Amostra"
+msgstr "Esta é um Fracionamento destacado da Amostra"
 
 #: bika/lims/content/bikasetup.py:651
 msgid "This is the default maximum time allowed for performing analyses.  It is only used for analyses where the analysis service does not specify a turnaround time. Only laboratory workdays are considered."
@@ -5970,7 +5970,7 @@ msgstr "Cancelar atribuição"
 
 #: senaite/core/profiles/default/workflows/senaite_analysis_workflow/definition.xml
 msgid "Unassigned"
-msgstr "Não designado"
+msgstr "Não atribuído"
 
 #: bika/lims/content/abstractbaseanalysis.py:610
 #: bika/lims/content/abstractroutineanalysis.py:60
@@ -7153,7 +7153,7 @@ msgstr "Selecione se a amostra é uma mistura de subamostras"
 #. Default: "Each line defines a new partition identified by the 'Partition ID'"
 #: senaite/core/content/sampletemplate.py:245
 msgid "description_sampletemplate_partitions"
-msgstr "Cada linha define uma nova partição identificada pelo 'ID da partição"
+msgstr "Cada linha define uma novo fracionamento identificado pelo 'ID da fracionamento"
 
 #. Default: "Select the sample point for this template"
 #: senaite/core/content/sampletemplate.py:187
@@ -7961,7 +7961,7 @@ msgstr "Recipiente"
 #. Default: "Partition ID"
 #: senaite/core/content/sampletemplate.py:60
 msgid "label_sampletemplate_partition_part_id"
-msgstr "ID da Partição"
+msgstr "ID do Fracionamento"
 
 #. Default: "Preservation"
 #: senaite/core/content/sampletemplate.py:103
@@ -8914,7 +8914,7 @@ msgstr "Métodos"
 #. Default: "Partition"
 #: senaite/core/browser/widgets/sampletemplate_services_widget.py:51
 msgid "listing_services_column_partition"
-msgstr "Partição"
+msgstr "Fracionamento"
 
 #. Default: "Price"
 #: senaite/core/browser/widgets/services_widget.py:105
