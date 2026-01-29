@@ -5105,7 +5105,7 @@ msgstr "Selecione para receber as amostras automaticamente quando criadas pelo p
 
 #: bika/lims/content/bikasetup.py:614
 msgid "Select to show sample partitions to client contacts. If deactivated, partitions won't be included in listings and no info message with links to the primary sample will be displayed to client contacts."
-msgstr "Selecione para mostrar partições de amostras aos contatos do cliente. Se desativado, as partições não serão incluídas nas listas e nenhuma mensagem informativa com links para a amostra primária será exibida aos contatos do cliente."
+msgstr "Selecione para mostrar partições de amostras aos contatos do cliente. Se desativado, as partições não serão incluídas nas listas e nenhuma mensagem informativa com vínculos para a amostra primária será exibida aos contatos do cliente."
 
 #: bika/lims/content/worksheettemplate.py:82
 msgid "Select which Analyses should be included on the Worksheet"
@@ -6001,7 +6001,7 @@ msgstr "Desvincular o usuário"
 
 #: bika/lims/browser/contact.py:227
 msgid "Unlinked User"
-msgstr "Usuário não vinculado"
+msgstr "Usuário desvinculado"
 
 #: senaite/core/exportimport/instruments/panalytical/omnia/axios_xrf.py:53
 msgid "Unrecognized file format ${file_format}"
@@ -6015,10 +6015,10 @@ msgstr "Formato do arquivo não reconhecido ${fileformat}"
 
 #: senaite/core/exportimport/instruments/horiba/jobinyvon/icp.py:57
 msgid "Unrecognized file format ${format}"
-msgstr "Formato de arquivo não reconhecido ${format}"
+msgstr "Formato do arquivo não reconhecido ${format}"
 
 #: senaite/core/browser/samples/view.py:431
-msgid "Unsassigned"
+msgid "Unassigned"
 msgstr "Não atribuído"
 
 #: bika/lims/skins/bika/bika_widgets/scheduleinputwidget.pt:63
@@ -6166,7 +6166,7 @@ msgstr "Falha de validação: valor de erro deve ser numérico"
 
 #: bika/lims/validators.py:498
 msgid "Validation failed: Keyword '${keyword}' is invalid"
-msgstr "Falha de validação: '${keyword}' é inválida"
+msgstr "Falha de validação: '${keyword}' é inválido"
 
 #: bika/lims/validators.py:973
 msgid "Validation failed: Max values must be greater than Min values"
@@ -6202,7 +6202,7 @@ msgstr "Falha de validação: Valores devem ser números"
 
 #: bika/lims/validators.py:392
 msgid "Validation failed: column title '${title}' must have keyword '${keyword}'"
-msgstr "Falha de validação: o título da coluna  ${title}' deve ter a palavra-chave '${keyword}'"
+msgstr "Falha de validação: o título da coluna '${title}' deve ter a palavra-chave '${keyword}'"
 
 #: bika/lims/validators.py:614
 msgid "Validation failed: degrees is 180; minutes must be zero"
@@ -6234,7 +6234,7 @@ msgstr "Falha de validação: graus devem ser números"
 
 #: bika/lims/validators.py:404
 msgid "Validation failed: keyword '${keyword}' must have column title '${title}'"
-msgstr "Falha de validação: a palavra-chave '${keyword}' deve ter o título da coluna  ${title}' "
+msgstr "Falha de validação: a palavra-chave '${keyword}' deve ter o título da coluna '${title}' "
 
 #: bika/lims/api/analysisservice.py:170
 #: bika/lims/validators.py:326
@@ -6247,7 +6247,7 @@ msgstr "Falha na validação: a palavra-chave já está em uso"
 
 #: bika/lims/api/analysisservice.py:185
 msgid "Validation failed: keyword is already in use by calculation '{}'"
-msgstr "Falha na validação: a palavra-chave já está em uso pela cálculo '{}'"
+msgstr "Falha na validação: a palavra-chave já está em uso pelo cálculo '{}'"
 
 #: bika/lims/controlpanel/bika_analysisservices.py:95
 #: bika/lims/validators.py:323
@@ -6299,11 +6299,11 @@ msgstr "Falha na validação: o valor deve estar entre 0 e 1000"
 #: senaite/core/content/analysiscategory.py:118
 #: senaite/core/content/subgroup.py:78
 msgid "Validation failed: value must be float"
-msgstr "Falha na validação: o valor deve ser flutuante"
+msgstr "Falha na validação: o valor deve ser decimal"
 
 #: bika/lims/content/instrumentvalidation.py:51
 msgid "Validation report date"
-msgstr "Data de validação do laudo"
+msgstr "Data do relatório de validação"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Validations"
@@ -6366,7 +6366,7 @@ msgstr "Versão"
 #: bika/lims/profiles/default/types/ARTemplate.xml
 #: bika/lims/profiles/default/types/Analysis.xml
 msgid "View"
-msgstr "Visão"
+msgstr "Visualizar"
 
 #: senaite/core/browser/install/templates/senaite-overview.pt:52
 msgid "View your SENAITE site"
@@ -6439,7 +6439,7 @@ msgstr "Quando os resultados de análises em duplicata nas planilhas, feitas a p
 
 #: bika/lims/validators.py:517
 msgid "Wildcards for interims are not allowed: ${wildcards}"
-msgstr "Caracteres para interinos não são permitidos: ${wildcards}"
+msgstr "Curingas para campos intermediários não são permitidos: ${wildcards}"
 
 #: senaite/core/browser/setup/templates/email_body_sample_publication.pt:20
 msgid "With best regards"
@@ -6449,7 +6449,7 @@ msgstr "Atenciosamente"
 #: bika/lims/content/instrumentmaintenancetask.py:102
 #: bika/lims/content/instrumentvalidation.py:100
 msgid "Work Performed"
-msgstr "Performance de trabalho"
+msgstr "Trabalho realizado"
 
 #: bika/lims/browser/auditlog.py:94
 #: bika/lims/controlpanel/auditlog.py:99
@@ -6468,7 +6468,7 @@ msgstr "Layout da Planilha"
 
 #: senaite/core/profiles/default/types/WorksheetTemplate.xml
 msgid "Worksheet Template"
-msgstr "Tema da Ficha de Trabalho"
+msgstr "Modelo de Planilha"
 
 #: senaite/core/profiles/default/types/WorksheetTemplates.xml
 msgid "Worksheet Templates"
@@ -6492,11 +6492,11 @@ msgstr "Planilhas"
 
 #: senaite/core/content/supplier.py:166
 msgid "Wrong IBAN length by %s: %s"
-msgstr "Comprimento incorreto do IBAN por %s: %s"
+msgstr "Comprimento incorreto do IBAN para %s: %s"
 
 #: bika/lims/validators.py:1138
 msgid "Wrong IBAN length by %s: %sshort by %i"
-msgstr "Tamanho de IBAN errado por %s: %s muito curto por %i"
+msgstr "Tamanho incorreto do IBAN para %s: %s — menor por %i"
 
 #: senaite/core/browser/dashboard/templates/dashboard.pt:540
 msgid "Yearly"
@@ -6525,7 +6525,7 @@ msgstr "Você pode usar o botão Procurar para selecionar e carregar um novo ane
 
 #: bika/lims/browser/worksheet/tools.py:42
 msgid "You do not have sufficient privileges to view the worksheet ${worksheet_title}."
-msgstr "Você não tem privilegios suficientes para ver as planilhas ${worksheet_title}."
+msgstr "Você não tem privilégios suficientes para ver a planilha ${worksheet_title}."
 
 #: senaite/core/browser/install/templates/senaite-overview.pt:78
 msgid "You have multiple SENAITE sites:"
@@ -6638,7 +6638,7 @@ msgstr "Selecione o departamento responsável"
 #. Default: "This service will not appear for selection on the sample registration form if the elapsed time since sample collection exceeds the holding time limit. Exceeding this time limit may result in unreliable or compromised data, as the integrity of the sample can degrade over time. Consequently, any results obtained after this period may not accurately reflect the sample's true composition, impacting data validity. Note: This setting does not affect the test's availability in the 'Manage Analyses' view."
 #: bika/lims/content/abstractbaseanalysis.py:438
 msgid "description_analysis_maxholdingtime"
-msgstr "Este serviço não aparecerá para seleção no formulário de registro de amostras se o tempo decorrido desde a coleta da amostra exceder o limite de tempo de armazenamento. Exceder esse limite de tempo pode resultar em dados não confiáveis ​​ou comprometidos, pois a integridade da amostra pode se degradar com o tempo. Consequentemente, quaisquer resultados obtidos após esse período podem não refletir com precisão a verdadeira composição da amostra, afetando a validade dos dados. Observação: essa configuração não afeta a disponibilidade do teste na visualização 'Gerenciar Análises"
+msgstr "Este serviço não aparecerá para seleção no formulário de registro de amostras se o tempo decorrido desde a coleta da amostra exceder o limite de tempo de armazenamento. Exceder esse limite de tempo pode resultar em dados não confiáveis ​​ou comprometidos, pois a integridade da amostra pode se degradar com o tempo. Consequentemente, quaisquer resultados obtidos após esse período podem não refletir com precisão a verdadeira composição da amostra, afetando a validade dos dados. Observação: essa configuração não afeta a disponibilidade do teste na visualização 'Gerenciar análises'"
 
 #. Default: "Criteria to use when result options are displayed for selection in results entry listings. Note this only applies to the options displayed in the selection list. It does not have any effect to the order in which results are displayed after being submitted"
 #: bika/lims/content/abstractbaseanalysis.py:751
@@ -6648,7 +6648,7 @@ msgstr "Critérios a serem usados ​​quando as opções de resultado são exi
 #. Default: "Specify the uncertainty value for a given range, e.g. for results in a range with minimum of 0 and maximum of 10, where the uncertainty value is 0.5 - a result of 6.67 will be reported as 6.67 ± 0.5.<br/>You can also specify the uncertainty value as a percentage of the result value, by adding a '%' to the value entered in the 'Uncertainty Value' column, e.g. for results in a range with minimum of 10.01 and a maximum of 100, where the uncertainty value is 2%, a result of 100 will be reported as 100 ± 2.<br/>If you don't want uncertainty to be displayed for a given range, set 0 (or a value below 0) as the Uncertainty value.<br/>Please ensure successive ranges are continuous, e.g. 0.00 - 10.00 is followed by 10.01 - 20.00, 20.01 - 30.00 etc."
 #: bika/lims/content/abstractbaseanalysis.py:611
 msgid "description_analysis_uncertainty"
-msgstr "Especifique o valor da incerteza para um determinado intervalo, por exemplo, para resultados em um intervalo com mínimo de 0 e máximo de 10, onde o valor da incerteza é 0,5 - um resultado de 6,67 será relatado como 6,67 ± 0,5.<br/>Você também pode especificar o valor da incerteza como uma porcentagem do valor do resultado, adicionando um '%' ao valor inserido na coluna 'Valor da Incerteza', por exemplo, para resultados em um intervalo com mínimo de 10,01 e máximo de 100, onde o valor da incerteza é 2%, um resultado de 100 será relatado como 100 ± 2.<br/>Se você não quiser que a incerteza seja exibida para um determinado intervalo, defina 0 (ou um valor abaixo de 0) como o valor da incerteza.<br/>Certifique-se de que os intervalos sucessivos sejam contínuos, por exemplo, 0,00 - 10,00 seguido por 10,01 - 20:00, 20:01 - 30:00 etc."
+msgstr "Especifique o valor da incerteza para um determinado intervalo, por exemplo, para resultados em um intervalo com mínimo de 0 e máximo de 10, onde o valor da incerteza é 0,5 - um resultado de 6,67 será relatado como 6,67 ± 0,5.<br/>Você também pode especificar o valor da incerteza como uma porcentagem do valor do resultado, adicionando um '%' ao valor inserido na coluna 'Valor da Incerteza', por exemplo, para resultados em um intervalo com mínimo de 10,01 e máximo de 100, onde o valor da incerteza é 2%, um resultado de 100 será relatado como 100 ± 2.<br/>Se você não quiser que a incerteza seja exibida para um determinado intervalo, defina 0 (ou um valor abaixo de 0) como o valor da incerteza.<br/>Certifique-se de que os intervalos sucessivos sejam contínuos, por exemplo, 0,00 - 10,00 seguido por 10,01 - 20,00, 20,01 - 30,00 etc."
 
 #. Default: "The measurement units for this analysis service' results, e.g. mg/l, ppm, dB, mV, etc."
 #: bika/lims/content/abstractbaseanalysis.py:110
@@ -6718,7 +6718,7 @@ msgstr "Número de amostras a serem criadas com as informações fornecidas"
 #. Default: "Link dynamic analysis specification"
 #: bika/lims/content/analysisspec.py:72
 msgid "description_analysisspec_dynamicspec"
-msgstr "Link Dinâmico da Especificação de análises"
+msgstr "Vincular especificação dinâmica de análises"
 
 #. Default: "'Min' and 'Max' values indicate a valid results range. Any result outside this results range will raise an alert.<br/>'Min warn' and 'Max warn' values indicate a shoulder range. Any result outside the results range but within the shoulder range will raise a less severe alert.<br/>If the result is out of range, the value set for '&lt; Min' or '&gt; Max' will be displayed in lists and results reports instead of the real result. In such case, the value set for 'Out of range comment' will be displayed in results report as well"
 #: bika/lims/content/analysisspec.py:91
@@ -6733,7 +6733,7 @@ msgstr "Selecione o tipo de amostra para esta especificação"
 #. Default: "Contained samples in the PDF"
 #: bika/lims/content/arreport.py:82
 msgid "description_arreport_contained_samples"
-msgstr "Amostras contidos no PDF"
+msgstr "Amostras contidas no PDF"
 
 #. Default: "The primary sample of the PDF"
 #: bika/lims/content/arreport.py:52
@@ -6953,7 +6953,7 @@ msgstr "Por favor, informe o percentual de Impostos adicionado ao preço do prod
 #. Default: "Reference sample values are zero or 'blank'"
 #: bika/lims/content/referencedefinition.py:70
 msgid "description_referencedefinition_blank"
-msgstr "Os valores de amostra de referência são zero ou 'em branco"
+msgstr "Os valores de amostra de referência são zero ou 'em branco'"
 
 #. Default: "Samples of this type should be treated as hazardous"
 #: bika/lims/content/referencedefinition.py:84
@@ -6978,7 +6978,7 @@ msgstr "Selecione a definição de referência para esta amostra"
 #. Default: "Add all field names that support to enter multiple values using the paste popup in the sample add form. Please note that the paste button will only show for the fields listed here."
 #: senaite/core/registry/schema.py:388
 msgid "description_registry_allow_multi_paste"
-msgstr "Adicione todos os nomes de campos que permitem a entrada de múltiplos valores usando a janela pop-up de colagem no formulário de exemplo. Observe que o botão de colar só será exibido para os campos listados aqui."
+msgstr "Adicione todos os nomes de campos que permitem a entrada de múltiplos valores usando a janela pop-up de colagem no formulário de amostra. Observe que o botão de colar só será exibido para os campos listados aqui."
 
 #. Default: "Define the relationship between portal types and the additional catalogs in which these portal types should be indexed, beyond the default catalogs. A restart is required for these changes to take effect."
 #: senaite/core/registry/schema.py:343
