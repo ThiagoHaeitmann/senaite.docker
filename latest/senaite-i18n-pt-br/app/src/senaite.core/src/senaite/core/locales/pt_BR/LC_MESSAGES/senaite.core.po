@@ -1053,7 +1053,7 @@ msgstr "Certificados Cal./Qual."
 
 #: bika/lims/content/instrumentcalibration.py:69
 msgid "Calibration report date"
-msgstr "Data da etiqueta "próxima calibração" atual registrada no Equipamento (Data à vencer)"
+msgstr "Data da etiqueta 'próxima calibração' atual registrada no Equipamento (Data à vencer)"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibrations"
