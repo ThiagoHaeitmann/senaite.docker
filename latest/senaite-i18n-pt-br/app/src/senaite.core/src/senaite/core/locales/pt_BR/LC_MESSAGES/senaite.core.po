@@ -3387,11 +3387,11 @@ msgstr "Preservação do Laboratório"
 
 #: senaite/core/profiles/default/types/LabProduct.xml
 msgid "Lab Product"
-msgstr "Produto de Laboratório"
+msgstr "Reagente/Consumível"
 
 #: senaite/core/profiles/default/types/LabProducts.xml
 msgid "Lab Products"
-msgstr "Produtos do Laboratório"
+msgstr "Reagentes/Consumíveis"
 
 #: bika/lims/content/laboratory.py:64
 msgid "Lab URL"
@@ -9634,7 +9634,7 @@ msgstr "Inativo"
 #. Default: "Lab Products"
 #: view.py:56
 msgid "listing_labproducts_title"
-msgstr "Reagentes e Consumíveis"
+msgstr "Reagentes/Consumíveis"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/manufacturers/view.py:51
