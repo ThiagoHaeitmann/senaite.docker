@@ -461,7 +461,7 @@ msgstr "Avançado"
 #: bika/lims/browser/instrument.py:650
 #: bika/lims/content/instrumentcertification.py:92
 msgid "Agency"
-msgstr "Agência"
+msgstr "Empresa Responsável"
 
 #: senaite/core/browser/controlpanel/departments/view.py:98
 #: senaite/core/browser/controlpanel/labels/view.py:80
@@ -1062,7 +1062,7 @@ msgstr "Calibrações/Qualificações"
 #: bika/lims/browser/instrument.py:220
 #: bika/lims/content/instrumentcalibration.py:96
 msgid "Calibrator"
-msgstr "Calibrador"
+msgstr "Técnico de Calibração"
 
 #: bika/lims/browser/analyses/view.py:1532
 msgid "Can verify, but submitted by current user"
@@ -1798,7 +1798,7 @@ msgstr ""
 
 #: bika/lims/content/instrumentcertification.py:100
 msgid "Date granted"
-msgstr "Data concedida"
+msgstr "Data de emissão"
 
 #: bika/lims/browser/worksheet/templates/print/sample_by_column.pt:112
 msgid "Date received"
@@ -2188,11 +2188,11 @@ msgstr "Ponto (.)"
 
 #: bika/lims/browser/instrument.py:86
 msgid "Down from"
-msgstr "Copiar de"
+msgstr "Inativo de"
 
 #: bika/lims/browser/instrument.py:87
 msgid "Down to"
-msgstr "Copiar para"
+msgstr "Inativo até"
 
 #: bika/lims/browser/publish/reports_listing.py:150
 msgid "Download"
@@ -3249,7 +3249,7 @@ msgstr "Modelos de Interpretação"
 
 #: bika/lims/content/instrumentcertification.py:110
 msgid "Interval"
-msgstr "Intervalo"
+msgstr "Intervalo de tempo até próxima calibração"
 
 #: senaite/core/browser/dashboard/dashboard.py:603
 #: senaite/core/browser/samples/view.py:389
@@ -3537,7 +3537,9 @@ msgstr "Carregar do arquivo"
 
 #: bika/lims/content/instrumentcertification.py:195
 msgid "Load the certificate document here"
-msgstr "Carregar o documento do certificado aqui"
+msgstr "" 
+"Carregar o documento do certificado aqui, com assinatura digital - se PDF - " 
+"ou carimbo da qualidade aprovando uso e scanner do documento físico)"
 
 #: bika/lims/content/storagelocation.py:58
 msgid "Location Code"
@@ -4345,7 +4347,7 @@ msgstr "Pedido"
 
 #: bika/lims/content/instrumentcertification.py:93
 msgid "Organization responsible of granting the calibration certificate"
-msgstr "Organização responsável por conceder o certificado de calibração"
+msgstr "Organização responsável pela emissão certificado (se interno, o nome do Laboratório)"
 
 #: bika/lims/browser/templates/analysisreport_info.pt:51
 msgid "Orientation"
@@ -5061,7 +5063,7 @@ msgstr ""
 
 #: bika/lims/content/instrumentcertification.py:194
 msgid "Report upload"
-msgstr "Upload de Laudo"
+msgstr "Upload do Certificado"
 
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "Republish"
@@ -6412,8 +6414,8 @@ msgid ""
 "certificate expires in days. Setting this inverval overwrites the 'To' field "
 "on save."
 msgstr ""
-"O intervalo é calculado a partir do campo 'De' e define quando o certificado "
-"expira em dias. Definir este intervalo sobrescreve o campo 'Até' ao salvar."
+"O intervalo é calculado a partir do campo 'Válido a partir de', e define quando o certificado "
+"expira em dias (somando os dias inseridos). Definir o intervalo sobrescreve o campo 'Válido até' ao salvar."
 
 #: bika/lims/browser/accreditation.py:71
 msgid "The lab is not accredited, or accreditation has not been configured. "
@@ -7935,22 +7937,25 @@ msgstr "Selecione o fornecedor deste equipamento"
 #. Default: "The person who performed the task"
 #: bika/lims/content/instrumentcalibration.py:130
 msgid "description_instrumentcalibration_worker"
-msgstr "A pessoa que realizou a tarefa"
+msgstr "" 
+"A pessoa que realizou a tarefa de acompanhar o Técnico externo"
+"ou que realizou a calibração/qualificação (caso tenha sido feita"
+"pelo próprio laboratório)"
 
 #. Default: "The person at the supplier who prepared the certificat"
 #: bika/lims/content/instrumentcertification.py:149
 msgid "description_instrumentcertification_preparator"
-msgstr "A pessoa do fornecedor que preparou o certificado"
+msgstr "Responsável interno por assinar e acompanhar a certificação/qualificação externa"
 
 #. Default: "The person at the supplier who approved the certificate"
 #: bika/lims/content/instrumentcertification.py:173
 msgid "description_instrumentcertification_validator"
-msgstr "A pessoa do fornecedor que aprovou o certificado"
+msgstr "Responsável da Qualidade que Liberou o Equipamento"
 
 #. Default: "The person who performed the task"
 #: bika/lims/content/instrumentvalidation.py:112
 msgid "description_instrumentvalidation_worker"
-msgstr "A pessoa que realizou a tarefa"
+msgstr "A pessoa que realizou a tarefa de checar a verificação/validação do equipamento"
 
 #. Default: "Select a default department for this contact from one of the selected departments."
 #: bika/lims/content/labcontact.py:89
@@ -8843,7 +8848,7 @@ msgstr "Responsável pela calibração do equipamento"
 #. Default: "Prepared by"
 #: bika/lims/content/instrumentcertification.py:146
 msgid "label_instrumentcertification_preparator"
-msgstr "Preparado por"
+msgstr "Acompanhado por"
 
 #. Default: "Approved by"
 #: bika/lims/content/instrumentcertification.py:170
