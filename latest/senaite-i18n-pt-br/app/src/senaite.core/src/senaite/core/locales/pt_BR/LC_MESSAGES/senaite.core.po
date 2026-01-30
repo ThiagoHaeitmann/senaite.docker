@@ -1820,7 +1820,7 @@ msgstr "Data de emissão do certificado"
 
 #: bika/lims/content/instrumentcertification.py:127
 msgid "Date when the certificate is valid"
-msgstr "Data de validade do certificado"
+msgstr "Data de realização da nova Calibração/Qualificação"
 
 #: bika/lims/browser/fields/interimfieldsfield.py:103
 #: bika/lims/content/abstractbaseanalysis.py:682
