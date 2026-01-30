@@ -2914,8 +2914,8 @@ msgid ""
 msgstr ""
 "Se o sistema não encontrar nenhuma correspondência (Amostra, Análise de "
 "Referência ou Duplicata), ele usará o identificador do registro para "
-"encontrar correspondências para IDs de Amostras de Referência. <br /> Se um "
-"ID de Amostra de Referência for encontrado, o sistema criará automaticamente "
+"encontrar correspondências para IDs de Carta Controle. <br /> Se um "
+"ID de amostra de Carta Controle for encontrado, o sistema criará automaticamente "
 "um Teste de Calibração (Análise de Referência) e o vinculará ao Equipamento "
 "selecionado."
 
@@ -3963,7 +3963,7 @@ msgid ""
 "No Reference Definitions for Blanks available. <br /> To add a Blank in this "
 "Worksheet Template, create a Reference Definition for a Blank sample first."
 msgstr ""
-"Nenhuma Definição de Referência para Branco disponível. <br /> Para "
+"Nenhuma Definição de Referência (Incerteza e Carta Controle) para Branco disponível. <br /> Para "
 "adicionar um Branco neste Modelo de Planilha, crie primeiro uma Definição de "
 "Referência para uma amostra de Branco."
 
@@ -3973,7 +3973,7 @@ msgid ""
 "this Worksheet Template, create a Reference Definition for a Control sample "
 "first."
 msgstr ""
-"Nenhuma Definição de Referência para Controles disponível. <br /> Para "
+"Nenhuma Definição de Referência (Incerteza e Carta Controle) para Controles disponível. <br /> Para "
 "adicionar um Controle neste Modelo de Planilha, crie primeiro uma Definição "
 "de Referência para uma amostra de Controle."
 
@@ -3983,9 +3983,9 @@ msgid ""
 "Control or Blank in this Worksheet Template, create a Reference Definition "
 "first."
 msgstr ""
-"Nenhuma Definição de Referência para Controles ou Brancos disponível. <br /> "
+"Nenhuma Definição de Referência (Incerteza e Carta Controle) para Controles ou Brancos disponível. <br /> "
 "Para adicionar um Controle ou Branco neste Modelo de Planilha, crie uma "
-"Definição de Referência primeiro."
+"Definição de Referência (Incerteza e Carta Controle) primeiro."
 
 #: senaite/core/exportimport/instruments/importer.py:416
 msgid "No Sample found for ${sid}"
@@ -4886,7 +4886,7 @@ msgstr "Análise de Referência"
 #: bika/lims/browser/templates/referencesample_view.pt:63
 #: bika/lims/profiles/default/types/ReferenceDefinition.xml
 msgid "Reference Definition"
-msgstr "Definição de Referência"
+msgstr "Incerteza e Carta Controle"
 
 #: bika/lims/controlpanel/bika_referencedefinitions.py:62
 #: bika/lims/profiles/default/types/ReferenceDefinitions.xml
@@ -4897,11 +4897,11 @@ msgstr "Definições de Referências"
 #: bika/lims/browser/templates/instrument_referenceanalyses.pt:12
 #: bika/lims/browser/worksheet/views/referencesamples.py:72
 msgid "Reference Sample"
-msgstr "Amostra de Referência"
+msgstr "Carta Controle"
 
 #: senaite/core/profiles/default/types/Supplier.xml
 msgid "Reference Samples"
-msgstr "Amostras de Referência"
+msgstr "Carta Controle"
 
 #: bika/lims/browser/referencesample.py:257
 #: bika/lims/profiles/default/types/ReferenceSample.xml
@@ -6046,7 +6046,7 @@ msgstr ""
 "Especifique o tamanho da Planilha, por exemplo, correspondente ao tamanho da "
 "bandeja de um equipamento específico. Em seguida, selecione um 'tipo' de "
 "Análise para cada posição da Planilha. Quando amostras de CQ forem "
-"selecionadas, também selecione qual Amostra de Referência deve ser usada. Se "
+"selecionadas, também selecione qual Amostra de Carta Controle deve ser usada. Se "
 "uma análise duplicada for selecionada, indique qual posição da amostra ela "
 "deve duplicar."
 
@@ -7986,7 +7986,7 @@ msgstr ""
 #. Default: "Reference sample values are zero or 'blank'"
 #: bika/lims/content/referencedefinition.py:70
 msgid "description_referencedefinition_blank"
-msgstr "Os valores de amostra de referência são zero ou 'em branco'"
+msgstr "Os valores de amostras de Carta Controle são zero ou 'em branco'"
 
 #. Default: "Samples of this type should be treated as hazardous"
 #: bika/lims/content/referencedefinition.py:84
@@ -8013,7 +8013,7 @@ msgstr "Selecione o fabricante para esta amostra"
 #. Default: "Select the reference definition for this sample"
 #: bika/lims/content/referencesample.py:60
 msgid "description_referencesample_referencedefinition"
-msgstr "Selecione a definição de referência para esta amostra"
+msgstr "Selecione a Incerteza para esta amostra"
 
 #. Default: "Add all field names that support to enter multiple values using the paste popup in the sample add form. Please note that the paste button will only show for the fields listed here."
 #: senaite/core/registry/schema.py:388
@@ -8471,7 +8471,7 @@ msgstr ""
 "Especifique o tamanho da planilha, por exemplo, correspondente ao tamanho da "
 "bandeja de um equipamento específico. Em seguida, selecione um 'tipo' de "
 "análise para cada posição da planilha. Quando amostras de controle de "
-"qualidade forem selecionadas, selecione também qual amostra de referência "
+"qualidade forem selecionadas, selecione também qual carta controle "
 "deve ser usada. Se uma análise duplicada for selecionada, indique de qual "
 "posição da amostra ela deve ser duplicada."
 
@@ -8910,7 +8910,7 @@ msgstr "Fabricante"
 #. Default: "Reference Definition"
 #: bika/lims/content/referencesample.py:57
 msgid "label_referencesample_referencedefinition"
-msgstr "Definição de referência"
+msgstr "Incerteza e Carta Controle"
 
 #. Default: "Catalog mappings"
 #: senaite/core/registry/schema.py:339
