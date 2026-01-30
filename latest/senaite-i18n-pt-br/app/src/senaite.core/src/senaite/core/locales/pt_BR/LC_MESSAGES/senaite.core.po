@@ -1646,7 +1646,7 @@ msgstr "Emails padrão para copiar (CC) todas as Amostras publicadas deste clien
 
 #: bika/lims/content/abstractbaseanalysis.py:395
 msgid "Default Instrument"
-msgstr "Instrumento padrão"
+msgstr "Equipamento padrão"
 
 #: bika/lims/content/abstractbaseanalysis.py:411
 msgid "Default Method"
@@ -1683,7 +1683,7 @@ msgstr "Separador padrão"
 
 #: bika/lims/content/abstractbaseanalysis.py:396
 msgid "Default instrument used for analyses of this type"
-msgstr "Instrumento padrão utilizado para análises deste tipo"
+msgstr "Equipamento padrão utilizado para análises deste tipo"
 
 #: bika/lims/content/sampletype.py:208
 msgid "Default large sticker"
@@ -1824,7 +1824,7 @@ msgstr "Descrição das ações realizadas durante o processo de manutenção"
 
 #: bika/lims/content/instrumentvalidation.py:101
 msgid "Description of the actions made during the validation"
-msgstr "Descrição das ações feitas durante a validação"
+msgstr "Descrição das ações feitas durante a validação/verificação pelo analista"
 
 #: bika/lims/content/storagelocation.py:64
 msgid "Description of the location"
@@ -2098,7 +2098,7 @@ msgstr "Chaves vazias não são permitidas"
 
 #: bika/lims/content/worksheettemplate.py:140
 msgid "Enable Multiple Use of Instrument in Worksheets."
-msgstr "Permitir Uso Múltiplo do Instrumento nas Planilhas."
+msgstr "Permitir Uso Múltiplo do Equipamento nas Planilhas."
 
 #: bika/lims/content/bikasetup.py:626
 msgid "Enable Sample Preservation"
@@ -2508,7 +2508,7 @@ msgstr "Se marcada, uma lista de seleção será exibida ao lado do campo result
 
 #: bika/lims/content/instrument.py:187
 msgid "If checked, the instrument will be unavailable until the next valid calibration was performed. This checkbox will automatically be unchecked."
-msgstr "Se selecionado, o instrumento estará indisponível até a próxima calibração válida ser realizada. Esta caixa de seleção será automaticamente desmarcada."
+msgstr "Se selecionado, o equipamento estará indisponível até a próxima calibração válida ser realizada. Esta caixa de seleção será automaticamente desmarcada."
 
 #: bika/lims/content/bikasetup.py:398
 msgid "If enabled, a free text field will be displayed close to each analysis in results entry view"
@@ -2556,11 +2556,11 @@ msgstr "Se o texto for inserido aqui, ele é usado em vez do título quando o se
 
 #: senaite/core/exportimport/import.pt:74
 msgid "If the system doesn't find any match (Sample, Reference Analysis or Duplicate), it will use the record's identifier to find matches for Reference Sample IDs. <br /> If a Reference Sample ID is found, the system will automatically create a Calibration Test (Reference Analysis) and will link it to the selected Instrument."
-msgstr "Se o sistema não encontrar nenhuma correspondência (Amostra, Análise de Referência ou Duplicata), ele usará o identificador do registro para encontrar correspondências para IDs de Amostras de Referência. <br /> Se um ID de Amostra de Referência for encontrado, o sistema criará automaticamente um Teste de Calibração (Análise de Referência) e o vinculará ao Instrumento selecionado."
+msgstr "Se o sistema não encontrar nenhuma correspondência (Amostra, Análise de Referência ou Duplicata), ele usará o identificador do registro para encontrar correspondências para IDs de Amostras de Referência. <br /> Se um ID de Amostra de Referência for encontrado, o sistema criará automaticamente um Teste de Calibração (Análise de Referência) e o vinculará ao Equipamento selecionado."
 
 #: bika/lims/content/worksheettemplate.py:141
 msgid "If unchecked, Lab Managers won't be able to assign the same Instrument more than one Analyses while creating a Worksheet."
-msgstr "Se desmarcado, os Gestores de Laboratório não poderão atribuir o mesmo Instrumento a mais de uma Análise ao criar uma Planilha."
+msgstr "Se desmarcado, os Gestores de Laboratório não poderão atribuir o mesmo Equipamento a mais de uma Análise ao criar uma Planilha."
 
 #: bika/lims/content/bikasetup.py:195
 msgid "If unchecked, analysts and lab clerks will be able to manage Worksheets, too. If the users have restricted access only to those worksheets for which they are assigned, this option will be checked and readonly."
@@ -2675,11 +2675,11 @@ msgstr "Instruções para rotinas de prevenção e manutenção regulares destin
 #: bika/lims/browser/referencesample.py:164
 #: bika/lims/browser/resultsimport/autoimportlogs.py:51
 msgid "Instrument"
-msgstr "Instrumento"
+msgstr "Equipamento"
 
 #: senaite/core/browser/form/adapters/method.py:74
 msgid "Instrument '{}' is used by service '{}'"
-msgstr "Instrumento '{}' usado pelo serviço '{}'"
+msgstr "Equipamento '{}' usado pelo serviço '{}'"
 
 #: bika/lims/browser/instrument.py:192
 msgid "Instrument Calibrations"
@@ -3610,7 +3610,7 @@ msgstr "Nenhum importador encontrado para a interface '{}'"
 
 #: senaite/core/browser/form/adapters/data_import.py:126
 msgid "No instrument import interfaces available for {}"
-msgstr "Nenhuma interface de importação de instrumento disponível para {}"
+msgstr "Nenhuma interface de importação de equipamento disponível para {}"
 
 #: bika/lims/browser/workflow/client.py:120
 msgid "No items published"
@@ -3910,7 +3910,7 @@ msgstr "Arquivo de imagem"
 
 #: bika/lims/content/instrument.py:339
 msgid "Photo of the instrument"
-msgstr "Foto do instrumento"
+msgstr "Foto do equipamento"
 
 #: senaite/core/browser/samples/rejection/templates/rejection_report.pt:87
 #: senaite/core/z3cform/widgets/address.py:120
@@ -5001,11 +5001,11 @@ msgstr "Selecionar todos:"
 
 #: bika/lims/content/instrument.py:223
 msgid "Select an Export interface for this instrument."
-msgstr "Selecione uma interface de exportação para este instrumento."
+msgstr "Selecione uma interface de exportação para este equipamento."
 
 #: bika/lims/content/instrument.py:236
 msgid "Select an Import interface for this instrument."
-msgstr "Selecione uma interface de importação para este instrumento."
+msgstr "Selecione uma interface de importação para este equipamento."
 
 #: bika/lims/content/artemplate.py:288
 msgid "Select analyses to include in this template"
@@ -5037,11 +5037,11 @@ msgstr "Selecione caso as descrições devam ser incluídas"
 
 #: bika/lims/content/abstractbaseanalysis.py:374
 msgid "Select if the results for tests of this type of analysis can be set by using an instrument. If disabled, no instruments will be available for tests of this type of analysis in manage results view, even though the method selected for the test has instruments assigned."
-msgstr "Selecione se os resultados para os testes deste tipo de análise podem ser definidos usando um instrumento. Se estiver desativado, não haverá equipamentos disponíveis para testes desse tipo de análise na exibição de resultados de gerenciamento, mesmo que o método selecionado para o teste tenha equipamentos atribuídos."
+msgstr "Selecione se os resultados para os testes deste tipo de análise podem ser definidos usando um equipamento. Se estiver desativado, não haverá equipamentos disponíveis para testes desse tipo de análise na exibição de resultados de gerenciamento, mesmo que o método selecionado para o teste tenha equipamentos atribuídos."
 
 #: bika/lims/browser/worksheet/templates/worksheets.pt:71
 msgid "Select instrument"
-msgstr "Selecionar instrumento"
+msgstr "Selecionar equipamento"
 
 #: senaite/core/browser/viewlets/templates/resultsinterpretation.pt:76
 msgid "Select template"
@@ -5340,7 +5340,7 @@ msgstr "Especifique quantas cópias de cada etiqueta devem ser impressas por pad
 
 #: bika/lims/content/worksheettemplate.py:63
 msgid "Specify the size of the Worksheet, e.g. corresponding to a specific instrument's tray size. Then select an Analysis 'type' per Worksheet position.Where QC samples are selected, also select which Reference Sample should be used.If a duplicate analysis is selected, indicate which sample position it should be a duplicate of"
-msgstr "Especifique o tamanho da Planilha, por exemplo, correspondente ao tamanho da bandeja de um instrumento específico. Em seguida, selecione um 'tipo' de Análise para cada posição da Planilha. Quando amostras de CQ forem selecionadas, também selecione qual Amostra de Referência deve ser usada. Se uma análise duplicada for selecionada, indique qual posição da amostra ela deve duplicar."
+msgstr "Especifique o tamanho da Planilha, por exemplo, correspondente ao tamanho da bandeja de um equipamento específico. Em seguida, selecione um 'tipo' de Análise para cada posição da Planilha. Quando amostras de CQ forem selecionadas, também selecione qual Amostra de Referência deve ser usada. Se uma análise duplicada for selecionada, indique qual posição da amostra ela deve duplicar."
 
 #: senaite/core/browser/samples/templates/manage_sample_fields.pt:149
 #: senaite/core/registry/schema.py:270
@@ -5554,11 +5554,11 @@ msgstr "Analista ou técnico responsável pela manutenção"
 
 #: bika/lims/content/instrumentvalidation.py:79
 msgid "The analyst responsible of the validation"
-msgstr "Analista responsável pela validação"
+msgstr "Analista responsável pela validação/verificação do equipamento pós calibração/qualificação/manutenção"
 
 #: bika/lims/browser/batch/batchbook.py:38
 msgid "The batch book allows to introduce analysis results for all samples in this batch. Please note that submitting the results for verification is only possible within samples or worksheets, because additional information like e.g. the instrument or the method need to be set additionally."
-msgstr "O livro de lote permite inserir os resultados da análise para todas as amostras deste lote. Por favor, note que o envio dos resultados para verificação só é possível dentro das amostras ou folhas de trabalho, pois informações adicionais como, por exemplo, o instrumento ou o método precisam ser configuradas adicionalmente."
+msgstr "O livro de lote permite inserir os resultados da análise para todas as amostras deste lote. Por favor, note que o envio dos resultados para verificação só é possível dentro das amostras ou folhas de trabalho, pois informações adicionais como, por exemplo, o equipamento ou o método precisam ser configuradas adicionalmente."
 
 #: bika/lims/content/analysisrequest.py:835
 msgid "The client side identifier of the sample"
@@ -5574,19 +5574,19 @@ msgstr "A referência do lado do cliente para esta solicitação"
 
 #: bika/lims/content/instrument.py:348
 msgid "The date the instrument was installed"
-msgstr "A data o instrumento foi instalado"
+msgstr "A data de instalação do equipamento"
 
 #: bika/lims/content/analysisrequest.py:606
 msgid "The date when the sample was preserved"
-msgstr "A data em que a amostra foi preservada"
+msgstr "A data de preservação da amostra"
 
 #: bika/lims/content/analysisrequest.py:1060
 msgid "The date when the sample was received"
-msgstr "A data em que a amostra foi recebida"
+msgstr "A data de recebimento da amostra"
 
 #: bika/lims/content/client.py:153
 msgid "The decimal mark selected in Bika Setup will be used."
-msgstr "O marcador decimal definido nas configurações do Bika será usado."
+msgstr "O separador decimal definido nas configurações do Bika será usado."
 
 #: senaite/core/browser/install/templates/senaite-addsite.pt:113
 msgid "The default timezone setting of the portal. Users will be able to set their own timezone, if available timezones are defined in the date and time settings."
@@ -6312,7 +6312,7 @@ msgstr "Validações"
 #: bika/lims/browser/instrument.py:317
 #: bika/lims/content/instrumentvalidation.py:78
 msgid "Validator"
-msgstr "Validador"
+msgstr "Validador/Verificador"
 
 #: bika/lims/browser/worksheet/templates/results.pt:206
 #: bika/lims/content/calculation.py:151
@@ -6898,7 +6898,7 @@ msgstr "Métodos suportados por este equipamento analítico"
 #. Default: "For each interface of this instrument, you can define a folder where the system should look for the results files while automatically importing results. Having a folder for each Instrument and inside that folder creating different folders for each of its Interfaces can be a good approach. You can use Interface codes to be sure that folder names are unique."
 #: bika/lims/content/instrument.py:267
 msgid "description_instrument_result_file_folder"
-msgstr "Para cada interface deste equipamento, você pode definir uma pasta onde o sistema deve procurar os arquivos de resultados ao importar os resultados automaticamente. Ter uma pasta para cada instrumento e, dentro dessa pasta, criar pastas diferentes para cada uma de suas interfaces pode ser uma boa abordagem. Você pode usar códigos de interface para garantir que os nomes das pastas sejam exclusivos."
+msgstr "Para cada interface deste equipamento, você pode definir uma pasta onde o sistema deve procurar os arquivos de resultados ao importar os resultados automaticamente. Ter uma pasta para cada equipamento e, dentro dessa pasta, criar pastas diferentes para cada uma de suas interfaces pode ser uma boa abordagem. Você pode usar códigos de interface para garantir que os nomes das pastas sejam exclusivos."
 
 #. Default: "Select the supplier of this instrument"
 #: bika/lims/content/instrument.py:122
