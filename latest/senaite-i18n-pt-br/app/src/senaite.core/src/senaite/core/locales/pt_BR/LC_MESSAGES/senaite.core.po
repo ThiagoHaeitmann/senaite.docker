@@ -149,7 +149,7 @@ msgstr "+-"
 
 #: senaite/core/exportimport/dataimport.py:126
 msgid "... Choose an Instrument ..."
-msgstr "... Escolha um Instrumento ..."
+msgstr "... Escolha um Equipamento ..."
 
 #: bika/lims/browser/fields/resultrangefield.py:40
 #: bika/lims/browser/widgets/analysisspecificationwidget.py:120
@@ -734,7 +734,7 @@ msgstr "Redirecionar automaticamente o usuário para a visualização de criaç�
 
 #: bika/lims/content/analysisservice.py:76
 msgid "Available instruments based on the selected methods."
-msgstr "Instrumentos disponíveis com base nos métodos selecionados."
+msgstr "Equipamentos disponíveis com base nos métodos selecionados."
 
 #: bika/lims/content/analysisservice.py:61
 msgid "Available methods to perform the test"
@@ -908,13 +908,13 @@ msgstr "Cálculos"
 
 #: bika/lims/content/instrumentscheduledtask.py:118
 msgid "Calibration"
-msgstr "Calibração"
+msgstr "Calibração/Qualificação"
 
 #: bika/lims/browser/instrument.py:627
 #: bika/lims/browser/templates/instrument_certifications.pt:40
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibration Certificates"
-msgstr "Certificados de calibração"
+msgstr "Certificados Cal./Qual."
 
 #: bika/lims/content/instrumentcalibration.py:69
 msgid "Calibration report date"
@@ -922,7 +922,7 @@ msgstr "Data de calibração do laudo"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibrations"
-msgstr "Calibração"
+msgstr "Calibrações/Qualificações"
 
 #: bika/lims/browser/instrument.py:220
 #: bika/lims/content/instrumentcalibration.py:96
@@ -1478,7 +1478,7 @@ msgstr "Atual"
 
 #: bika/lims/content/client.py:164
 msgid "Custom decimal mark"
-msgstr "Marca decimal padrão"
+msgstr "Separador padrão"
 
 #: bika/lims/browser/analyses/view.py:132
 #: bika/lims/browser/worksheet/views/analyses.py:80
@@ -1573,15 +1573,15 @@ msgstr "Data Verificada"
 
 #: bika/lims/content/instrumentcalibration.py:79
 msgid "Date from which the instrument is under calibration"
-msgstr "Data a partir da qual o instrumento está sob calibração"
+msgstr "Data inicial do período de calibração/qualificação realizada pelo técnico"
 
 #: bika/lims/content/instrumentmaintenancetask.py:65
 msgid "Date from which the instrument is under maintenance"
-msgstr "Data a partir da qual o instrumento está sob manutenção"
+msgstr "Data inicial da manutenção equipamento"
 
 #: bika/lims/content/instrumentvalidation.py:61
 msgid "Date from which the instrument is under validation"
-msgstr "Data a partir da qual o instrumento está sob validação"
+msgstr "Data inicial da validação/verificação de calibração/qualificação do equipamento"
 
 #: bika/lims/content/instrumentcertification.py:100
 msgid "Date granted"
@@ -1593,17 +1593,17 @@ msgstr "Data de Recebimento"
 
 #: bika/lims/content/instrumentcertification.py:137
 msgid "Date until the certificate is valid"
-msgstr "Data até a qual o certificado é válido"
+msgstr "Data agendada para o técnico iniciar calibração/qualificação"
 
 #: bika/lims/content/instrumentcalibration.py:89
 #: bika/lims/content/instrumentmaintenancetask.py:75
 #: bika/lims/content/instrumentvalidation.py:71
 msgid "Date until the instrument will not be available"
-msgstr "Data até que o instrumento não estará disponível"
+msgstr "Data final do processo de calibração/qualificação (dia que o técnico finalizou a calibração/qualificação)"
 
 #: bika/lims/content/instrumentcertification.py:101
 msgid "Date when the calibration certificate was granted"
-msgstr "Data de quando o certificado de calibração foi concedido"
+msgstr "Data de emissão do certificado"
 
 #: bika/lims/content/instrumentcertification.py:127
 msgid "Date when the certificate is valid"
@@ -1630,7 +1630,7 @@ msgstr "Desativar"
 
 #: bika/lims/content/client.py:165
 msgid "Decimal mark to use in the reports from this Client."
-msgstr "Marca decimal para uso nos Laudos deste cliente."
+msgstr "Separador decimal a ser utilizado nos laudos deste cliente."
 
 #: bika/lims/content/analysisservice.py:165
 msgid "Default Container"
@@ -1679,7 +1679,7 @@ msgstr "Contagem padrão de amostras a adicionar."
 #: bika/lims/content/bikasetup.py:278
 #: bika/lims/content/client.py:152
 msgid "Default decimal mark"
-msgstr "Marca decimal padrão"
+msgstr "Separador padrão"
 
 #: bika/lims/content/abstractbaseanalysis.py:396
 msgid "Default instrument used for analyses of this type"
@@ -1816,7 +1816,7 @@ msgstr "Descrição"
 
 #: bika/lims/content/instrumentcalibration.py:119
 msgid "Description of the actions made during the calibration"
-msgstr "Descrição das ações realizadas durante a calibração"
+msgstr "Descrição das ações realizadas pelo técnico durante a calibração/qualificação"
 
 #: bika/lims/content/instrumentmaintenancetask.py:103
 msgid "Description of the actions made during the maintenance process"
@@ -2597,7 +2597,7 @@ msgstr "Importação concluída com sucesso: ${updated_ars} amostras e ${updated
 
 #: senaite/core/exportimport/instruments/importer.py:546
 msgid "Import finished successfully: ${updated_ars} Samples, ${updated_instruments} Instruments and ${updated_results} results updated"
-msgstr "Importação concluída com sucesso: ${updated_ars} Amostras, ${updated_instruments} Instrumentos e ${updated_results} resultados atualizados"
+msgstr "Importação concluída com sucesso: ${updated_ars} Amostras, ${updated_instruments} Equipamentos e ${updated_results} resultados atualizados"
 
 #: bika/lims/browser/resultsimport/autoimportlogs.py:59
 msgid "Imported File"
@@ -2683,121 +2683,121 @@ msgstr "Instrumento '{}' usado pelo serviço '{}'"
 
 #: bika/lims/browser/instrument.py:192
 msgid "Instrument Calibrations"
-msgstr "Calibrações de Instrumento"
+msgstr "Calibrações de Equipamentos"
 
 #: bika/lims/browser/instrument.py:781
 msgid "Instrument Files"
-msgstr "Arquivo de Instrumentos"
+msgstr "Arquivo de Equipamentos"
 
 #: senaite/core/exportimport/import.pt:37
 msgid "Instrument Import"
-msgstr "Importação do Instrumento"
+msgstr "Importação de Equipamento"
 
 #: senaite/core/profiles/default/types/InstrumentLocation.xml
 msgid "Instrument Location"
-msgstr "Localização do Instrumento"
+msgstr "Local do Equipamento"
 
 #: senaite/core/profiles/default/types/InstrumentLocations.xml
 msgid "Instrument Locations"
-msgstr "Localizações do Instrumento"
+msgstr "Locais do Equipamento"
 
 #: bika/lims/browser/instrument.py:64
 msgid "Instrument Maintenance"
-msgstr "Manutenção do Instrumento"
+msgstr "Manutenção do Equipamento"
 
 #: bika/lims/browser/instrument.py:381
 msgid "Instrument Scheduled Tasks"
-msgstr "Agenda de Tarefas do Instrumento"
+msgstr "Agenda de Tarefas do Equipamento"
 
 #: bika/lims/browser/instrument.py:289
 msgid "Instrument Validations"
-msgstr "Validação de Instrumento"
+msgstr "Validação/Verificação de Equipamento"
 
 #: bika/lims/content/abstractbaseanalysis.py:373
 msgid "Instrument assignment is allowed"
-msgstr "A atribuição do instrumento é permitida"
+msgstr "A atribuição permitida do equipamento"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:35
 msgid "Instrument disabled until successful calibration:"
-msgstr "Instrumento segregado até calibração bem-sucedida:"
+msgstr "Equipamento segregado até calibração/qualificação bem-sucedida:"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:54
 msgid "Instrument disposed until new calibration tests being done:"
-msgstr "Instrumentos segregados até que novos testes de calibração sejam realizados:"
+msgstr "Equipamentos segregados até que novos testes de calibração/qualificação sejam realizados:"
 
 #: bika/lims/browser/worksheet/views/export.py:53
 msgid "Instrument exporter not found"
-msgstr "Exportador para o instrumento não encontrado"
+msgstr "Exportador para o equipamento não encontrado"
 
 #: bika/lims/browser/workflow/analysis.py:139
 msgid "Instrument failed reference test"
-msgstr "Instrumento falhou no teste de referência"
+msgstr "Equipamento falhou no teste de referência"
 
 #: bika/lims/browser/worksheet/views/export.py:40
 msgid "Instrument has no data interface selected"
-msgstr "O instrumento não possui interface de dados selecionada"
+msgstr "O equipamento não possui interface de dados selecionada"
 
 #: senaite/core/browser/form/adapters/data_import.py:96
 msgid "Instrument import finished"
-msgstr "Importação de Instrumento finalizada"
+msgstr "Importação de Equipamento finalizada"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:92
 msgid "Instrument in calibration progress:"
-msgstr "Instrumento em calibração:"
+msgstr "Equipamento em calibração/qualificação:"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:73
 msgid "Instrument in validation progress:"
-msgstr "Instrumento em validação:"
+msgstr "Equipamento em validação/verificação:"
 
 #: senaite/core/exportimport/instruments/importer.py:402
 msgid "Instrument not found"
-msgstr "Instrumento não encontrado"
+msgstr "Equipamento não encontrado"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:16
 msgid "Instrument's calibration certificate expired:"
-msgstr "Certificado de calibração dos instrumentos expirado:"
+msgstr "Certificado de calibração dos equipamento expirado:"
 
 #: senaite/core/profiles/default/types/InstrumentType.xml
 msgid "InstrumentType"
-msgstr "Tipo de Instrumento"
+msgstr "Tipo de Equipamento"
 
 #: senaite/core/profiles/default/types/InstrumentTypes.xml
 msgid "InstrumentTypes"
-msgstr "Tipos de Instrumentos"
+msgstr "Tipos de Equipamentos"
 
 #: senaite/core/profiles/default/types/InstrumentLocation.xml
 #: senaite/core/profiles/default/types/InstrumentType.xml
 #: senaite/core/profiles/default/types/Manufacturer.xml
 msgid "Instruments"
-msgstr "Instrumentos"
+msgstr "Equipamentos"
 
 #: senaite/core/exportimport/import.pt:162
 msgid "Instruments can be configured with one or multiple import data interfaces."
-msgstr "Os instrumentos podem ser configurados com uma ou várias interfaces de dados de importação."
+msgstr "Os equipamentos podem ser configurados com uma ou várias interfaces de dados de importação."
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:39
 msgid "Instruments disabled until successful calibration:"
-msgstr "Instrumentos desativados até calibração bem-sucedida:"
+msgstr "Equipamentos desativados até calibração bem-sucedida:"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:58
 msgid "Instruments disposed until new calibration tests being done:"
-msgstr "Instrumentos dispostos até que novos testes de calibração sejam feitos:"
+msgstr "Equipamentos dispostos até que novos testes de calibração sejam feitos:"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:96
 msgid "Instruments in calibration progress:"
-msgstr "Instrumentos em calibração:"
+msgstr "Equipamentos em calibração:"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:77
 msgid "Instruments in validation progress:"
-msgstr "Instrumentos em progresso de validação:"
+msgstr "Equipamentos em progresso de verificação/validação da calibração/qualificação:"
 
 #: bika/lims/content/method.py:103
 msgid "Instruments supporting this method"
-msgstr "Instrumentos que suportam este método"
+msgstr "Equipamentos que suportam este método"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:20
 msgid "Instruments' calibration certificates expired:"
-msgstr "Os certificados de calibração dos instrumentos expiraram:"
+msgstr "Os certificados de calibração/qualificação dos seguintes equipamentos expiraram:"
 
 #: bika/lims/browser/resultsimport/autoimportlogs.py:55
 msgid "Interface"
@@ -2805,16 +2805,16 @@ msgstr "Interface"
 
 #: bika/lims/browser/instrument.py:493
 msgid "Internal Calibration Tests"
-msgstr "Testes de calibração interna"
+msgstr "Testes de calibração/qualificação INTERNA"
 
 #: bika/lims/content/instrumentcertification.py:84
 msgid "Internal Certificate"
-msgstr "Certificado interno"
+msgstr "Certificado INTERNO"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:145
 #: senaite/core/browser/samples/view.py:599
 msgid "Internal use"
-msgstr "Uso interno"
+msgstr "Uso INTERNO"
 
 #: bika/lims/browser/templates/instrument_referenceanalyses.pt:36
 #: bika/lims/browser/templates/referencesample_analyses.pt:31
@@ -3778,7 +3778,7 @@ msgstr "Apenas imagens podem ser exibidas diretamente no laudo"
 
 #: senaite/core/exportimport/import.pt:95
 msgid "Only instruments that have an import interface configured are displayed"
-msgstr "Apenas os instrumentos que possuem uma interface de importação configurada são exibidos"
+msgstr "Apenas os equipamentos que possuem uma interface de importação configurada são exibidos"
 
 #: bika/lims/content/bikasetup.py:194
 msgid "Only lab managers can create and manage worksheets"
@@ -4358,41 +4358,41 @@ msgstr "Reintegração"
 #: senaite/core/profiles/default/workflows/senaite_analysis_workflow/definition.xml
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "Reject"
-msgstr "Rejeitar"
+msgstr "Declinar"
 
 #: bika/lims/profiles/default/types/RejectAnalysis.xml
 msgid "Reject Analysis"
-msgstr "Rejeitar análise"
+msgstr "Declinar análise"
 
 #: senaite/core/browser/samples/rejection/templates/reject_samples.pt:17
 msgid "Reject samples"
-msgstr "Rejeitar amostras"
+msgstr "Declinar amostras"
 
 #: senaite/core/browser/dashboard/dashboard.py:593
 #: senaite/core/browser/samples/rejection/templates/rejection_report.pt:121
 #: senaite/core/browser/samples/view.py:408
 msgid "Rejected"
-msgstr "Rejeitado"
+msgstr "Declinado"
 
 #: bika/lims/browser/workflow/analysisrequest.py:107
 msgid "Rejected items: {}"
-msgstr "Itens rejeitados: {}"
+msgstr "Itens declinados: {}"
 
 #: bika/lims/browser/viewlets/templates/rejected_ar_viewlet.pt:13
 msgid "Rejected sample"
-msgstr "Amostra rejeitada"
+msgstr "Amostra Declinada"
 
 #: senaite/core/browser/samples/rejection/reject_samples.py:114
 msgid "Rejected {} samples: {}"
-msgstr "Amostras {} rejeitadas: {}"
+msgstr "Amostras {} declinadas: {}"
 
 #: senaite/core/browser/samples/rejection/reject_samples.py:121
 msgid "Rejection cancelled"
-msgstr "Rejeição cancelada"
+msgstr "Declínio cancelado"
 
 #: senaite/core/browser/samples/rejection/templates/reject_samples.pt:84
 msgid "Rejection reasons"
-msgstr "Motivos de rejeição"
+msgstr "Motivos de declínio"
 
 #: senaite/core/browser/samples/rejection/reject_samples.py:70
 msgid "Rejection workflow is not enabled"
@@ -4404,7 +4404,7 @@ msgstr "Recarregar"
 
 #: senaite/core/browser/viewlets/remarks.py:31
 msgid "Remarks"
-msgstr "Notas"
+msgstr "Observações"
 
 #: bika/lims/content/analysisrequest.py:1086
 msgid "Remarks and comments for this request"
@@ -4416,15 +4416,15 @@ msgstr "Observações de {}"
 
 #: bika/lims/content/instrumentcalibration.py:108
 msgid "Remarks to take into account before calibration"
-msgstr "Observações a considerar antes da calibração"
+msgstr "Observações da Labpharma a considerar antes da calibração/qualificação (Ex.: Falhas, trobleshouting, troca de peças...)"
 
 #: bika/lims/content/instrumentscheduledtask.py:87
 msgid "Remarks to take into account before performing the task"
-msgstr "Observações a considerar antes da calibração"
+msgstr "Observações a serem consideradas antes da realização da tarefa"
 
 #: bika/lims/content/instrumentvalidation.py:90
 msgid "Remarks to take into account before validation"
-msgstr "Observações a considerar antes da calibração"
+msgstr "Observações a considerar antes da verificação/validação pós calibração/qualificação"
 
 #: bika/lims/content/instrumentmaintenancetask.py:93
 msgid "Remarks to take into account for maintenance process"
@@ -4474,12 +4474,12 @@ msgstr "Data de emissão"
 #: bika/lims/content/instrumentcalibration.py:150
 #: bika/lims/content/instrumentvalidation.py:132
 msgid "Report ID"
-msgstr "ID do Laudo"
+msgstr "ID do Novo Certificado de Cablibração/Qualificação"
 
 #: bika/lims/content/instrumentcalibration.py:151
 #: bika/lims/content/instrumentvalidation.py:133
 msgid "Report identification number"
-msgstr "Número de identificação do Laudo"
+msgstr "Número de identificação do novo certificado emitido pelo técnico responsável pela calibração/qualificação"
 
 #: bika/lims/content/instrumentcertification.py:194
 msgid "Report upload"
@@ -5037,7 +5037,7 @@ msgstr "Selecione caso as descrições devam ser incluídas"
 
 #: bika/lims/content/abstractbaseanalysis.py:374
 msgid "Select if the results for tests of this type of analysis can be set by using an instrument. If disabled, no instruments will be available for tests of this type of analysis in manage results view, even though the method selected for the test has instruments assigned."
-msgstr "Selecione se os resultados para os testes deste tipo de análise podem ser definidos usando um instrumento. Se estiver desativado, não haverá instrumentos disponíveis para testes desse tipo de análise na exibição de resultados de gerenciamento, mesmo que o método selecionado para o teste tenha instrumentos atribuídos."
+msgstr "Selecione se os resultados para os testes deste tipo de análise podem ser definidos usando um instrumento. Se estiver desativado, não haverá equipamentos disponíveis para testes desse tipo de análise na exibição de resultados de gerenciamento, mesmo que o método selecionado para o teste tenha equipamentos atribuídos."
 
 #: bika/lims/browser/worksheet/templates/worksheets.pt:71
 msgid "Select instrument"
@@ -5301,7 +5301,7 @@ msgstr "Modelo de Pequeno Adesivo"
 
 #: bika/lims/browser/worksheet/views/results.py:190
 msgid "Some analyses use out-of-date or uncalibrated instruments. Results edition not allowed"
-msgstr "Algumas análises estão desatualizadas ou instrumentos não calibrados. Edição resultados não permitidos"
+msgstr "Algumas análises estão desatualizadas ou equipamentos não calibrados. Edição de resultados não permitida"
 
 #: bika/lims/content/abstractbaseanalysis.py:80
 #: bika/lims/content/analysiscategory.py:82
@@ -5512,7 +5512,7 @@ msgstr "Modelo"
 
 #: bika/lims/content/calculation.py:156
 msgid "Test Parameters"
-msgstr "Parâmetros de teste"
+msgstr "Parâmetros do teste"
 
 #: bika/lims/content/calculation.py:170
 msgid "Test Result"
@@ -5530,7 +5530,7 @@ msgstr "Obrigado pela sua solicitação de análise."
 
 #: senaite/core/browser/install/templates/senaite-addsite.pt:54
 msgid "The ID of the site. This ends up as part of the URL. No special characters or spaces are allowed."
-msgstr "A identificação do site. Isso acaba como parte do URL. Não são permitidos caracteres especiais ou espaços."
+msgstr "O ID do site. Isso acaba como parte do URL. Não são permitidos caracteres especiais ou espaços."
 
 #: bika/lims/content/laboratory.py:65
 msgid "The Laboratory's web address"
@@ -5546,7 +5546,7 @@ msgstr "As análises inclusas neste perfil, agrupadas por categoria"
 
 #: bika/lims/content/instrumentcalibration.py:97
 msgid "The analyst or agent responsible of the calibration"
-msgstr "Analista ou técnico responsável pela calibração"
+msgstr "Analista ou técnico (externo) responsável pela calibração/qualificação"
 
 #: bika/lims/content/instrumentmaintenancetask.py:83
 msgid "The analyst or agent responsible of the maintenance"
@@ -5635,11 +5635,11 @@ msgstr "O tempo de retenção para esta amostra e análise está prestes a expir
 #: bika/lims/content/instrument.py:309
 #: bika/lims/content/instrumentcertification.py:58
 msgid "The instrument's ID in the lab's asset register"
-msgstr "ID do instrumento no registro de ativos do laboratório"
+msgstr "ID do equipamento no registro de ativos (Patrimônio)"
 
 #: bika/lims/content/instrument.py:138
 msgid "The instrument's model number"
-msgstr "O número do modelo do instrumento"
+msgstr "O número do modelo do equipamento"
 
 #: bika/lims/content/instrumentcertification.py:111
 msgid "The interval is calculated from the 'From' field and defines when the certificate expires in days. Setting this inverval overwrites the 'To' field on save."
@@ -5723,7 +5723,7 @@ msgstr "A amostra é uma mistura de subamostras"
 
 #: bika/lims/content/instrument.py:146
 msgid "The serial number that uniquely identifies the instrument"
-msgstr "O número de série que identifica, de forma única, o instrumento."
+msgstr "O número de série que identifica, de forma única, o equipamento."
 
 #: bika/lims/content/abstractbaseanalysis.py:847
 msgid "The service's analytical protocol ID"
@@ -5739,7 +5739,7 @@ msgstr "A especificação possui uma Especificação Dinâmica atribuída"
 
 #: bika/lims/content/abstractbaseanalysis.py:344
 msgid "The unique keyword used to identify the analysis service in import files of bulk Sample requests and results imports from instruments. It is also used to identify dependent analysis services in user defined results calculations"
-msgstr "A palavra-chave única usada para identificar o serviço de análise em arquivos de importação de solicitações em massa de Amostras e importações de resultados de instrumentos. Também é usada para identificar serviços de análise dependentes em cálculos de resultados definidos pelo usuário."
+msgstr "A palavra-chave única usada para identificar o serviço de análise em arquivos de importação de solicitações em massa de Amostras e importações de resultados de equipamentos. Também é usada para identificar serviços de análise dependentes em cálculos de resultados definidos pelo usuário."
 
 #: bika/lims/browser/analysisrequest/add2.py:1198
 msgid "The value of field '%s' was emptied. Please select a new value."
@@ -5938,7 +5938,7 @@ msgstr "Tipo de controle a ser exibido na entrada de valor quando opções estiv
 
 #: bika/lims/content/multifile.py:74
 msgid "Type of document (e.g. user manual, instrument specifications, image, ...)"
-msgstr "Tipo de documento (por exemplo, manual do utilizador, especificações do instrumento, imagem, ...)"
+msgstr "Tipo de documento (por exemplo, manual do utilizador, especificações do equipamento, imagem, ...)"
 
 #: bika/lims/content/storagelocation.py:69
 msgid "Type of location"
@@ -6533,7 +6533,7 @@ msgstr "Você tem vários sites:"
 
 #: bika/lims/browser/worksheet/views/export.py:33
 msgid "You must select an instrument"
-msgstr "Você deve selecionar um instrumento"
+msgstr "Você deve selecionar um equipamento"
 
 #: senaite/core/browser/install/templates/senaite-addsite.pt:159
 msgid "You normally don't need to change anything here unless you have specific reasons and know what you are doing."
@@ -6763,7 +6763,7 @@ msgstr "Selecione o tipo de anexo"
 #. Default: "Assign the instrument for this log"
 #: bika/lims/content/autoimportlog.py:53
 msgid "description_autoimportlog_instrument"
-msgstr "Atribua o instrumento para este registro"
+msgstr "Atribua o equipamento para este registro"
 
 #. Default: "The date and time when the log was created"
 #: bika/lims/content/autoimportlog.py:90
@@ -6878,32 +6878,32 @@ msgstr "Nome do departamento"
 #. Default: "Location where the instrument is installed"
 #: bika/lims/content/instrument.py:322
 msgid "description_instrument_instrumentlocation"
-msgstr "Local onde o instrumento está instalado"
+msgstr "Local onde o equipamento está instalado"
 
 #. Default: "Select the type of this instrument"
 #: bika/lims/content/instrument.py:82
 msgid "description_instrument_instrumenttype"
-msgstr "Selecione o tipo deste instrumento"
+msgstr "Selecione o tipo deste equipamento"
 
 #. Default: "Select the manufacturer of this instrument"
 #: bika/lims/content/instrument.py:102
 msgid "description_instrument_manufacturer"
-msgstr "Selecione o fabricante deste instrumento"
+msgstr "Selecione o fabricante deste equipamento"
 
 #. Default: "Methods that are supported by this analytical instrument"
 #: bika/lims/content/instrument.py:174
 msgid "description_instrument_methods"
-msgstr "Métodos suportados por este instrumento analítico"
+msgstr "Métodos suportados por este equipamento analítico"
 
 #. Default: "For each interface of this instrument, you can define a folder where the system should look for the results files while automatically importing results. Having a folder for each Instrument and inside that folder creating different folders for each of its Interfaces can be a good approach. You can use Interface codes to be sure that folder names are unique."
 #: bika/lims/content/instrument.py:267
 msgid "description_instrument_result_file_folder"
-msgstr "Para cada interface deste instrumento, você pode definir uma pasta onde o sistema deve procurar os arquivos de resultados ao importar os resultados automaticamente. Ter uma pasta para cada instrumento e, dentro dessa pasta, criar pastas diferentes para cada uma de suas interfaces pode ser uma boa abordagem. Você pode usar códigos de interface para garantir que os nomes das pastas sejam exclusivos."
+msgstr "Para cada interface deste equipamento, você pode definir uma pasta onde o sistema deve procurar os arquivos de resultados ao importar os resultados automaticamente. Ter uma pasta para cada instrumento e, dentro dessa pasta, criar pastas diferentes para cada uma de suas interfaces pode ser uma boa abordagem. Você pode usar códigos de interface para garantir que os nomes das pastas sejam exclusivos."
 
 #. Default: "Select the supplier of this instrument"
 #: bika/lims/content/instrument.py:122
 msgid "description_instrument_supplier"
-msgstr "Selecione o fornecedor deste instrumento"
+msgstr "Selecione o fornecedor deste equipamento"
 
 #. Default: "The person who performed the task"
 #: bika/lims/content/instrumentcalibration.py:130
@@ -7338,12 +7338,12 @@ msgstr "O usuário está vinculado a um contato. Altere suas configurações no 
 #. Default: "Select the preferred instrument"
 #: senaite/core/content/worksheettemplate.py:266
 msgid "description_worksheettemplate_instrument"
-msgstr "Selecione o instrumento preferido"
+msgstr "Selecione o equipamento preferido"
 
 #. Default: "Restrict the available analysis services and instruments to those with the selected method.<br/>In order to apply this change to the services list, you should save the change first."
 #: senaite/core/content/worksheettemplate.py:240
 msgid "description_worksheettemplate_restrict_to_method"
-msgstr "Restringe os serviços e instrumentos de análise disponíveis àqueles com o método selecionado.<br/>Para aplicar essa alteração à lista de serviços, você deve salvá-la primeiro."
+msgstr "Restringe os serviços e equipamentos de análise disponíveis àqueles com o método selecionado.<br/>Para aplicar essa alteração à lista de serviços, você deve salvá-la primeiro."
 
 #. Default: "Select which Analyses should be included on the Worksheet"
 #: senaite/core/content/worksheettemplate.py:350
@@ -7353,7 +7353,7 @@ msgstr "Selecione quais análises devem ser incluídas na planilha"
 #. Default: "Specify the size of the Worksheet, e.g. corresponding to a specific instrument's tray size. Then select an Analysis 'type' per Worksheet position. Where QC samples are selected, also select which Reference Sample should be used. If a duplicate analysis is selected, indicate which sample position it should be a duplicate of"
 #: senaite/core/content/worksheettemplate.py:315
 msgid "description_worksheettemplate_template_layout"
-msgstr "Especifique o tamanho da planilha, por exemplo, correspondente ao tamanho da bandeja de um instrumento específico. Em seguida, selecione um 'tipo' de análise para cada posição da planilha. Quando amostras de controle de qualidade forem selecionadas, selecione também qual amostra de referência deve ser usada. Se uma análise duplicada for selecionada, indique de qual posição da amostra ela deve ser duplicada."
+msgstr "Especifique o tamanho da planilha, por exemplo, correspondente ao tamanho da bandeja de um equipamento específico. Em seguida, selecione um 'tipo' de análise para cada posição da planilha. Quando amostras de controle de qualidade forem selecionadas, selecione também qual amostra de referência deve ser usada. Se uma análise duplicada for selecionada, indique de qual posição da amostra ela deve ser duplicada."
 
 #. Default: "Not found Analysis position for duplicate."
 #: senaite/core/browser/form/adapters/worksheettemplate.py:115
@@ -7403,7 +7403,7 @@ msgstr "Partições"
 #. Default: "No Instrument"
 #: senaite/core/browser/form/adapters/worksheettemplate.py:228
 msgid "form_widget_instrument_title"
-msgstr "Sem instrumento"
+msgstr "Sem equipamento"
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
 #: senaite/core/browser/user/passwordpanel.py:44
@@ -7566,7 +7566,7 @@ msgstr "Tipo de Anexo"
 #. Default: "Instrument"
 #: bika/lims/content/autoimportlog.py:50
 msgid "label_autoimportlog_instrument"
-msgstr "Instrumento"
+msgstr "Equipamento"
 
 #. Default: "Log Time"
 #: bika/lims/content/autoimportlog.py:87
@@ -7691,7 +7691,7 @@ msgstr "Localização"
 #. Default: "Instrument type"
 #: bika/lims/content/instrument.py:79
 msgid "label_instrument_instrumenttype"
-msgstr "Tipo de Instrumento"
+msgstr "Tipo de Equipamento"
 
 #. Default: "Manufacturer"
 #: bika/lims/content/instrument.py:99
@@ -7716,7 +7716,7 @@ msgstr "Fornecedor"
 #. Default: "Performed by"
 #: bika/lims/content/instrumentcalibration.py:127
 msgid "label_instrumentcalibration_worker"
-msgstr "Responsável pela calibração do instrumento"
+msgstr "Responsável pela calibração do equipamento"
 
 #. Default: "Prepared by"
 #: bika/lims/content/instrumentcertification.py:146
@@ -8107,7 +8107,7 @@ msgstr "Nome completo"
 #. Default: "Preferred instrument"
 #: senaite/core/content/worksheettemplate.py:262
 msgid "label_worksheettemplate_instrument"
-msgstr "Instrumento preferido"
+msgstr "Equipamento preferido"
 
 #. Default: "Restrict to Method"
 #: senaite/core/content/worksheettemplate.py:236
@@ -8377,7 +8377,7 @@ msgstr "Inativo"
 #. Default: "Instrument Locations"
 #: senaite/core/browser/controlpanel/instrumentlocations/view.py:58
 msgid "listing_instrumentlocations_title"
-msgstr "Locais de Instrumentos"
+msgstr "Locais dos Equipamentos"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:49
@@ -8412,7 +8412,7 @@ msgstr "Inativo"
 #. Default: "Instrument Types"
 #: senaite/core/browser/controlpanel/instrumenttypes/view.py:56
 msgid "listing_instrumenttypes_title"
-msgstr "Tipos de Instrumento"
+msgstr "Tipos de Equipamento"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/interpretationtemplates/view.py:52
@@ -9140,7 +9140,7 @@ msgstr "Descrição"
 #. Default: "Instrument"
 #: senaite/core/browser/controlpanel/worksheettemplates/view.py:89
 msgid "listing_worksheettemplates_column_instrument"
-msgstr "Instrumento"
+msgstr "Equipamento"
 
 #. Default: "Method"
 #: senaite/core/browser/controlpanel/worksheettemplates/view.py:82
@@ -9233,7 +9233,7 @@ msgstr "Não são permitidos espaços em branco no prefixo."
 #. Default: "Folder to import the instrument results from"
 #: bika/lims/content/instrument.py:250
 msgid "subfield_label_instrument_import_folder"
-msgstr "Pasta de onde importar os resultados do instrumento"
+msgstr "Pasta de onde importar os resultados do equipamento"
 
 #. Default: "Interface Code"
 #: bika/lims/content/instrument.py:248
