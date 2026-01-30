@@ -1798,7 +1798,7 @@ msgstr ""
 
 #: bika/lims/content/instrumentcertification.py:100
 msgid "Date granted"
-msgstr "Data de emissão"
+msgstr "Data de Consenso"
 
 #: bika/lims/browser/worksheet/templates/print/sample_by_column.pt:112
 msgid "Date received"
@@ -5619,7 +5619,7 @@ msgstr "Selecione arquivo existente"
 
 #: bika/lims/content/instrumentcertification.py:85
 msgid "Select if is an in-house calibration certificate"
-msgstr "Selecione se for um certificado de calibração interno"
+msgstr "Selecione se for um certificado de calibração/qualificação interno (Realizada pelo próprio laboratório)"
 
 #: bika/lims/content/analysisservice.py:88
 msgid ""
@@ -6198,11 +6198,11 @@ msgstr "Padrão do Sistema"
 
 #: bika/lims/browser/instrument.py:83
 msgid "Task"
-msgstr "Tarefa"
+msgstr "Análise Crítica (N°)"
 
 #: bika/lims/content/instrumentcertification.py:57
 msgid "Task ID"
-msgstr "ID da tarefa"
+msgstr "N° da Análise Crítica"
 
 #. Default: "Type"
 #: bika/lims/browser/instrument.py:85
@@ -6998,7 +6998,7 @@ msgstr "Válido até"
 
 #: bika/lims/content/instrumentscheduledtask.py:122
 msgid "Validation"
-msgstr "Validação"
+msgstr "Análise de Certificado"
 
 #: senaite/core/z3cform/error.py:32
 msgid "Validation failed."
@@ -7220,16 +7220,16 @@ msgstr "Falha na validação: o valor deve ser decimal"
 
 #: bika/lims/content/instrumentvalidation.py:51
 msgid "Validation report date"
-msgstr "Data do relatório de validação"
+msgstr "Data de aprovação do Certificado pela Qualidade"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Validations"
-msgstr "Validações"
+msgstr "Análise Crítica de Certificados"
 
 #: bika/lims/browser/instrument.py:317
 #: bika/lims/content/instrumentvalidation.py:78
 msgid "Validator"
-msgstr "Validador/Verificador"
+msgstr "Responsável pela Análise Crítica (Qualidade)"
 
 #: bika/lims/browser/worksheet/templates/results.pt:206
 #: bika/lims/content/calculation.py:151 bika/lims/content/instrument.py:288
@@ -8858,7 +8858,7 @@ msgstr "Aprovado por"
 #. Default: "Performed by"
 #: bika/lims/content/instrumentvalidation.py:109
 msgid "label_instrumentvalidation_worker"
-msgstr "Realizado por"
+msgstr "Aprovado por (Gerente/Coordenador)"
 
 #. Default: "Default Department"
 #: bika/lims/content/labcontact.py:86
