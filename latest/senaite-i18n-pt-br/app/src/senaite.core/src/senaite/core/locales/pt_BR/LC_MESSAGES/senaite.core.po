@@ -690,7 +690,7 @@ msgstr "Aplicar largura"
 
 #: bika/lims/content/instrument.py:308
 msgid "Asset Number"
-msgstr "Número do Ativo"
+msgstr "Número do Ativo (Patrimônio)"
 
 #: senaite/core/profiles/default/workflows/senaite_analysis_workflow/definition.xml
 msgid "Assign"
@@ -1053,7 +1053,7 @@ msgstr "Certificados Cal./Qual."
 
 #: bika/lims/content/instrumentcalibration.py:69
 msgid "Calibration report date"
-msgstr "Data da próxima registrada no Equipamento"
+msgstr "Data da etiqueta "próxima calibração" atual registrada no Equipamento (Data à vencer)"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibrations"
@@ -1062,7 +1062,7 @@ msgstr "Agenda de Calibrações/Qualificações"
 #: bika/lims/browser/instrument.py:220
 #: bika/lims/content/instrumentcalibration.py:96
 msgid "Calibrator"
-msgstr "Técnico de Calibração"
+msgstr "Técnico Responsável pela Calibração/Qualificação"
 
 #: bika/lims/browser/analyses/view.py:1532
 msgid "Can verify, but submitted by current user"
@@ -1784,7 +1784,7 @@ msgstr "Data Verificada"
 #: bika/lims/content/instrumentcalibration.py:79
 msgid "Date from which the instrument is under calibration"
 msgstr ""
-"Data inicial ficará fora de uso para Calibração/Qualificação"
+"Data inicial que o equipamento ficará 'fora de uso' até acontecer Calibração/Qualificação"
 
 #: bika/lims/content/instrumentmaintenancetask.py:65
 msgid "Date from which the instrument is under maintenance"
@@ -1793,8 +1793,7 @@ msgstr "Data inicial da manutenção equipamento"
 #: bika/lims/content/instrumentvalidation.py:61
 msgid "Date from which the instrument is under validation"
 msgstr ""
-"Data inicial da validação/verificação de calibração/qualificação do "
-"equipamento"
+"Data de início da Análise Crítica"
 
 #: bika/lims/content/instrumentcertification.py:100
 msgid "Date granted"
@@ -1813,7 +1812,7 @@ msgstr "Data vencimento da calibração/qualificação"
 #: bika/lims/content/instrumentvalidation.py:71
 msgid "Date until the instrument will not be available"
 msgstr ""
-"Data final do processo de calibração/qualificação"
+"Data final que termina o processo de Calibração/Qualificação"
 
 #: bika/lims/content/instrumentcertification.py:101
 msgid "Date when the calibration certificate was granted"
@@ -3090,7 +3089,7 @@ msgstr "Equipamento '{}' usado pelo serviço '{}'"
 
 #: bika/lims/browser/instrument.py:192
 msgid "Instrument Calibrations"
-msgstr "Calibrações/Qualificações de Equipamentos"
+msgstr "Agenda de Calibrações/Qualificações"
 
 #: bika/lims/browser/instrument.py:781
 msgid "Instrument Files"
@@ -6197,11 +6196,11 @@ msgstr "Padrão do Sistema"
 
 #: bika/lims/browser/instrument.py:83
 msgid "Task"
-msgstr "Análise Crítica (N°)"
+msgstr "Título da Análise Crítica"
 
 #: bika/lims/content/instrumentcertification.py:57
 msgid "Task ID"
-msgstr "N° da Análise Crítica"
+msgstr "Título da Análise Crítica realizada"
 
 #. Default: "Type"
 #: bika/lims/browser/instrument.py:85
@@ -6272,8 +6271,8 @@ msgstr "Analista ou técnico responsável pela manutenção"
 #: bika/lims/content/instrumentvalidation.py:79
 msgid "The analyst responsible of the validation"
 msgstr ""
-"Analista responsável pela validação/verificação do equipamento pós "
-"calibração/qualificação/manutenção"
+"Analista da Qualidade responsável pela análise crítica do certificado equipamento"
+
 
 #: bika/lims/browser/batch/batchbook.py:38
 msgid ""
@@ -6401,7 +6400,7 @@ msgstr ""
 #: bika/lims/content/instrument.py:309
 #: bika/lims/content/instrumentcertification.py:58
 msgid "The instrument's ID in the lab's asset register"
-msgstr "ID do equipamento no registro de ativos (Patrimônio)"
+msgstr "Insira abaixo a identificação"
 
 #: bika/lims/content/instrument.py:138
 msgid "The instrument's model number"
@@ -6718,7 +6717,7 @@ msgstr "Título da Unidade"
 #: bika/lims/content/instrumentmaintenancetask.py:74
 #: bika/lims/content/instrumentvalidation.py:70
 msgid "To"
-msgstr "Para"
+msgstr "Até"
 
 #: senaite/core/browser/samples/view.py:295
 msgid "To Be Preserved"
@@ -7937,9 +7936,8 @@ msgstr "Selecione o fornecedor deste equipamento"
 #: bika/lims/content/instrumentcalibration.py:130
 msgid "description_instrumentcalibration_worker"
 msgstr "" 
-"A pessoa que realizou a tarefa de acompanhar o Técnico externo"
-"ou que realizou a calibração/qualificação (caso tenha sido feita"
-"pelo próprio laboratório)"
+"Responsável que acomapanhou o Técnico externo e que recebeu o certificado para o laboratório"
+
 
 #. Default: "The person at the supplier who prepared the certificat"
 #: bika/lims/content/instrumentcertification.py:149
@@ -7954,7 +7952,7 @@ msgstr "Responsável da Qualidade que Liberou o Equipamento"
 #. Default: "The person who performed the task"
 #: bika/lims/content/instrumentvalidation.py:112
 msgid "description_instrumentvalidation_worker"
-msgstr "A pessoa que realizou a tarefa de checar a verificação/validação do equipamento"
+msgstr "Gerente ou Coornador da Qualidade por aprovar a Análise Crítica da Analista da Qualidade"
 
 #. Default: "Select a default department for this contact from one of the selected departments."
 #: bika/lims/content/labcontact.py:89
@@ -8842,7 +8840,7 @@ msgstr "Fornecedor"
 #. Default: "Performed by"
 #: bika/lims/content/instrumentcalibration.py:127
 msgid "label_instrumentcalibration_worker"
-msgstr "Responsável pela Acompanhamento"
+msgstr "Responsável por Receber o Certificado (Gerente/Coordenador)"
 
 #. Default: "Prepared by"
 #: bika/lims/content/instrumentcertification.py:146
@@ -11053,7 +11051,7 @@ msgstr "Nome"
 
 #: senaite/core/browser/dashboard/templates/dashboard.pt:530
 msgid "to"
-msgstr "para"
+msgstr "até"
 
 #: bika/lims/content/instrumentscheduledtask.py:140
 msgid "until"
