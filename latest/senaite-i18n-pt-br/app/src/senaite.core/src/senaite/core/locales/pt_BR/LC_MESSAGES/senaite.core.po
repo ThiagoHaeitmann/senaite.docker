@@ -1057,7 +1057,7 @@ msgstr "Data de calibração do laudo"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibrations"
-msgstr "Calibrações/Qualificações"
+msgstr "Agenda de Calibrações/Qualificações"
 
 #: bika/lims/browser/instrument.py:220
 #: bika/lims/content/instrumentcalibration.py:96
@@ -3091,7 +3091,7 @@ msgstr "Equipamento '{}' usado pelo serviço '{}'"
 
 #: bika/lims/browser/instrument.py:192
 msgid "Instrument Calibrations"
-msgstr "Calibrações de Equipamentos"
+msgstr "Calibrações/Qualificações de Equipamentos"
 
 #: bika/lims/browser/instrument.py:781
 msgid "Instrument Files"
