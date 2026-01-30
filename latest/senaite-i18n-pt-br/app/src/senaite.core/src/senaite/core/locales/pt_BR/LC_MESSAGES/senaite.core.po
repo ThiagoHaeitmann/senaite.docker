@@ -1053,7 +1053,7 @@ msgstr "Certificados Cal./Qual."
 
 #: bika/lims/content/instrumentcalibration.py:69
 msgid "Calibration report date"
-msgstr "Data de calibração do laudo"
+msgstr "Data da próxima registrada no Equipamento"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibrations"
@@ -1784,7 +1784,7 @@ msgstr "Data Verificada"
 #: bika/lims/content/instrumentcalibration.py:79
 msgid "Date from which the instrument is under calibration"
 msgstr ""
-"Data inicial do período de calibração/qualificação realizada pelo técnico"
+"Data inicial ficará fora de uso para Calibração/Qualificação"
 
 #: bika/lims/content/instrumentmaintenancetask.py:65
 msgid "Date from which the instrument is under maintenance"
@@ -1806,15 +1806,14 @@ msgstr "Data de Recebimento"
 
 #: bika/lims/content/instrumentcertification.py:137
 msgid "Date until the certificate is valid"
-msgstr "Data agendada para o técnico iniciar calibração/qualificação"
+msgstr "Data vencimento da calibração/qualificação"
 
 #: bika/lims/content/instrumentcalibration.py:89
 #: bika/lims/content/instrumentmaintenancetask.py:75
 #: bika/lims/content/instrumentvalidation.py:71
 msgid "Date until the instrument will not be available"
 msgstr ""
-"Data final do processo de calibração/qualificação (dia que o técnico "
-"finalizou a calibração/qualificação)"
+"Data final do processo de calibração/qualificação"
 
 #: bika/lims/content/instrumentcertification.py:101
 msgid "Date when the calibration certificate was granted"
@@ -4347,7 +4346,7 @@ msgstr "Pedido"
 
 #: bika/lims/content/instrumentcertification.py:93
 msgid "Organization responsible of granting the calibration certificate"
-msgstr "Organização responsável pela emissão certificado (se interno, o nome do Laboratório)"
+msgstr "Empresa responsável pela emissão do certificado (se interno, o nome do Laboratório)"
 
 #: bika/lims/browser/templates/analysisreport_info.pt:51
 msgid "Orientation"
@@ -5003,7 +5002,7 @@ msgstr "Observações a serem consideradas antes da realização da tarefa"
 msgid "Remarks to take into account before validation"
 msgstr ""
 "Observações a considerar antes da verificação/validação pós calibração/"
-"qualificação"
+"qualificação/manutenção"
 
 #: bika/lims/content/instrumentmaintenancetask.py:93
 msgid "Remarks to take into account for maintenance process"
@@ -5047,7 +5046,7 @@ msgstr "Laudo"
 #: bika/lims/content/instrumentcalibration.py:68
 #: bika/lims/content/instrumentvalidation.py:50
 msgid "Report Date"
-msgstr "Data de emissão"
+msgstr "Data do Certificado"
 
 #: bika/lims/content/instrumentcalibration.py:150
 #: bika/lims/content/instrumentvalidation.py:132
@@ -8843,7 +8842,7 @@ msgstr "Fornecedor"
 #. Default: "Performed by"
 #: bika/lims/content/instrumentcalibration.py:127
 msgid "label_instrumentcalibration_worker"
-msgstr "Responsável pela calibração do equipamento"
+msgstr "Responsável pela Acompanhamento"
 
 #. Default: "Prepared by"
 #: bika/lims/content/instrumentcertification.py:146
