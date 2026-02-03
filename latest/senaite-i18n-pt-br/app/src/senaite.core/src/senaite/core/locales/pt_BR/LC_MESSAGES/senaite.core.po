@@ -723,7 +723,7 @@ msgstr "Arquivo anexado '%{filename}' à folha de trabalho ${worksheet}"
 
 #: senaite/core/extender/label.py:58
 msgid "Attached labels"
-msgstr "Etiquetas anexadas"
+msgstr "Tags anexadas"
 
 #: senaite/core/exportimport/instruments/importer.py:872
 msgid "Attaching '${attachment}' to Analysis '${analysis}'"
@@ -3425,7 +3425,7 @@ msgstr "Objetos Rotulados"
 #: senaite/core/browser/label/labeled_objects.py:65
 #: senaite/core/extender/label.py:57
 msgid "Labels"
-msgstr "Etiquetas"
+msgstr "Tags"
 
 #: bika/lims/content/laboratory.py:206
 #: bika/lims/profiles/default/types/Laboratory.xml
