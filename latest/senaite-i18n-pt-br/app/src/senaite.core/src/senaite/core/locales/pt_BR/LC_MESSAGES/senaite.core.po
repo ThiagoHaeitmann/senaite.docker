@@ -330,7 +330,7 @@ msgstr "Cabeçalho da página de acreditação"
 
 #: senaite/core/browser/widgets/services_widget.py:283
 msgid "Accredited"
-msgstr "Certificado"
+msgstr "Acreditado"
 
 #: bika/lims/browser/auditlog.py:92 bika/lims/controlpanel/auditlog.py:95
 msgid "Action"
@@ -958,7 +958,7 @@ msgstr "Branco"
 
 #: bika/lims/config.py:88
 msgid "Blank QC analyses"
-msgstr "Análises para CQ de branco"
+msgstr "Análises de CQ - Branco"
 
 #: bika/lims/controlpanel/bika_instruments.py:80
 msgid "Brand"
@@ -1048,7 +1048,7 @@ msgstr "Calibração/Qualificação"
 #: bika/lims/browser/templates/instrument_certifications.pt:40
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibration Certificates"
-msgstr "Certificados Cal./Qual."
+msgstr "Certificados do Equipamento"
 
 #: bika/lims/content/instrumentcalibration.py:69
 msgid "Calibration report date"
@@ -1056,7 +1056,7 @@ msgstr "Data da etiqueta 'próxima calibração' atual registrada no Equipamento
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Calibrations"
-msgstr "Agenda de Calibrações/Qualificações"
+msgstr "Agenda do Equipamento"
 
 #: bika/lims/browser/instrument.py:220
 #: bika/lims/content/instrumentcalibration.py:96
@@ -1188,7 +1188,7 @@ msgid ""
 "schedule of accredited analyses"
 msgstr ""
 "Selecione aqui se o serviço de análise está incluso no cronograma do "
-"laboratório para análises certificadas"
+"laboratório para análises acreditadas (ISO 17025, FDA...)"
 
 #: bika/lims/content/samplepoint.py:122
 msgid ""
@@ -1408,11 +1408,11 @@ msgstr "Recolher tabela de análises laboratoriais na visualização da amostra"
 
 #: senaite/core/registry/schema.py:182
 msgid "Collapse qc analysis table"
-msgstr "Recolher tabela de análises de CQ"
+msgstr "Recolher tabela de análises de CQ - Carta Controle"
 
 #: senaite/core/registry/schema.py:183
 msgid "Collapse qc analysis table in sample view"
-msgstr "Recolher tabela de análises de CQ na visualização da amostra"
+msgstr "Recolher tabela de análises de CQ (Carta Controle) na visualização da amostra"
 
 #: senaite/core/browser/samples/rejection/templates/rejection_report.pt:117
 msgid "Collected"
@@ -1437,7 +1437,7 @@ msgstr "Comentários ou interpretação de resultados"
 #: bika/lims/content/abstractbaseanalysis.py:834
 #: bika/lims/content/analysisprofile.py:91
 msgid "Commercial ID"
-msgstr "ID do comércio"
+msgstr "Centro de Custo (CC)"
 
 #: bika/lims/content/analysisrequest.py:940
 #: bika/lims/content/samplepoint.py:121
@@ -1555,7 +1555,7 @@ msgstr "Controle"
 
 #: bika/lims/config.py:89
 msgid "Control QC analyses"
-msgstr "Análises para CQ de controle"
+msgstr "Análises de  CQ - Carta Controle"
 
 #: bika/lims/browser/fields/interimfieldsfield.py:59
 #: bika/lims/content/analysisservice.py:221
@@ -2099,11 +2099,11 @@ msgstr "Desconto %"
 #: senaite/core/browser/samples/templates/dispatch_samples.pt:78
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "Dispatch"
-msgstr "Despachar"
+msgstr "Despachar/Devolver"
 
 #: senaite/core/browser/samples/templates/dispatch_samples.pt:15
 msgid "Dispatch samples"
-msgstr "Despachar amostras"
+msgstr "Despachar/Devolver amostras"
 
 #: senaite/core/browser/samples/view.py:367
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
@@ -2213,16 +2213,16 @@ msgstr "Data de Entrega"
 
 #: bika/lims/controlpanel/bika_analysisservices.py:199
 msgid "Dup Var"
-msgstr "Variável Duplicada"
+msgstr "Variável duplicata"
 
 #: bika/lims/browser/worksheet/views/analyses.py:549 bika/lims/config.py:69
 #: bika/lims/controlpanel/bika_analysisservices.py:217
 msgid "Duplicate"
-msgstr "Duplicada"
+msgstr "Duplicata"
 
 #: bika/lims/profiles/default/types/DuplicateAnalysis.xml
 msgid "Duplicate Analysis"
-msgstr "Análise duplicada"
+msgstr "Análise Duplicata"
 
 #: bika/lims/content/worksheettemplate.py:59
 msgid "Duplicate Of"
@@ -2230,7 +2230,7 @@ msgstr "Duplicado de"
 
 #: bika/lims/config.py:90
 msgid "Duplicate QC analyses"
-msgstr "Análises de CQ duplicadas"
+msgstr "Análises de CQ - Duplicatas"
 
 #: bika/lims/content/abstractbaseanalysis.py:460
 msgid "Duplicate Variation %"
@@ -2660,7 +2660,7 @@ msgid ""
 "Float value from 0.0 - 1000.0 indicating the sort order. Duplicate values "
 "are ordered alphabetically."
 msgstr ""
-"Valor de flutuação de 0,0 - 1000,0 indicando a ordem de classificação. Os "
+"Valor de racional de 0,0 - 1000,0 indicando a ordem de classificação. Os "
 "valores duplicados são ordenados alfabeticamente."
 
 #: bika/lims/content/bikasetup.py:957
@@ -2901,7 +2901,7 @@ msgid ""
 "listed in column headings. HTML formatting is allowed."
 msgstr ""
 "Se o texto for inserido aqui, ele é usado em vez do título quando o serviço "
-"for listado em títulos de coluna. Formatação HTML é permitida."
+"for listado coluna Títulos. Formatação HTML é permitida."
 
 #: senaite/core/exportimport/import.pt:74
 msgid ""
@@ -3088,7 +3088,10 @@ msgstr "Equipamento '{}' usado pelo serviço '{}'"
 
 #: bika/lims/browser/instrument.py:192
 msgid "Instrument Calibrations"
-msgstr "Agenda de Calibrações/Qualificações"
+msgstr "Agenda do Equipamento"
+
+msgid "Instrument Calibration"
+msgstr "Agenda do Equipamento"
 
 #: bika/lims/browser/instrument.py:781
 msgid "Instrument Files"
@@ -3112,11 +3115,14 @@ msgstr "Manutenção do Equipamento"
 
 #: bika/lims/browser/instrument.py:381
 msgid "Instrument Scheduled Tasks"
-msgstr "Agenda de Tarefas do Equipamento"
+msgstr "Agenda do Equipamento"
 
 #: bika/lims/browser/instrument.py:289
 msgid "Instrument Validations"
-msgstr "Validação/Verificação de Equipamento"
+msgstr "Análise Crítica do Certificado"
+
+msgid "Instrument Validation"
+msgstr "Análise Crítica do Certificado"
 
 #: bika/lims/content/abstractbaseanalysis.py:373
 msgid "Instrument assignment is allowed"
@@ -3220,7 +3226,7 @@ msgstr "Interface"
 
 #: bika/lims/browser/instrument.py:493
 msgid "Internal Calibration Tests"
-msgstr "Testes de calibração/qualificação INTERNA"
+msgstr "Testes de CQ - Carta Controle"
 
 #: bika/lims/content/instrumentcertification.py:84
 msgid "Internal Certificate"
@@ -3834,7 +3840,7 @@ msgstr "Volume Mínimo"
 
 #: bika/lims/content/bikasetup.py:300
 msgid "Minimum number of results for QC stats calculations"
-msgstr "Número mínimo de resultados para cálculos estatísticos de CQ"
+msgstr "Número mínimo de resultados para cálculos estatísticos de CQ - Carta Controle"
 
 #: bika/lims/browser/fields/coordinatefield.py:37
 #: bika/lims/browser/fields/durationfield.py:38
@@ -4516,7 +4522,7 @@ msgstr ""
 #: senaite/core/browser/samples/templates/dispatch_samples.pt:71
 msgid "Please write a comment where the listed sample(s) are dispatched"
 msgstr ""
-"Por favor, escreva um comentário onde as amostra(s) listadas são despachadas"
+"Por favor, escreva um comentário e finalidade onde as amostra(s) listadas são despachadas"
 
 #: bika/lims/browser/templates/analysisservice_info.pt:96
 #: bika/lims/content/abstractbaseanalysis.py:494
@@ -4761,7 +4767,7 @@ msgstr "Campos em destaque"
 
 #: bika/lims/content/abstractbaseanalysis.py:846
 msgid "Protocol ID"
-msgstr "ID de Protocolo"
+msgstr "ID do Protocolo"
 
 #: senaite/core/browser/samples/view.py:182
 msgid "Province"
@@ -4796,16 +4802,16 @@ msgstr "Publicado {}"
 
 #: senaite/core/browser/viewlets/sampleanalyses.py:76
 msgid "QC Analyses"
-msgstr "Análises do CQ"
+msgstr "Análises de CQ - Carta Controle"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "QC Results"
-msgstr "Resultados de CQ"
+msgstr "Carta Controle"
 
 #: bika/lims/browser/analyses/qc.py:55 bika/lims/browser/instrument.py:552
 #: bika/lims/browser/referencesample.py:144
 msgid "QC Sample ID"
-msgstr "ID da amostra do CQ"
+msgstr "ID da amostra do CQ - Carta Controle"
 
 #: senaite/core/browser/dashboard/templates/dashboard.pt:538
 msgid "Quarterly"
@@ -5049,7 +5055,7 @@ msgstr "Data do Certificado"
 #: bika/lims/content/instrumentcalibration.py:150
 #: bika/lims/content/instrumentvalidation.py:132
 msgid "Report ID"
-msgstr "ID do Novo Certificado de Cablibração/Qualificação"
+msgstr "ID do Novo Certificado de Calibração/Qualificação"
 
 #: bika/lims/content/instrumentcalibration.py:151
 #: bika/lims/content/instrumentvalidation.py:133
@@ -6044,9 +6050,9 @@ msgid ""
 msgstr ""
 "Especifique o tamanho da Planilha, por exemplo, correspondente ao tamanho da "
 "bandeja de um equipamento específico. Em seguida, selecione um 'tipo' de "
-"Análise para cada posição da Planilha. Quando amostras de CQ forem "
+"Análise para cada posição da Planilha. Quando amostras de CQ (Carta Controle) forem "
 "selecionadas, também selecione qual Amostra de Carta Controle deve ser usada. Se "
-"uma análise duplicada for selecionada, indique qual posição da amostra ela "
+"uma análise Duplicata (Carta Controle) for selecionada, indique qual posição da amostra ela "
 "deve duplicar."
 
 #: senaite/core/browser/samples/templates/manage_sample_fields.pt:149
@@ -6469,7 +6475,7 @@ msgstr "O preço cobrado a clientes qualificados para descontos por volume"
 
 #: bika/lims/content/analysisprofile.py:92
 msgid "The profile's commercial ID for accounting purposes."
-msgstr "ID comercial do perfil para fins contábeis."
+msgstr "Centro de Custo (CC) do perfil para fins contábeis."
 
 #: bika/lims/content/analysisprofile.py:52
 msgid ""
@@ -6537,11 +6543,11 @@ msgstr "O número de série que identifica, de forma única, o equipamento."
 
 #: bika/lims/content/abstractbaseanalysis.py:847
 msgid "The service's analytical protocol ID"
-msgstr "ID de protocolo de serviço analítico"
+msgstr "ID do protocolo de serviço analítico (em caso validações e outros serviços)"
 
 #: bika/lims/content/abstractbaseanalysis.py:835
 msgid "The service's commercial ID for accounting purposes"
-msgstr "ID serviço do perfil para fins contábeis."
+msgstr "ID do serviço para fins contábeis."
 
 #: bika/lims/browser/viewlets/templates/sample_dynamic_specs_viewlet.pt:14
 msgid "The specification has a Dynamic Specification assigned"
@@ -6553,7 +6559,7 @@ msgid ""
 "bulk Sample requests and results imports from instruments. It is also used "
 "to identify dependent analysis services in user defined results calculations"
 msgstr ""
-"A palavra-chave única usada para identificar o serviço de análise em "
+"Palavra-chave usada para identificar o serviço de análise em "
 "arquivos de importação de solicitações em massa de Amostras e importações de "
 "resultados de equipamentos. Também é usada para identificar serviços de "
 "análise dependentes em cálculos de resultados definidos pelo usuário."
@@ -6821,13 +6827,13 @@ msgid ""
 "Types that support labels directly.<br/>NOTE: In cluster setups, other "
 "instances need to be restarted manually for the changes to take place!"
 msgstr ""
-"Tipos que suportam rótulos diretamente.<br/>OBSERVAÇÃO: Em configurações de "
+"Tipos que suportam tags diretamente.<br/>OBSERVAÇÃO: Em configurações de "
 "cluster, outras instâncias precisam ser reiniciadas manualmente para que as "
 "alterações tenham efeito!"
 
 #: senaite/core/registry/schema.py:92
 msgid "Types with labels"
-msgstr "Tipos com rótulos"
+msgstr "Tipos com Tags"
 
 #: bika/lims/browser/worksheet/views/printview.py:142
 msgid "Unable to load the template"
@@ -6961,7 +6967,7 @@ msgid ""
 "minimum number of results before QC statistics will be calculated and plotted"
 msgstr ""
 "Usar muito poucos dados não faz sentido estatisticamente. Configure um "
-"número mínimo aceitável de resultados antes que as estatísticas de CQ possam "
+"número mínimo aceitável de resultados antes que as estatísticas de CQ (Carta Controle) possam "
 "ser calculadas e exibidas"
 
 #: bika/lims/browser/analysisrequest/templates/ar_add2.pt:697
@@ -7003,7 +7009,7 @@ msgstr "Falha de validação"
 
 #: bika/lims/validators.py:345
 msgid "Validation failed: '${keyword}': duplicate keyword"
-msgstr "Falha de validação: '${keyword}': palavra-chave duplicada"
+msgstr "Falha de validação: '${keyword}': palavra-chave da Duplicata"
 
 #: bika/lims/validators.py:364
 msgid ""
@@ -7659,7 +7665,7 @@ msgstr ""
 #. Default: "Commercial ID used for accounting"
 #: senaite/core/content/analysisprofile.py:125
 msgid "description_analysisprofile_commercial_id"
-msgstr "ID comercial usado para fins contábeis"
+msgstr "Centro de Custo (CC) usado para fins contábeis"
 
 #. Default: "Please provide a unique profile keyword"
 #: senaite/core/content/analysisprofile.py:94
@@ -8448,7 +8454,7 @@ msgstr ""
 #. Default: "Select the preferred instrument"
 #: senaite/core/content/worksheettemplate.py:266
 msgid "description_worksheettemplate_instrument"
-msgstr "Selecione o equipamento preferido"
+msgstr "Selecione o equipamento fixo"
 
 #. Default: "Restrict the available analysis services and instruments to those with the selected method.<br/>In order to apply this change to the services list, you should save the change first."
 #: senaite/core/content/worksheettemplate.py:240
@@ -8471,8 +8477,8 @@ msgstr ""
 "bandeja de um equipamento específico. Em seguida, selecione um 'tipo' de "
 "análise para cada posição da planilha. Quando amostras de controle de "
 "qualidade forem selecionadas, selecione também qual carta controle "
-"deve ser usada. Se uma análise duplicada for selecionada, indique de qual "
-"posição da amostra ela deve ser duplicada."
+"deve ser usada. Se uma análise Duplicata (Carta Controle) for selecionada, indique de qual "
+"posição da amostra ela deve ser a Duplicata."
 
 #. Default: "Not found Analysis position for duplicate."
 #: senaite/core/browser/form/adapters/worksheettemplate.py:115
@@ -8559,7 +8565,7 @@ msgstr "em"
 #. Default: "Labels"
 #: senaite/core/behaviors/label.py:117
 msgid "label_Labels"
-msgstr "Rótulos"
+msgstr "Tags"
 
 #. Default: "Add to the following groups:"
 #: bika/lims/browser/templates/login_details.pt:276
@@ -8614,7 +8620,7 @@ msgstr "Unidade padrão"
 #. Default: "Units for Selection"
 #: bika/lims/content/abstractbaseanalysis.py:139
 msgid "label_analysis_unitchoices"
-msgstr "Unidades disponíveis"
+msgstr "Unidades de resultados disponíveis"
 
 #. Default: "The Upper Limit of Detection (ULOD) is the highest concentration of a parameter that can be reliably measured using a specified testing methodology. Beyond this limit, results may no longer be accurate or valid due to instrument saturation or methodological limitations. Results exceeding this threshold are typically reported as '> ULOD', indicating that the parameter's concentration is above the reliable detection range of the method."
 #: bika/lims/content/abstractbaseanalysis.py:258
@@ -9230,7 +9236,7 @@ msgstr "Nome completo"
 #. Default: "Preferred instrument"
 #: senaite/core/content/worksheettemplate.py:262
 msgid "label_worksheettemplate_instrument"
-msgstr "Equipamento preferido"
+msgstr "Equipamento fixo"
 
 #. Default: "Restrict to Method"
 #: senaite/core/content/worksheettemplate.py:236
@@ -10412,7 +10418,7 @@ msgstr "Nome"
 #. Default: "Commercial ID"
 #: senaite/core/content/analysisprofile.py:121
 msgid "title_analysisprofile_commercial_id"
-msgstr "ID Comercial"
+msgstr "Centro de Custo (CC)"
 
 #. Default: "Description"
 #: senaite/core/content/analysisprofile.py:82
