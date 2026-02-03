@@ -768,7 +768,7 @@ msgstr "Anexo requerido"
 
 #: bika/lims/content/abstractbaseanalysis.py:329
 msgid "Attachment required for verification"
-msgstr "Anexo obrigatório para verificação"
+msgstr "Anexo obrigatório para duplo check"
 
 #: senaite/core/browser/attachment/attachment.py:349
 msgid "Attachment(s) deleted"
@@ -1033,7 +1033,7 @@ msgstr "Campos de Cálculo Intermediário"
 
 #: bika/lims/content/analysisservice.py:106
 msgid "Calculation to be assigned to this content."
-msgstr "Cálculo a ser atribuído a este conteúdo."
+msgstr "Cálculo a ser atribuído a esta análise."
 
 #: bika/lims/browser/methodfolder.py:71 bika/lims/content/method.py:115
 #: bika/lims/controlpanel/bika_calculations.py:60
@@ -1999,7 +1999,7 @@ msgid ""
 "Define the precision when converting values to exponent notation.  The "
 "default is 7."
 msgstr ""
-"Define a precisão ao converter valores para notação exponencial. Padrão do "
+"Define a precisão ao converter valores para notação científica (1,0 x 10^2). Padrão do "
 "sistema: 7"
 
 #: bika/lims/content/analysisrequest.py:477
@@ -2234,7 +2234,7 @@ msgstr "Análises de CQ - Duplicatas"
 
 #: bika/lims/content/abstractbaseanalysis.py:460
 msgid "Duplicate Variation %"
-msgstr "Variação da Duplicação %"
+msgstr "Coeficiente de Variação - CV (%)"
 
 #: bika/lims/validators.py:460
 msgid "Duplicate keys in choices field"
@@ -3616,7 +3616,7 @@ msgstr "Tipo de manutenção"
 
 #: bika/lims/content/abstractbaseanalysis.py:330
 msgid "Make attachments mandatory for verification"
-msgstr "Tornar os anexos obrigatórios para verificação"
+msgstr "Tornar os anexos obrigatórios para para o duplo ckeck (como cromatogramas, planilhas e outros...)"
 
 #: bika/lims/config.py:76
 msgid "Male"
@@ -8590,12 +8590,12 @@ msgstr "Descrição do limite inferior de detecção da análise"
 #. Default: "Lower Limit of Detection (LLOD)"
 #: bika/lims/content/abstractbaseanalysis.py:184
 msgid "label_analysis_lower_limit_of_detection_title"
-msgstr "Limite inferior de detecção do rótulo da análise"
+msgstr "Limite inferior de detecção da análise (LLOD)"
 
 #. Default: "The Lower Limit of Quantification (LLOQ) is the lowest concentration of a parameter that can be reliably and accurately measured using the specified testing methodology, with acceptable levels of precision and accuracy. Results below this value cannot be quantified with confidence and are typically reported as '< LOQ' (or 'Detected but < LOQ'), indicating that while the parameter may be present, its exact concentration cannot be determined reliably."
 #: bika/lims/content/abstractbaseanalysis.py:212
 msgid "label_analysis_lower_limit_of_quantification_description"
-msgstr "Descrição do limite inferior de quantificação da análise"
+msgstr "Limite inferior de Quantificação da análise (LLOQ)"
 
 #. Default: "Lower Limit Of Quantification (LLOQ)"
 #: bika/lims/content/abstractbaseanalysis.py:208
@@ -8625,12 +8625,12 @@ msgstr "Unidades de resultados disponíveis"
 #. Default: "The Upper Limit of Detection (ULOD) is the highest concentration of a parameter that can be reliably measured using a specified testing methodology. Beyond this limit, results may no longer be accurate or valid due to instrument saturation or methodological limitations. Results exceeding this threshold are typically reported as '> ULOD', indicating that the parameter's concentration is above the reliable detection range of the method."
 #: bika/lims/content/abstractbaseanalysis.py:258
 msgid "label_analysis_upper_limit_of_detection_description"
-msgstr "Limite superior de detecção da análise"
+msgstr "Descrição do Limite superior de detecção da análise"
 
 #. Default: "Upper Limit of Detection (ULOD)"
 #: bika/lims/content/abstractbaseanalysis.py:255
 msgid "label_analysis_upper_limit_of_detection_title"
-msgstr "Limite Superior de Detecção da Análise"
+msgstr "Limite Superior de Detecção da Análise (ULOD)"
 
 #. Default: "The Upper Limit of Quantification (ULOQ) is the highest concentration of a parameter that can be reliably and accurately measured using the specified testing methodology, with acceptable levels of precision and accuracy. Results above this value cannot be quantified with confidence and are typically reported as '> ULOQ', indicating that its exact concentration cannot be determined reliably."
 #: bika/lims/content/abstractbaseanalysis.py:236
@@ -8640,7 +8640,7 @@ msgstr "Descrição do limite superior de quantificação da análise"
 #. Default: "Upper Limit Of Quantification (ULOQ)"
 #: bika/lims/content/abstractbaseanalysis.py:233
 msgid "label_analysis_upper_limit_of_quantification_title"
-msgstr "Limite Superior de Quantificação da Análise"
+msgstr "Limite Superior de Quantificação da Análise (ULOQ)"
 
 #. Default: "Sample types"
 #: senaite/core/content/analysisprofile.py:180
