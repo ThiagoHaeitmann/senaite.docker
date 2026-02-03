@@ -1305,7 +1305,7 @@ msgstr "Cliente"
 
 #: bika/lims/browser/batchfolder.py:84 bika/lims/content/batch.py:101
 msgid "Client Batch ID"
-msgstr "ID Cliente em lote"
+msgstr "Lote do Cliente"
 
 #: senaite/core/behaviors/clientshareable.py:90
 #: senaite/core/browser/samples/rejection/templates/rejection_report.pt:83
@@ -1329,7 +1329,7 @@ msgstr "Pedido de Cliente"
 #: bika/lims/browser/batch/batchbook.py:81
 #: bika/lims/content/analysisrequest.py:800
 msgid "Client Order Number"
-msgstr "Orçamento do pedido"
+msgstr "N° de Orçamento"
 
 #: senaite/core/browser/samples/view.py:194
 msgid "Client Ref"
