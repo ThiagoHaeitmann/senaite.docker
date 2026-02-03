@@ -797,7 +797,7 @@ msgstr "Importação automática"
 
 #: bika/lims/browser/instrument.py:749
 msgid "Auto Import Logs of %s"
-msgstr "Logs de Importação Automática de %s"
+msgstr "Logs de Auto-Importação de %s"
 
 #: senaite/core/behaviors/configure.zcml:13
 msgid "Auto-Generate ID Behavior for Dexterity Contents"
@@ -805,7 +805,7 @@ msgstr "Comportamento de Geração Automática de ID para Conteúdos Dexterity"
 
 #: bika/lims/profiles/default/types/Instrument.xml
 msgid "Auto-Import Logs"
-msgstr "Registros de Auto-Importação"
+msgstr "Logs de Auto-Importação"
 
 #: bika/lims/content/artemplate.py:241
 msgid "Auto-partition on receive"
@@ -2150,6 +2150,12 @@ msgstr "Distrito"
 #: bika/lims/browser/instrument.py:654 bika/lims/content/multifile.py:47
 msgid "Document"
 msgstr "Documento"
+
+msgid "Multifile"
+msgstr "Documentos"
+
+msgid "A Document/File attachment"
+msgstr "Anexos de Docuemntos e Arquivos do Equipamento"
 
 #: bika/lims/browser/instrument.py:799 bika/lims/content/multifile.py:39
 msgid "Document ID"
