@@ -298,7 +298,7 @@ msgstr "adicionar"
 #. Default: "Sort on"
 #: senaite/databox/behaviors/databox.py:130
 msgid "label_sort_on"
-msgstr "ordenar_por"
+msgstr "Ordenar por"
 
 #. Default: "Reversed order"
 #: senaite/databox/behaviors/databox.py:137
