@@ -3711,7 +3711,7 @@ msgid ""
 "lab personnel and not to clients."
 msgstr ""
 "Marcar a amostra para uso interno apenas. Isso significa que ela é acessível "
-"somente ao pessoal do laboratório e não aos clientes."
+"somente ao pessoal do laboratório e não aos clientes. (Ex.: Ensaios de Proficiência e Amostras à cegas...)"
 
 #: bika/lims/browser/analysisrequest/manage_analyses.py:94
 #: bika/lims/browser/fields/referenceresultsfield.py:38
