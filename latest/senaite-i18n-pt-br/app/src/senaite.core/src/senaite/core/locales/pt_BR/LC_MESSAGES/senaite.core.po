@@ -411,8 +411,7 @@ msgid ""
 "Add one or more attachments to describe the sample in this sample, or to "
 "specify your request."
 msgstr ""
-"Adicione um ou mais anexos para descrever a amostra nesta amostra, ou para "
-"especificar sua solicitação."
+"Adicione a carta de encaminhamento da amostra e fotos da amostra."
 
 #: bika/lims/skins/bika/bika_widgets/remarkswidget.pt:45
 msgid "Add remarks"
@@ -896,7 +895,7 @@ msgstr "Bases"
 #: bika/lims/profiles/default/types/Batch.xml
 #: bika/lims/vocabularies/__init__.py:128
 msgid "Batch"
-msgstr "Lote"
+msgstr "Lote Interno"
 
 #: bika/lims/profiles/default/types/Batch.xml
 msgid "Batch Book"
@@ -904,7 +903,7 @@ msgstr "Livro de lotes"
 
 #: senaite/core/browser/samples/view.py:165
 msgid "Batch ID"
-msgstr "ID do Lote"
+msgstr "ID do Lote Interno"
 
 #: senaite/core/profiles/default/types/BatchLabel.xml
 msgid "Batch Label"
@@ -1210,9 +1209,9 @@ msgid ""
 "short-circuit the preservation workflow for sample partitions stored in this "
 "container."
 msgstr ""
-"Selecione aqui se o recipiente já está preservado. Esta seleção irá reduzir "
-"o processo de preservação para partições de amostra armazenadas neste "
-"recipiente."
+"Selecione aqui se a embalagem já está preservada. Esta seleção irá reduzir "
+"o processo de preservação para fracionamentos de amostra armazenadas nesta "
+"embalagem."
 
 #: bika/lims/content/laboratory.py:112
 msgid "Check this box if your laboratory is accredited"
@@ -1223,8 +1222,8 @@ msgid ""
 "Check this box to ensure a separate sample container is used for this "
 "analysis service"
 msgstr ""
-"Selecione esta caixa para garantir que um recipiente separado para a amostra "
-"será usado neste serviço de análise"
+"Selecione esta caixa para garantir que uma embalagem separada para a amostra "
+"será usada neste serviço de análise"
 
 #: bika/lims/content/analysisservice.py:257
 msgid "Checkbox"
@@ -1330,7 +1329,7 @@ msgstr "Pedido de Cliente"
 #: bika/lims/browser/batch/batchbook.py:81
 #: bika/lims/content/analysisrequest.py:800
 msgid "Client Order Number"
-msgstr "Número de ordem do cliente"
+msgstr "Orçamento do pedido"
 
 #: senaite/core/browser/samples/view.py:194
 msgid "Client Ref"
@@ -1339,7 +1338,7 @@ msgstr "Referência de Cliente"
 #: bika/lims/browser/analysisrequest/templates/invoice_content.pt:66
 #: bika/lims/content/analysisrequest.py:817
 msgid "Client Reference"
-msgstr "Referência de Cliente"
+msgstr "Fabricante"
 
 #: senaite/core/browser/samples/view.py:199
 msgid "Client SID"
@@ -1347,7 +1346,7 @@ msgstr "SID do Cliente"
 
 #: bika/lims/content/analysisrequest.py:834
 msgid "Client Sample ID"
-msgstr "ID da Amostra do Cliente"
+msgstr "Nome da Amostra"
 
 #: senaite/core/registry/schema.py:39
 msgid "Client Settings"
@@ -1527,20 +1526,20 @@ msgstr "Amostras Contidas"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:175
 msgid "Container"
-msgstr "Recipiente"
+msgstr "Embalagem"
 
 #: senaite/core/content/samplecontainer.py:70
 #: senaite/core/profiles/default/types/ContainerType.xml
 msgid "Container Type"
-msgstr "Tipo de Recipiente"
+msgstr "Tipo de Embalagem"
 
 #: senaite/core/profiles/default/types/ContainerTypes.xml
 msgid "Container Types"
-msgstr "Tipos de Recipientes"
+msgstr "Tipos de Embalagens"
 
 #: bika/lims/controlpanel/bika_containers.py:58
 msgid "Containers"
-msgstr "Recipientes"
+msgstr "Embalagens"
 
 #: bika/lims/browser/client/views/attachments.py:52
 msgid "Content Type"
@@ -1747,7 +1746,7 @@ msgstr "Data de Abertura"
 
 #: senaite/core/browser/samples/view.py:146
 msgid "Date Preserved"
-msgstr "Data da Preservação"
+msgstr "Data de armazenamento"
 
 #: bika/lims/content/arreport.py:161
 msgid "Date Printed"
@@ -1847,7 +1846,7 @@ msgstr "Separador decimal a ser utilizado nos laudos deste cliente."
 
 #: bika/lims/content/analysisservice.py:165
 msgid "Default Container"
-msgstr "Recipiente Padrão"
+msgstr "Embalagem Padrão"
 
 #: bika/lims/controlpanel/bika_labcontacts.py:78
 msgid "Default Department"
@@ -4547,7 +4546,7 @@ msgstr "Pré-preservado"
 #: senaite/core/content/samplecontainer.py:100
 msgid "Pre-preserved containers must have a preservation selected"
 msgstr ""
-"Recipientes pré-preservados devem ter uma preservação/conservação selecionada"
+"Embalagens pré-preservados devem ter uma preservação/conservação selecionada"
 
 #: bika/lims/content/abstractbaseanalysis.py:157
 msgid "Precision as number of decimals"
@@ -4625,7 +4624,7 @@ msgstr "Categoria da Preservação"
 
 #: senaite/core/content/samplecontainer.py:117
 msgid "Preservation method of this container"
-msgstr "Método de preservação deste recipiente"
+msgstr "Método de preservação deste embalagem"
 
 #: bika/lims/content/analysisservice.py:182
 msgid "Preservation per sample type"
@@ -4637,7 +4636,7 @@ msgstr "Preservar"
 
 #: senaite/core/browser/samples/view.py:228
 msgid "Preserver"
-msgstr "Preservador"
+msgstr "Resposnável pelo Armazenamento"
 
 #: senaite/core/browser/viewlets/templates/toolbar.pt:44
 msgid "Press Ctrl+Space to trigger the Spotlight search"
@@ -4867,7 +4866,7 @@ msgstr "Recebimento pendente"
 #: bika/lims/browser/publish/templates/email.pt:56
 #: bika/lims/browser/templates/analysisreport_info.pt:143
 msgid "Recipients"
-msgstr "Recipientes"
+msgstr "Embalagens"
 
 #: bika/lims/browser/templates/referencesample_sticker.pt:46
 #: bika/lims/content/worksheettemplate.py:57
@@ -5290,11 +5289,11 @@ msgstr "Condições da amostra"
 
 #: senaite/core/profiles/default/types/SampleContainer.xml
 msgid "Sample Container"
-msgstr "Recipiente de Amostra"
+msgstr "Embalagem de Amostra"
 
 #: senaite/core/profiles/default/types/SampleContainers.xml
 msgid "Sample Containers"
-msgstr "Recipientes de Amostra"
+msgstr "Embalagens de Amostra"
 
 #: senaite/core/registry/schema.py:225
 msgid "Sample Header"
@@ -5336,7 +5335,7 @@ msgstr "Preservações de Amostras"
 
 #: bika/lims/content/analysisrequest.py:654
 msgid "Sample Rejection"
-msgstr "Rejeição de amostra"
+msgstr "Declinar amostra"
 
 #: bika/lims/profiles/default/types/Client.xml
 msgid "Sample Templates"
@@ -5666,9 +5665,9 @@ msgid ""
 "container to be used depends on the sample type and preservation "
 "combination, specify the container in the sample type table below"
 msgstr ""
-"Selecione o recipiente padrão a ser usado por este serviço de análise. Caso "
-"o recipiente a ser usado dependa da combinação entre o tipo de amostra e sua "
-"preservação, especifique o recipiente na tabela de tipo de amostra abaixo."
+"Selecione a embalagem padrão a ser usado por este serviço de análise. Caso "
+"a embalagem a ser usada dependa da combinação entre o tipo de amostra e sua "
+"preservação, especifique a embalagem na tabela de tipo de amostra abaixo."
 
 #: bika/lims/profiles/default/registry.xml
 msgid ""
@@ -5800,7 +5799,7 @@ msgstr "Enviado para"
 #: bika/lims/browser/fields/partitionsetupfield.py:115
 #: bika/lims/content/analysisservice.py:129
 msgid "Separate Container"
-msgstr "Recipiente Separado"
+msgstr "Emabalagem Separada"
 
 #: bika/lims/content/instrument.py:145
 msgid "Serial No"
@@ -5842,7 +5841,7 @@ msgstr "Definir observações para as análises selecionadas"
 
 #: bika/lims/content/analysisrequest.py:655
 msgid "Set the Sample Rejection workflow and the reasons"
-msgstr "Defina o fluxo de trabalho de Rejeição de amostra e as razões"
+msgstr "Defina o fluxo de trabalho de Declínio da amostra, e as razões"
 
 #: bika/lims/content/instrumentmaintenancetask.py:127
 msgid "Set the maintenance task as closed."
@@ -6293,11 +6292,11 @@ msgstr "O identificador do lado do cliente da amostra"
 
 #: bika/lims/content/analysisrequest.py:801
 msgid "The client side order number for this request"
-msgstr "O número do pedido no lado do cliente para esta solicitação"
+msgstr "O número do orçamento para esta solicitação"
 
 #: bika/lims/content/analysisrequest.py:818
 msgid "The client side reference for this request"
-msgstr "A referência do lado do cliente para esta solicitação"
+msgstr "A referência de fabricante do lado do cliente para esta solicitação"
 
 #: bika/lims/content/instrument.py:348
 msgid "The date the instrument was installed"
@@ -6305,7 +6304,7 @@ msgstr "A data de instalação do equipamento"
 
 #: bika/lims/content/analysisrequest.py:606
 msgid "The date when the sample was preserved"
-msgstr "A data de preservação da amostra"
+msgstr "A data de acondicionamento da amostra dentro do laboratório"
 
 #: bika/lims/content/analysisrequest.py:1060
 msgid "The date when the sample was received"
@@ -6811,7 +6810,7 @@ msgstr "Tipo de Local"
 
 #: senaite/core/content/samplecontainer.py:73
 msgid "Type of the container"
-msgstr "Tipo do recipiente"
+msgstr "Tipo do embalagem"
 
 #: senaite/core/browser/controlpanel/templates/setupview.pt:27
 msgid "Type to filter ..."
@@ -7087,7 +7086,7 @@ msgstr ""
 msgid ""
 "Validation failed: PrePreserved containers must have a preservation selected."
 msgstr ""
-"Falha de validação: recipientes pré-preservados devem ter uma preservação "
+"Falha de validação: embalagens pré-preservadas devem ter uma conservação "
 "selecionada"
 
 #: bika/lims/validators.py:727
@@ -7864,13 +7863,13 @@ msgstr "Contatos em CC para novas amostras"
 #: bika/lims/content/container.py:100
 msgid "description_container_preservation"
 msgstr ""
-"Se este recipiente já estiver pré-preservado, o método de preservação poderá "
+"Se esta embalagem já estiver pré-preservada, o método de conservação poderá "
 "ser selecionado aqui."
 
 #. Default: "Select the type of this container"
 #: bika/lims/content/container.py:57
 msgid "description_container_type"
-msgstr "Selecione o tipo deste recipiente"
+msgstr "Selecione o tipo deste embalagem"
 
 #. Default: "${copyright} 2017-${current_year} ${senaitelims}"
 #: senaite/core/browser/viewlets/templates/footer.pt:13
@@ -8049,7 +8048,7 @@ msgstr ""
 #. Default: "Assign sample to a batch"
 #: bika/lims/content/analysisrequest.py:314
 msgid "description_sample_batch"
-msgstr "Atribuir amostra a um lote"
+msgstr "Atribuir amostra a um lote interno"
 
 #. Default: "The contacts used in CC for email notifications"
 #: bika/lims/content/analysisrequest.py:189
@@ -8069,12 +8068,12 @@ msgstr "Selecione o contato principal para esta amostra"
 #. Default: "Select a container for this sample"
 #: bika/lims/content/analysisrequest.py:552
 msgid "description_sample_container"
-msgstr "Selecione um recipiente para esta amostra"
+msgstr "Selecione uma embalagem para esta amostra"
 
 #. Default: "The date when the sample was taken"
 #: bika/lims/content/analysisrequest.py:436
 msgid "description_sample_datesampled"
-msgstr "A data em que a amostra foi coletada"
+msgstr "A data em que a amostra foi coletada (Conforme Carta de encaminhamento ou etiqueta)"
 
 #. Default: "Reference to detached sample"
 #: bika/lims/content/analysisrequest.py:1264
@@ -8260,8 +8259,8 @@ msgstr "Define os adesivos a serem usados ​​para este tipo de amostra."
 #: senaite/core/content/sampletype.py:230
 msgid "description_sampletype_containertype"
 msgstr ""
-"O tipo de recipiente padrão. Novas partições de amostra recebem "
-"automaticamente um recipiente deste tipo, a menos que tenha sido "
+"O tipo de embalagem padrão. Novos fracionamentos de amostra recebem "
+"automaticamente uma embalagem deste tipo, a menos que tenha sido "
 "especificado com mais detalhes por serviço de análise."
 
 #. Default: "The period for which unpreserved samples of this type can be kept before they expire and cannot be analysed any further"
@@ -8269,7 +8268,7 @@ msgstr ""
 msgid "description_sampletype_duration_period"
 msgstr ""
 "O período durante o qual amostras não preservadas deste tipo podem ser "
-"mantidas antes de expirarem e não poderem mais ser analisadas."
+"mantidas antes de expirarem, e não podem mais ser analisadas."
 
 #. Default: "Samples of this type should be treated as hazardous"
 #: senaite/core/content/sampletype.py:159
@@ -8780,7 +8779,7 @@ msgstr "Contatos para CC"
 #. Default: "Preservation"
 #: bika/lims/content/container.py:97
 msgid "label_container_preservation"
-msgstr "Conservação do recipiente"
+msgstr "Conservação da embalagem"
 
 #. Default: "Container Type"
 #: bika/lims/content/container.py:54
@@ -8955,7 +8954,7 @@ msgstr "Amostras"
 #. Default: "Batch"
 #: bika/lims/content/analysisrequest.py:311
 msgid "label_sample_batch"
-msgstr "Lote"
+msgstr "Lote Interno"
 
 #. Default: "CC Contact"
 #: bika/lims/content/analysisrequest.py:186
@@ -8975,7 +8974,7 @@ msgstr "Contato"
 #. Default: "Container"
 #: bika/lims/content/analysisrequest.py:549
 msgid "label_sample_container"
-msgstr "Recipiente"
+msgstr "Embalagem"
 
 #. Default: "Date Sampled"
 #: bika/lims/content/analysisrequest.py:432
@@ -9060,7 +9059,7 @@ msgstr "Localização de Armazenamento"
 #. Default: "Batch Sub-group"
 #: bika/lims/content/analysisrequest.py:346
 msgid "label_sample_subgroup"
-msgstr "Sub-grupo do Lote"
+msgstr "Sub-grupo do Lote Interno"
 
 #. Default: "Sample Template"
 #: bika/lims/content/analysisrequest.py:373
@@ -9080,7 +9079,7 @@ msgstr "Categoria"
 #. Default: "Container"
 #: senaite/core/content/sampletemplate.py:81
 msgid "label_sampletemplate_partition_container"
-msgstr "Recipiente"
+msgstr "Embalagem"
 
 #. Default: "Partition ID"
 #: senaite/core/content/sampletemplate.py:60
@@ -9125,7 +9124,7 @@ msgstr "Modelos de etiquetas permitidas"
 #. Default: "Default Container Type"
 #: senaite/core/content/sampletype.py:226
 msgid "label_sampletype_containertype"
-msgstr "Tipo do recipiente padrão"
+msgstr "Tipo da embalagem padrão"
 
 #. Default: "Description"
 #: senaite/core/content/sampletype.py:133
@@ -9391,7 +9390,7 @@ msgstr "Inativo"
 #. Default: "Batch Labels"
 #: senaite/core/browser/controlpanel/batchlabels/view.py:57
 msgid "listing_batchlabels_title"
-msgstr "Etiquetas de Lote"
+msgstr "Etiquetas de Lote Interno"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/containertypes/view.py:51
@@ -9426,7 +9425,7 @@ msgstr "Inativo"
 #. Default: "Container Types"
 #: senaite/core/browser/controlpanel/containertypes/view.py:58
 msgid "listing_containertypes_title"
-msgstr "Tipos de Recipiente"
+msgstr "Tipos de Embalagem"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/dynamicanalysisspecs/view.py:52
@@ -9691,7 +9690,7 @@ msgstr "Capacidade"
 #. Default: "Container Type"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:79
 msgid "listing_sampleconatiners_column_containertype"
-msgstr "Tipo de Recipiente"
+msgstr "Tipo de Embalagem"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:72
@@ -9711,7 +9710,7 @@ msgstr "Lacre intacto"
 #. Default: "Container"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:65
 msgid "listing_sampleconatiners_column_title"
-msgstr "Recipiente"
+msgstr "Embalagem"
 
 #. Default: "Active"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:111
@@ -9731,7 +9730,7 @@ msgstr "Inativo"
 #. Default: "Sample Containers"
 #: senaite/core/browser/controlpanel/samplecontainers/view.py:56
 msgid "listing_sampleconatiners_title"
-msgstr "Recipientes Amostra"
+msgstr "Enbalagens de Amostra"
 
 #. Default: "Add"
 #: senaite/core/browser/controlpanel/sampleconditions/view.py:47
@@ -9921,7 +9920,7 @@ msgstr "Adicionar"
 #. Default: "Default Container"
 #: senaite/core/browser/controlpanel/sampletypes/view.py:108
 msgid "listing_sampletypes_column_default_container"
-msgstr "Recipiente Padrão"
+msgstr "Embalagem Padrão"
 
 #. Default: "Description"
 #: senaite/core/browser/controlpanel/sampletypes/view.py:71
@@ -10737,7 +10736,7 @@ msgstr "Nome da Amostra"
 #. Default: "Description"
 #: senaite/core/content/samplecontainer.py:52
 msgid "title_samplecontainer_description"
-msgstr "Descrição do Recipiente"
+msgstr "Descrição"
 
 #. Default: "Name"
 #: senaite/core/content/samplecontainer.py:44
