@@ -2629,11 +2629,11 @@ msgstr "Arquivo Excluído"
 
 #: bika/lims/content/analysisservice.py:259
 msgid "File upload"
-msgstr "Envio de arquivo"
+msgstr "Upload de arquivo"
 
 #: bika/lims/content/multifile.py:48
 msgid "File upload "
-msgstr "Carregar arquivo"
+msgstr "Upload de arquivo"
 
 #: bika/lims/browser/publish/reports_listing.py:82
 msgid "Filesize"
