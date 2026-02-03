@@ -5,7 +5,10 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     PYENV_ROOT=/opt/pyenv \
     PATH=/opt/pyenv/bin:/opt/pyenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
+USER root
+RUN apt-get update && apt-get install -y locales \
+    && sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen \
+    && locale-gen
 # deps de build (gcc etc.)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl wget git bash patch xz-utils \
