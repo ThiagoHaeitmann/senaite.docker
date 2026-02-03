@@ -6201,7 +6201,7 @@ msgstr "Padrão do Sistema"
 
 #: bika/lims/browser/instrument.py:83
 msgid "Task"
-msgstr "Título da Análise Crítica"
+msgstr "Título"
 
 #: bika/lims/content/instrumentcertification.py:57
 msgid "Task ID"
