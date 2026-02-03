@@ -239,7 +239,7 @@ msgstr "Configurações do Relatório"
 
 #: senaite/impress/analysisrequest/templates/signatures.pt:7
 msgid "Responsibles"
-msgstr "Responsáveis"
+msgstr "Signatários"
 
 #: senaite/impress/analysisrequest/templates/results.pt:41
 msgid "Result"
