@@ -76,7 +76,7 @@ msgstr "Modelos Disponíveis"
 #: senaite/impress/analysisrequest/templates/summary.pt:37
 #: senaite/impress/browser/publish/content.py:96
 msgid "Batch ID"
-msgstr "ID do Lote"
+msgstr "Lote Interno"
 
 #: senaite/impress/analysisrequest/templates/summary.pt:91
 msgid "Batch Labels"
@@ -301,7 +301,7 @@ msgstr "Armazena os PDFs de múltiplos relatórios gerados individualmente. Desa
 
 #: senaite/impress/analysisrequest/templates/summary.pt:25
 msgid "Summary"
-msgstr "Resumo"
+msgstr "Dados da Amostra"
 
 #: senaite/impress/analysisrequest/templates/info.pt:59
 msgid "Supervisor"
