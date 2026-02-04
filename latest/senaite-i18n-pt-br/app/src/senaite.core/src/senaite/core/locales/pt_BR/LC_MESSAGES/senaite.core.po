@@ -2155,7 +2155,7 @@ msgid "Multifile"
 msgstr "Documentos"
 
 msgid "A Document/File attachment"
-msgstr "Anexos de Docuemntos e Arquivos do Equipamento"
+msgstr "Anexos de Documentos e Arquivos do Equipamento"
 
 #: bika/lims/browser/instrument.py:799 bika/lims/content/multifile.py:39
 msgid "Document ID"
