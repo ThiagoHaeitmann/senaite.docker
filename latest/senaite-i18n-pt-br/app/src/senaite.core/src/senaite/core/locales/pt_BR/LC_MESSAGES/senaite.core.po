@@ -856,7 +856,7 @@ msgid ""
 "is received."
 msgstr ""
 "Redirecionar automaticamente o usuário para a visualização de criação de "
-"partições quando a Amostra for recebida."
+"Fracionamento quando a Amostra for recebida."
 
 #: bika/lims/content/analysisservice.py:76
 msgid "Available instruments based on the selected methods."
@@ -1176,7 +1176,7 @@ msgstr "Alterações salvas."
 
 #: senaite/core/browser/viewlets/templates/sampleheader.pt:83
 msgid "Changes will be propagated to partitions"
-msgstr "As alterações serão propagadas para as partições"
+msgstr "As alterações serão propagadas para os fracionamentos"
 
 #: bika/lims/content/method.py:67
 msgid "Check if the method has been accredited"
@@ -1491,8 +1491,8 @@ msgid ""
 "Configure the sample partitions and preservations for this template. Assign "
 "analyses to the different partitions on the template's Analyses tab"
 msgstr ""
-"Configure as partições de amostra e preservações para este modelo. Designe "
-"análises para as diferentes partições na aba de Análises do modelo."
+"Configure os fracionamentos de amostra e preservações para este modelo. Designe "
+"análises para as diferentes frações na aba de Análises do modelo."
 
 #: bika/lims/browser/templates/login_details.pt:253
 msgid "Confirm password"
@@ -1618,7 +1618,7 @@ msgstr "Criar PDF da Fatura"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:256
 msgid "Create Partitions"
-msgstr "Criar Partições"
+msgstr "Fracionar"
 
 #: senaite/core/browser/install/templates/senaite-addsite.pt:214
 msgid "Create SENAITE Site"
@@ -1646,7 +1646,7 @@ msgstr "Criar nova planilha"
 
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "Create partitions"
-msgstr "Criar partições"
+msgstr "Fracionar"
 
 #: bika/lims/browser/batchfolder.py:90 bika/lims/browser/instrument.py:404
 #: bika/lims/browser/worksheet/views/folder.py:112
@@ -1668,7 +1668,7 @@ msgstr "Folha de trabalho criada %s"
 
 #: senaite/core/browser/samples/partition_magic.py:113
 msgid "Created {} partitions: {}"
-msgstr "Criou {} partições: {}"
+msgstr "Criou {} fracionamentos: {}"
 
 #: senaite/core/browser/samples/view.py:127
 msgid "Creator"
@@ -2132,7 +2132,7 @@ msgstr "Mostrar seletor de limite de detecção"
 
 #: bika/lims/content/bikasetup.py:613
 msgid "Display sample partitions to clients"
-msgstr "Exibir partições de amostras para clientes"
+msgstr "Exibir Fracionamentos de amostras para clientes"
 
 #: senaite/core/profiles/default/workflows/senaite_referencesample_workflow/definition.xml
 msgid "Dispose"
@@ -3647,7 +3647,7 @@ msgstr "Gerenciar gerador de números"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:21
 msgid "Manage Partitions"
-msgstr "Gerenciar Partições"
+msgstr "Gerenciar Fracionamentos"
 
 #: bika/lims/profiles/default/types/Worksheet.xml
 msgid "Manage Results"
@@ -4236,7 +4236,7 @@ msgstr "Número de Análises"
 
 #: senaite/core/browser/samples/templates/partition_magic.pt:82
 msgid "Number of Partitions to create"
-msgstr "Número de Partições a serem criadas"
+msgstr "Número de Fracionamentos a serem criadas"
 
 #: bika/lims/skins/bika/bika_widgets/worksheettemplatelayoutwidget.pt:52
 msgid "Number of Positions"
@@ -4493,7 +4493,7 @@ msgstr "Selecione uma análise ou serviço para o anexo"
 msgid ""
 "Please select number of partitions to create and press the preview button"
 msgstr ""
-"Por favor, selecione o número de partições a serem criadas e pressione o "
+"Por favor, selecione o número de fracionamentos a serem criadas e pressione o "
 "botão de visualização"
 
 #: senaite/core/browser/samples/dispatch_samples.py:61
@@ -5326,7 +5326,7 @@ msgstr "Matriz de Amostras"
 
 #: bika/lims/content/artemplate.py:172
 msgid "Sample Partitions"
-msgstr "Partições de Amostra"
+msgstr "Fracionamentos de Amostra"
 
 #: senaite/core/browser/samples/view.py:210
 #: senaite/core/profiles/default/types/SamplePoint.xml
@@ -5400,7 +5400,7 @@ msgstr "Configuração da visualização da amostra"
 
 #: bika/lims/browser/viewlets/templates/primary_ar_viewlet.pt:15
 msgid "Sample with partitions"
-msgstr "Amostra com partições"
+msgstr "Amostra com Fracionamento"
 
 #: senaite/core/profiles/default/types/SampleTemplate.xml
 msgid "SampleTemplate"
@@ -5770,8 +5770,8 @@ msgid ""
 "partitions won't be included in listings and no info message with links to "
 "the primary sample will be displayed to client contacts."
 msgstr ""
-"Selecione para mostrar partições de amostras aos contatos do cliente. Se "
-"desativado, as partições não serão incluídas nas listas e nenhuma mensagem "
+"Selecione para mostrar fracionamentos de amostras aos contatos do cliente. Se "
+"desativado, os fracionamentos não serão incluídas nas listas e nenhuma mensagem "
 "informativa com vínculos para a amostra primária será exibida aos contatos "
 "do cliente."
 
@@ -6370,7 +6370,7 @@ msgstr ""
 
 #: bika/lims/browser/viewlets/templates/primary_ar_viewlet.pt:20
 msgid "The following partitions have been created from this Sample:"
-msgstr "As seguintes partições foram criadas a partir desta Amostra:"
+msgstr "Os seguintes fracionamentos foram criadas a partir desta Amostra:"
 
 #: senaite/core/browser/samples/templates/dispatch_samples.pt:47
 msgid "The following sample(s) will be dispatched"
@@ -8227,7 +8227,7 @@ msgstr ""
 #: senaite/core/content/sampletemplate.py:258
 msgid "description_sampletemplate_auto_partition"
 msgstr ""
-"Redirecionar automaticamente o usuário para a visualização de partições "
+"Redirecionar automaticamente o usuário para a visualização de fracionamentos "
 "quando a amostra for recebida"
 
 #. Default: "Select if the sample is a mix of sub samples"
@@ -8533,7 +8533,7 @@ msgstr "Análises"
 #. Default: "Partitions"
 #: senaite/core/content/sampletemplate.py:141
 msgid "fieldset_sampletemplate_partitions"
-msgstr "Partições"
+msgstr "Fracionamentos"
 
 #. Default: "No Instrument"
 #: senaite/core/browser/form/adapters/worksheettemplate.py:228
@@ -9051,7 +9051,7 @@ msgstr "Tipo de Amostra"
 #. Default: "Expected Sampling Date"
 #: bika/lims/content/analysisrequest.py:495
 msgid "label_sample_samplingdate"
-msgstr "Data Prevista de Envio"
+msgstr "Previsão de Chegada"
 
 #. Default: "Sampling Deviation"
 #: bika/lims/content/analysisrequest.py:852
@@ -9111,7 +9111,7 @@ msgstr "Tipo de Amostra"
 #. Default: "Partitions"
 #: senaite/core/content/sampletemplate.py:243
 msgid "label_sampletemplate_partitions"
-msgstr "Partições"
+msgstr "Fracionamentos"
 
 #. Default: "Sample Point"
 #: senaite/core/content/sampletemplate.py:185
