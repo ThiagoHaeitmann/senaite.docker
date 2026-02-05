@@ -11112,3 +11112,129 @@ msgstr "{} (Desatualizado)"
 #: bika/lims/controlpanel/bika_instruments.py:173
 msgid "{} weeks and {} day(s)"
 msgstr "{} Semanas e {} dia(s)"
+
+msgid "Preferences"
+msgstr "Preferências"
+
+msgid "Address"
+msgstr "Endereço"
+
+msgid "Bank Details"
+msgstr "Info. Bancárias"
+
+msgid "Labels"
+msgstr "Tags"
+
+msgid "Email Telephone Fax"
+msgstr "Info de Contato"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Salutation"
+msgstr "Saudação"
+
+msgid "Firstname"
+msgstr "Primeiro Nome"
+
+msgid "Middle initial"
+msgstr "Iniciais do Meio do Nome"
+
+msgid "Middle name"
+msgstr "Nome do Meio"
+
+msgid "Surname"
+msgstr "Último Nome"
+
+msgid "Job title"
+msgstr "Cargo"
+
+msgid "Department"
+msgstr "Departamento"
+
+msgid "Greeting title eg. Mr, Mrs, Dr"
+msgstr "Saudação: Sr, Sra, Srta..."
+
+msgid "Email Address"
+msgstr "E-mail"
+
+msgid "Phone (business)"
+msgstr "Telefone Comercial"
+
+msgid "Fax (business)"
+msgstr "Fax Comercial"
+
+msgid "Phone (home)"
+msgstr "Telefone Particular"
+
+msgid "Phone (mobile)"
+msgstr "Celular"
+
+msgid "Physical address"
+msgstr "Endereço Físico"
+
+msgid "Postal address"
+msgstr "Endereço Postal"
+
+msgid "Attachments"
+msgstr "Anexos"
+
+msgid "Filename"
+msgstr "Nome do Arquivo"
+
+msgid "Client attachments and files"
+msgstr "Anexos e Arquivos do Cliente"
+
+msgid "Analysis"
+msgstr "Análises"
+
+msgid "Limits"
+msgstr "Limites"
+
+msgid "Method"
+msgstr "Método"
+
+msgid "Uncertainties"
+msgstr "Incertezas"
+
+msgid "Location"
+msgstr "Local"
+
+msgid "Result options"
+msgstr "Opções do Resultado"
+
+msgid "Advanced"
+msgstr "Avançado"
+
+msgid "Warning"
+msgstr "AVISO"
+
+msgid "More"
+msgstr "Mais"
+
+msgid "Reference values"
+msgstr "Valores de referência"
+
+msgid "Procedures"
+msgstr "Procedimento"
+
+msgid "Additional info."
+msgstr "Info. Adicional"
+
+msgid "Accreditation"
+msgstr "Acreditação"
+
+msgid "Search..."
+msgstr "Buscar..."
+
+msgid "Results Reports"
+msgstr "Relatório de Resultados"
+
+msgid "Security"
+msgstr "Segurança"
+
+msgid "Sampling"
+msgstr "Amostragem"
+
+msgid "ID Server"
+msgstr "Servidor de IDs"
