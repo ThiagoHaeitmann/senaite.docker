@@ -1001,3 +1001,18 @@ msgstr "Não atribuído"
 #: senaite/core/browser/usergroup/templates/usergroups_usersoverview.pt:52
 msgid "user_roles_note"
 msgstr "Observe que as funções definidas aqui se aplicam diretamente a um usuário. O símbolo ${image_link_icon} indica uma função herdada da participação em um grupo."
+
+msgid "Preferences"
+msgstr "Preferências"
+
+msgid "Address"
+msgstr "Endereço"
+
+msgid "Bank Details"
+msgstr "Info. Bancárias"
+
+msgid "Labels"
+msgstr "Tags"
+
+
+
