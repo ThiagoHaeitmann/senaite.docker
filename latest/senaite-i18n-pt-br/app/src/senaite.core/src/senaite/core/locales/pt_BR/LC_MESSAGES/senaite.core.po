@@ -8147,7 +8147,7 @@ msgstr "Selecione o tipo de amostra desta amostra"
 #. Default: "The date when the sample will be taken"
 #: bika/lims/content/analysisrequest.py:499
 msgid "description_sample_samplingdate"
-msgstr "A data em que a amostra será coletada"
+msgstr "A data em que a amostra será enviada"
 
 #. Default: "Deviation between the sample and how it was sampled"
 #: bika/lims/content/analysisrequest.py:855
@@ -9051,7 +9051,7 @@ msgstr "Tipo de Amostra"
 #. Default: "Expected Sampling Date"
 #: bika/lims/content/analysisrequest.py:495
 msgid "label_sample_samplingdate"
-msgstr "Data Prevista de Amostragem"
+msgstr "Data Prevista de Envio"
 
 #. Default: "Sampling Deviation"
 #: bika/lims/content/analysisrequest.py:852
