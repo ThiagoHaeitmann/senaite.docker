@@ -3113,7 +3113,7 @@ msgstr "Local do Equipamento"
 
 #: senaite/core/profiles/default/types/InstrumentLocations.xml
 msgid "Instrument Locations"
-msgstr "Locais do Equipamento"
+msgstr "Locais de Equipamentos"
 
 #: bika/lims/browser/instrument.py:64
 msgid "Instrument Maintenance"
