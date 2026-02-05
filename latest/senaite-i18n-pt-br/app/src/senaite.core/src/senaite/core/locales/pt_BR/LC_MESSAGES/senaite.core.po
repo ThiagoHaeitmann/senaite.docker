@@ -2211,7 +2211,7 @@ msgstr "Baixar laudos selecionados"
 
 #: senaite/core/browser/samples/view.py:315
 msgid "Due"
-msgstr "Prazo"
+msgstr "Aguardando Chegada"
 
 #: senaite/core/browser/samples/view.py:155
 msgid "Due Date"
@@ -4648,7 +4648,7 @@ msgstr "Preservar"
 
 #: senaite/core/browser/samples/view.py:228
 msgid "Preserver"
-msgstr "Resposnável pelo Armazenamento"
+msgstr "Recebedor"
 
 #: senaite/core/browser/viewlets/templates/toolbar.pt:44
 msgid "Press Ctrl+Space to trigger the Spotlight search"
@@ -6468,7 +6468,7 @@ msgstr ""
 
 #: bika/lims/content/analysisrequest.py:627
 msgid "The person who preserved the sample"
-msgstr "A pessoa que preservou a amostra"
+msgstr "A pessoa que recepcionou a amostra"
 
 #: bika/lims/content/analysisrequest.py:460
 msgid "The person who took the sample"
@@ -6755,7 +6755,7 @@ msgstr "A ser impresso"
 #: senaite/core/browser/dashboard/dashboard.py:403
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "To be sampled"
-msgstr "Para ser amostrado"
+msgstr "Aguardando Chegada"
 
 #: senaite/core/browser/dashboard/dashboard.py:438
 #: senaite/core/browser/samples/view.py:337
