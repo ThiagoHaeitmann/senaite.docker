@@ -135,6 +135,18 @@ if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
   fi
 fi
 
+if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
+    log "Aplicando Tunagem de Vanguarda no zope.conf..."
+    
+    # Ajusta o zodb_cache_size (Onde o painel lê os 30000)
+    sed -i "s/cache-size 30000/cache-size ${ZODB_CACHE_SIZE:-100000}/g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    
+    # Ajusta o número de Threads do Python/Zope
+    sed -i "s/zopethreads 1/zopethreads ${ZOPETHREADS:-64}/g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    
+    # Garante que o cache-size para o zeo-client também seja respeitado
+    sed -i "s/cache-size 30MB/cache-size ${ZEO_CLIENT_CACHE_SIZE:-1000MB}/g" "${APP_DIR}/parts/instance/etc/zope.conf"
+fi
 
 case "${MODE}" in
   zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
