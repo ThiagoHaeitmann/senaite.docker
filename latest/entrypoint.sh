@@ -137,32 +137,37 @@ fi
 
 ZOPE_CONF="${APP_DIR}/parts/instance/etc/zope.conf"
 WSGI_INI="${APP_DIR}/parts/instance/etc/wsgi.ini"
+ZEO_CONF_FILE="${APP_DIR}/parts/zeoserver/etc/zeo.conf"
 
 if [ -f "$ZOPE_CONF" ]; then
-    log "Aplicando Tunagem de Vanguarda no zope.conf..."
+    log "Aplicando Tunagem de Vanguarda no zope.conf (Instance)..."
     
-    # 1. Ajusta cache-size principal (Main DB) - Procura cache-size seguido de qualquer número
-    sed -i -E "s/cache-size [0-9]+/cache-size ${ZODB_CACHE_SIZE:-150000}/" "$ZOPE_CONF"
+    # 1. Ajusta cache-size principal
+    sed -i -E "s/cache-size [0-9]+/cache-size ${ZODB_CACHE_SIZE}/" "$ZOPE_CONF"
     
-    # 2. Ajusta cache-size do cliente ZEO dentro da tag <zeoclient>
-    # Busca por cache-size seguido de qualquer valor MB/GB e troca pelo valor da ENV
-    sed -i -E "/<zeoclient>/,/<\/zeoclient>/ s/cache-size [0-9]+(MB|GB|KB)/cache-size ${ZEO_CLIENT_CACHE_SIZE:-2000MB}/" "$ZOPE_CONF"
+    # 2. Ajusta cache-size do cliente ZEO
+    sed -i -E "/<zeoclient>/,/<\/zeoclient>/ s/cache-size [0-9]+(MB|GB|KB)/cache-size ${ZEO_CLIENT_CACHE_SIZE}/" "$ZOPE_CONF"
     
-    # 3. Ajusta o endereço do servidor ZEO (Server ou Address)
-    sed -i -E "s/(server|address) [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+/server ${ZEO_ADDRESS:-10.40.40.10:8100}/g" "$ZOPE_CONF"
+    # 3. Ajusta o endereço do servidor ZEO
+    sed -i -E "s/(server|address) [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+/server ${ZEO_ADDRESS}/g" "$ZOPE_CONF"
+
+    # 4. Ajusta Pool Size para suportar as 128 threads (Essencial para parar os logs de CRITICAL)
+    if grep -q "pool-size" "$ZOPE_CONF"; then
+        # Agora ele usa a variável ${ZODB_POOL_SIZE} vinda do Nomad
+        sed -i -E "s/pool-size [0-9]+/pool-size ${ZODB_POOL_SIZE:-30}/" "$ZOPE_CONF"
+    else
+        sed -i "/mount-point \//i \    pool-size ${ZODB_POOL_SIZE:-30}" "$ZOPE_CONF"
+    fi
 fi
 
 if [ -f "$WSGI_INI" ]; then
     log "Aplicando Tunagem de Threads no wsgi.ini..."
-    
-    # 4. Ajusta Threads no WSGI - Substitui threads = NUMERO pelo valor da ENV
-    sed -i -E "s/threads = [0-9]+/threads = ${ZOPETHREADS:-128}/" "$WSGI_INI"
+    sed -i -E "s/threads = [0-9]+/threads = ${ZOPETHREADS}/" "$WSGI_INI"
 fi
 
-ZEO_CONF_FILE="${APP_DIR}/parts/zeoserver/etc/zeo.conf"
 if [ "$MODE" = "zeo" ] && [ -f "$ZEO_CONF_FILE" ]; then
     log "Aplicando Tunagem de Vanguarda no ZEO Server..."
-    sed -i -E "s/invalidation-queue-size [0-9]+/invalidation-queue-size ${ZEO_INVALIDATION_QUEUE_SIZE:-1000}/" "$ZEO_CONF_FILE"
+    sed -i -E "s/invalidation-queue-size [0-9]+/invalidation-queue-size ${ZEO_INVALIDATION_QUEUE_SIZE}/" "$ZEO_CONF_FILE"
 fi
 
 case "${MODE}" in
