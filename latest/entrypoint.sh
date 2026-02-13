@@ -159,6 +159,12 @@ if [ -f "$WSGI_INI" ]; then
     sed -i -E "s/threads = [0-9]+/threads = ${ZOPETHREADS:-128}/" "$WSGI_INI"
 fi
 
+ZEO_CONF_FILE="${APP_DIR}/parts/zeoserver/etc/zeo.conf"
+if [ "$MODE" = "zeo" ] && [ -f "$ZEO_CONF_FILE" ]; then
+    log "Aplicando Tunagem de Vanguarda no ZEO Server..."
+    sed -i -E "s/invalidation-queue-size [0-9]+/invalidation-queue-size ${ZEO_INVALIDATION_QUEUE_SIZE:-1000}/" "$ZEO_CONF_FILE"
+fi
+
 case "${MODE}" in
   zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
   instance) run_as "${APP_DIR}/bin/instance"  console ;;
