@@ -79,7 +79,7 @@ msgstr ""
 "contagem</li><li>tipo de contador: [backreference|contained]</"
 "li><li>referência do contador: um parâmetro para a função de contagem</"
 "li><li>prefixo: prefixo padrão se nenhum for fornecido na string de formato</"
-"li><li>comprimento da divisão: o número de partes a serem incluídas no "
+"li><li>comprimento da divisão: o número de partes que serão incluídas no "
 "prefixo</li></ul></p>"
 
 #: bika/lims/browser/publish/templates/email.pt:143
@@ -1033,7 +1033,7 @@ msgstr "Campos de Cálculo Intermediário"
 
 #: bika/lims/content/analysisservice.py:106
 msgid "Calculation to be assigned to this content."
-msgstr "Cálculo a ser atribuído a esta análise."
+msgstr "Cálculo que será atribuído a esta análise."
 
 #: bika/lims/browser/methodfolder.py:71 bika/lims/content/method.py:115
 #: bika/lims/controlpanel/bika_calculations.py:60
@@ -1842,7 +1842,7 @@ msgstr "Desativar"
 
 #: bika/lims/content/client.py:165
 msgid "Decimal mark to use in the reports from this Client."
-msgstr "Separador decimal a ser utilizado nos laudos deste cliente."
+msgstr "Separador decimal que será utilizado nos laudos deste cliente."
 
 #: bika/lims/content/analysisservice.py:165
 msgid "Default Container"
@@ -1992,7 +1992,7 @@ msgstr ""
 
 #: bika/lims/content/abstractbaseanalysis.py:158
 msgid "Define the number of decimals to be used for this result."
-msgstr "Defina o número de decimais para ser usado neste resultado."
+msgstr "Defina o número de decimais que será usado neste resultado."
 
 #: bika/lims/content/abstractbaseanalysis.py:172
 msgid ""
@@ -2008,7 +2008,7 @@ msgstr "Definir o coletor que deve amostrar na data programada"
 
 #: bika/lims/content/sampletype.py:232
 msgid "Defines the stickers to use for this sample type."
-msgstr "Define as etiquetas a serem usadas para este tipo de amostra."
+msgstr "Define as etiquetas que serão usadas para este tipo de amostra."
 
 #: bika/lims/browser/fields/coordinatefield.py:36
 msgid "Degrees"
@@ -2058,7 +2058,7 @@ msgstr "Descrição das ações realizadas durante o processo de manutenção"
 #: bika/lims/content/instrumentvalidation.py:101
 msgid "Description of the actions made during the validation"
 msgstr ""
-"Descrição das ações feitas durante a validação/verificação pelo analista"
+"Descrição das ações feitas durante a análise crítica pelo analista"
 
 #: bika/lims/content/storagelocation.py:64
 msgid "Description of the location"
@@ -2305,7 +2305,7 @@ msgstr "Registro de E-mail"
 
 #: bika/lims/content/bikasetup.py:782
 msgid "Email body for Sample Invalidation notifications"
-msgstr "Corpo do e-mail para notificações de invalidação de amostra"
+msgstr "Corpo do e-mail para notificações de declínio de amostra"
 
 #: bika/lims/content/bikasetup.py:746
 msgid "Email body for Sample Rejection notifications"
@@ -2321,7 +2321,7 @@ msgstr "Notificação por e-mail"
 
 #: bika/lims/content/bikasetup.py:771
 msgid "Email notification on Sample invalidation"
-msgstr "Notificação por e-mail sobre invalidação de amostra"
+msgstr "Notificação por e-mail sobre declínio de amostra"
 
 #: bika/lims/content/bikasetup.py:736
 msgid "Email notification on Sample rejection"
@@ -3162,11 +3162,11 @@ msgstr "Importação de Equipamento finalizada"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:92
 msgid "Instrument in calibration progress:"
-msgstr "Equipamento em calibração/qualificação:"
+msgstr "Equipamento(s) em calibração/qualificação:"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:73
 msgid "Instrument in validation progress:"
-msgstr "Equipamento em validação/verificação:"
+msgstr "Equipamento(s) em análise crítica de certificados:"
 
 #: senaite/core/exportimport/instruments/importer.py:402
 msgid "Instrument not found"
@@ -3174,7 +3174,7 @@ msgstr "Equipamento não encontrado"
 
 #: bika/lims/browser/viewlets/templates/instrument_qc_failures_viewlet.pt:16
 msgid "Instrument's calibration certificate expired:"
-msgstr "Certificado de calibração dos equipamento expirado:"
+msgstr "Equipamento(s) com certificado(s) vencido(s):"
 
 #: senaite/core/profiles/default/types/InstrumentType.xml
 msgid "InstrumentType"
@@ -4390,7 +4390,7 @@ msgstr "Outro..."
 #: bika/lims/browser/instrument.py:723
 #: bika/lims/controlpanel/bika_instruments.py:170
 msgid "Out of date"
-msgstr "Expirado"
+msgstr "Vencido"
 
 #: senaite/core/exportimport/instruments/importer.py:379
 msgid "Override non-empty analysis results"
@@ -5011,7 +5011,7 @@ msgstr "Observações a serem consideradas antes da realização da tarefa"
 #: bika/lims/content/instrumentvalidation.py:90
 msgid "Remarks to take into account before validation"
 msgstr ""
-"Observações a considerar antes da verificação/validação pós calibração/"
+"Observações a considerar antes da análise crítica de certificados pós calibração/"
 "qualificação/manutenção"
 
 #: bika/lims/content/instrumentmaintenancetask.py:93
@@ -5205,21 +5205,21 @@ msgstr "Retestado"
 #: senaite/core/profiles/default/workflows/senaite_duplicateanalysis_workflow/definition.xml
 #: senaite/core/profiles/default/workflows/senaite_referenceanalysis_workflow/definition.xml
 msgid "Retract"
-msgstr "Retratar"
+msgstr "Retificar"
 
 #: senaite/core/browser/dashboard/dashboard.py:594
 #: senaite/core/profiles/default/workflows/senaite_analysis_workflow/definition.xml
 #: senaite/core/profiles/default/workflows/senaite_duplicateanalysis_workflow/definition.xml
 msgid "Retracted"
-msgstr "Retratado"
+msgstr "Retificado"
 
 #: bika/lims/browser/templates/analyses_retractedlist.pt:11
 msgid "Retracted analyses"
-msgstr "Análises retratadas"
+msgstr "Análises retificadas"
 
 #: bika/lims/browser/instrument.py:598
 msgid "Retractions"
-msgstr "Retratações"
+msgstr "Retificações"
 
 #: bika/lims/browser/publish/reports_listing.py:78
 msgid "Review State"
@@ -5879,7 +5879,7 @@ msgid ""
 "$retest_id, $retest_link, $lab_address"
 msgstr ""
 "Defina o texto para o corpo do e-mail a ser enviado, caso a opção "
-"'Notificação por e-mail na 'invalidação' da Amostra' esteja ativada, para o "
+"'Notificação por e-mail na 'declínio' da Amostra' esteja ativada, para o "
 "contato do cliente da Amostra. Você pode usar palavras-chave reservadas: "
 "$sample_id, $sample_link, $retest_id, $retest_link, $lab_address"
 
@@ -6615,7 +6615,7 @@ msgstr ""
 msgid ""
 "This Sample has been generated automatically due to the retraction of the "
 "Sample"
-msgstr "Esta Amostra foi gerada automaticamente devido à retratação da Amostra"
+msgstr "Esta Amostra foi gerada automaticamente devido à retificação da Amostra"
 
 #: bika/lims/browser/viewlets/templates/rejected_ar_viewlet.pt:15
 msgid "This Sample has been rejected due to the following reasons:"
@@ -6732,7 +6732,7 @@ msgstr "Até"
 
 #: senaite/core/browser/samples/view.py:295
 msgid "To Be Preserved"
-msgstr "A Ser Preservado"
+msgstr "Aguardando Preservação"
 
 #: senaite/core/browser/samples/view.py:286
 msgid "To Be Sampled"
@@ -6746,11 +6746,11 @@ msgstr "A ser exibido abaixo de cada seção de Categoria de Análise nos Laudos
 #: senaite/core/browser/dashboard/dashboard.py:410
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "To be preserved"
-msgstr "A ser preservado"
+msgstr "Aguardando Preservação"
 
 #: senaite/core/browser/dashboard/dashboard.py:460
 msgid "To be printed"
-msgstr "A ser impresso"
+msgstr "Aguardando impressão"
 
 #: senaite/core/browser/dashboard/dashboard.py:403
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
@@ -7047,7 +7047,7 @@ msgstr "Falha de validação: Direção deve ser N/S (Norte/Sul)"
 
 #: bika/lims/validators.py:1349
 msgid "Validation failed: Could not import module '%s'"
-msgstr "Falha na validação: Não foi possível importar o módulo '%s'"
+msgstr "Falha de validação: Não foi possível importar o módulo '%s'"
 
 #: bika/lims/validators.py:965
 msgid "Validation failed: Error percentage must be between 0 and 100"
@@ -7161,11 +7161,11 @@ msgstr "Falha de validação: palavra-chave contém caracteres inválidos"
 
 #: bika/lims/api/analysisservice.py:175
 msgid "Validation failed: keyword is already in use"
-msgstr "Falha na validação: a palavra-chave já está em uso"
+msgstr "Falha de validação: a palavra-chave já está em uso"
 
 #: bika/lims/api/analysisservice.py:185
 msgid "Validation failed: keyword is already in use by calculation '{}'"
-msgstr "Falha na validação: a palavra-chave já está em uso pelo cálculo '{}'"
+msgstr "Falha de validação: a palavra-chave já está em uso pelo cálculo '{}'"
 
 #: bika/lims/controlpanel/bika_analysisservices.py:95
 #: bika/lims/validators.py:323
@@ -7220,12 +7220,12 @@ msgstr ""
 #: senaite/core/content/analysiscategory.py:122
 #: senaite/core/content/subgroup.py:82
 msgid "Validation failed: value must be between 0 and 1000"
-msgstr "Falha na validação: o valor deve estar entre 0 e 1000"
+msgstr "Falha de validação: o valor deve estar entre 0 e 1000"
 
 #: senaite/core/content/analysiscategory.py:118
 #: senaite/core/content/subgroup.py:78
 msgid "Validation failed: value must be float"
-msgstr "Falha na validação: o valor deve ser decimal"
+msgstr "Falha de validação: o valor deve ser decimal"
 
 #: bika/lims/content/instrumentvalidation.py:51
 msgid "Validation report date"
@@ -7653,7 +7653,7 @@ msgstr ""
 #: senaite/core/content/analysiscategory.py:64
 msgid "description_analysiscategory_comments"
 msgstr ""
-"A ser exibido abaixo de cada seção de Categoria de Análise nos laudos de "
+"Será exibido abaixo de cada seção de Categoria de Análise nos laudos de "
 "resultados."
 
 #. Default: "Select the responsible department"
@@ -7820,7 +7820,7 @@ msgstr ""
 #: bika/lims/content/bikasetup.py:704
 msgid "description_bikasetup_email_body_sample_publication"
 msgstr ""
-"Defina o texto do corpo do e-mail a ser usado por padrão ao enviar laudos de "
+"Defina o texto do corpo do e-mail que será usado por padrão ao enviar laudos de "
 "resultados aos destinatários selecionados. Você pode usar palavras-chave "
 "reservadas: $client_name, $recipients, $lab_name, $lab_address"
 
@@ -7828,7 +7828,7 @@ msgstr ""
 #: bika/lims/content/bikasetup.py:682
 msgid "description_bikasetup_email_from_sample_publication"
 msgstr ""
-"E-mail a ser usado como endereço 'De' para e-mails enviados ao publicar "
+"E-mail que será usado como endereço 'De' para e-mails enviados ao publicar "
 "laudos de resultados. Este endereço substitui o valor definido nas "
 "'Configurações de e-mail' do portal."
 
@@ -8054,7 +8054,7 @@ msgstr ""
 #: senaite/core/registry/schema.py:303
 msgid "description_registry_generic_setup_skip_export_types"
 msgstr ""
-"Lista de tipos de portal a serem ignorados ao exportar a estrutura de "
+"Lista de tipos de portal que serão ignorados ao exportar a estrutura de "
 "conteúdo do site por meio da Configuração Genérica"
 
 #. Default: "Assign sample to a batch"
@@ -8127,7 +8127,7 @@ msgstr ""
 #. Default: "Reference to retracted sample"
 #: bika/lims/content/analysisrequest.py:1292
 msgid "description_sample_retracted"
-msgstr "Referência à amostra retratada"
+msgstr "Referência à amostra retificada"
 
 #. Default: "The condition of the sample"
 #: bika/lims/content/analysisrequest.py:883
@@ -8335,7 +8335,7 @@ msgstr ""
 #: senaite/core/content/senaitesetup.py:73
 msgid "description_senaitesetup_email_from_sample_publication"
 msgstr ""
-"E-mail a ser usado como endereço 'De' para e-mails enviados ao publicar "
+"E-mail que será usado como endereço 'De' para e-mails enviados ao publicar "
 "laudos de resultados. Este endereço substitui o valor definido nas "
 "'Configurações de e-mail' do portal."
 
@@ -8359,7 +8359,7 @@ msgstr ""
 #: senaite/core/content/senaitesetup.py:87
 msgid "description_senaitesetup_publication_email_text"
 msgstr ""
-"Defina o texto do corpo do e-mail a ser usado por padrão ao enviar laudos de "
+"Defina o texto do corpo do e-mail que será usado por padrão ao enviar laudos de "
 "resultados aos destinatários selecionados. Você pode usar palavras-chave "
 "reservadas: $client_name, $recipients, $lab_name, $lab_address"
 
@@ -8507,7 +8507,7 @@ msgstr "Conteúdo do arquivo"
 #: bika/lims/browser/analysisrequest/add2.py:1844
 msgid "error_analyssirequest_numsamples_above_max"
 msgstr ""
-"O número de amostras a serem criadas para o registro 'Amostra $"
+"O número de amostras que serão criadas para o registro 'Amostra $"
 "{record_index}' (${num_samples}) é superior a ${max_num_samples}"
 
 #. Default: "${name} is after ${max_date}, please correct."
@@ -8951,7 +8951,7 @@ msgstr "Página inicial do cliente"
 #. Default: "Portal types to skip on content structure export"
 #: senaite/core/registry/schema.py:299
 msgid "label_registry_generic_setup_skip_export_types"
-msgstr "Tipos de portal a serem ignorados na exportação de conteúdo"
+msgstr "Tipos de portal que serão ignorados na exportação de conteúdo"
 
 #. Default: "Allow multi paste"
 #: senaite/core/registry/schema.py:384
