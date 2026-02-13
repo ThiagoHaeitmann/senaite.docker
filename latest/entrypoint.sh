@@ -135,22 +135,33 @@ if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
   fi
 fi
 
-if [ -f "${APP_DIR}/parts/instance/etc/zope.conf" ]; then
+ZOPE_CONF="${APP_DIR}/parts/instance/etc/zope.conf"
+WSGI_INI="${APP_DIR}/parts/instance/etc/wsgi.ini"
+
+if [ -f "$ZOPE_CONF" ]; then
     log "Aplicando Tunagem de Vanguarda no zope.conf..."
     
-    # Ajusta o zodb_cache_size (Onde o painel lê os 30000)
-    sed -i "s/cache-size 30000/cache-size ${ZODB_CACHE_SIZE:-100000}/g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    # 1. Ajusta cache-size principal (Main DB) - Procura cache-size seguido de qualquer número
+    sed -i -E "s/cache-size [0-9]+/cache-size ${ZODB_CACHE_SIZE:-150000}/" "$ZOPE_CONF"
     
-    # Ajusta o número de Threads do Python/Zope
-    sed -i "s/zopethreads 1/zopethreads ${ZOPETHREADS:-64}/g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    # 2. Ajusta cache-size do cliente ZEO dentro da tag <zeoclient>
+    # Busca por cache-size seguido de qualquer valor MB/GB e troca pelo valor da ENV
+    sed -i -E "/<zeoclient>/,/<\/zeoclient>/ s/cache-size [0-9]+(MB|GB|KB)/cache-size ${ZEO_CLIENT_CACHE_SIZE:-2000MB}/" "$ZOPE_CONF"
     
-    # Garante que o cache-size para o zeo-client também seja respeitado
-    sed -i "s/cache-size 30MB/cache-size ${ZEO_CLIENT_CACHE_SIZE:-1000MB}/g" "${APP_DIR}/parts/instance/etc/zope.conf"
+    # 3. Ajusta o endereço do servidor ZEO (Server ou Address)
+    sed -i -E "s/(server|address) [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+/server ${ZEO_ADDRESS:-10.40.40.10:8100}/g" "$ZOPE_CONF"
+fi
+
+if [ -f "$WSGI_INI" ]; then
+    log "Aplicando Tunagem de Threads no wsgi.ini..."
+    
+    # 4. Ajusta Threads no WSGI - Substitui threads = NUMERO pelo valor da ENV
+    sed -i -E "s/threads = [0-9]+/threads = ${ZOPETHREADS:-128}/" "$WSGI_INI"
 fi
 
 case "${MODE}" in
   zeo)      run_as "${APP_DIR}/bin/zeoserver" fg ;;
-  instance) run_as "${APP_DIR}/bin/instance"  fg ;;
+  instance) run_as "${APP_DIR}/bin/instance"  console ;;
   check)    ls -la "${CFG}" "${APP_DIR}/bin/instance" "${APP_DIR}/bin/zeoserver" || true; exit 0 ;;
   *)        die "Unknown MODE '${MODE}' (use zeo|instance|check)" ;;
 esac
