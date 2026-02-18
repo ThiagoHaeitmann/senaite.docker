@@ -1770,7 +1770,7 @@ msgstr "Data do Pedido"
 
 #: bika/lims/content/analysisrequest.py:1058
 msgid "Date Sample Received"
-msgstr "Data de Recebimento da Amostra"
+msgstr "Data de Recebimento"
 
 #: senaite/core/browser/samples/view.py:140
 msgid "Date Sampled"
@@ -3774,7 +3774,7 @@ msgstr "Desconto de membro"
 
 #: bika/lims/content/analysisrequest.py:1102 bika/lims/content/bikasetup.py:254
 msgid "Member discount %"
-msgstr "Desconto para o associado %"
+msgstr "Desconto %"
 
 #: bika/lims/content/client.py:80
 msgid "Member discount applies"
@@ -8991,7 +8991,7 @@ msgstr "Embalagem"
 #. Default: "Date Sampled"
 #: bika/lims/content/analysisrequest.py:432
 msgid "label_sample_datesampled"
-msgstr "Data da Amostragem"
+msgstr "Previsão de Chegada"
 
 #. Default: "Detached from sample"
 #: bika/lims/content/analysisrequest.py:1261
@@ -9066,7 +9066,7 @@ msgstr "Especificação da Análise"
 #. Default: "Storage Location"
 #: bika/lims/content/analysisrequest.py:774
 msgid "label_sample_storagelocation"
-msgstr "Localização de Armazenamento"
+msgstr "Localização da Amostra"
 
 #. Default: "Batch Sub-group"
 #: bika/lims/content/analysisrequest.py:346
