@@ -9011,7 +9011,7 @@ msgstr "Amostra pai"
 #. Default: "Preservation"
 #: bika/lims/content/analysisrequest.py:580
 msgid "label_sample_preservation"
-msgstr "Conservação"
+msgstr "Conservação no Lab"
 
 #. Default: "Primary Sample"
 #: bika/lims/content/analysisrequest.py:275
@@ -9036,7 +9036,7 @@ msgstr "Reteste a partir da amostra"
 #. Default: "Sample Condition"
 #: bika/lims/content/analysisrequest.py:880
 msgid "label_sample_samplecondition"
-msgstr "Condições da amostra"
+msgstr "Condição na Entrada"
 
 #. Default: "Sample Point"
 #: bika/lims/content/analysisrequest.py:750
