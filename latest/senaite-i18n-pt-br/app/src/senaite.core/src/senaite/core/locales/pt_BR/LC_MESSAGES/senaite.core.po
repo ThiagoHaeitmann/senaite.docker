@@ -651,11 +651,11 @@ msgstr "Categoria de Análise"
 
 #: senaite/core/profiles/default/types/AnalysisProfile.xml
 msgid "AnalysisProfile"
-msgstr "Perfil de Análise"
+msgstr "Pacote de Análises"
 
 #: senaite/core/profiles/default/types/AnalysisProfiles.xml
 msgid "AnalysisProfiles"
-msgstr "Perfis de Análise"
+msgstr "Pacotes de Análises"
 
 #: bika/lims/browser/analyses/view.py:182
 #: bika/lims/browser/worksheet/templates/results.pt:35
@@ -2424,7 +2424,7 @@ msgid ""
 "Profile only, overriding the systems VAT"
 msgstr ""
 "Digite um valor percentual , ex:14,0. Este percentual é aplicado somente ao "
-"perfil de análises, sobrepondo o VAT do sistema"
+"pacote de análises, sobrepondo o VAT do sistema"
 
 #: bika/lims/content/bikasetup.py:267
 msgid ""
@@ -2863,7 +2863,7 @@ msgid ""
 "in reports. This setting can be overrided in Analysis Profile and/or Sample"
 msgstr ""
 "Se ativado, esta análise e seus resultados não serão exibidos por padrão nos "
-"laudos. Esta configuração pode ser sobrescrita no Perfil de Análise e/ou na "
+"laudos. Esta configuração pode ser sobrescrita no Pacote de Análise e/ou na "
 "Amostra"
 
 #: bika/lims/content/batch.py:138
@@ -4016,7 +4016,7 @@ msgstr "Nenhuma amostra pôde ser criada."
 
 #: bika/lims/browser/batch/batchbook.py:175
 msgid "No Subgroup"
-msgstr "Sem Subgrupo"
+msgstr "Sem Finalidade"
 
 #: bika/lims/browser/workflow/__init__.py:124
 msgid "No action defined."
@@ -6111,16 +6111,16 @@ msgstr "Sequência de caracteres"
 
 #: senaite/core/profiles/default/types/SubGroup.xml
 msgid "SubGroup"
-msgstr "Subgrupo"
+msgstr "Finalidade"
 
 #: senaite/core/profiles/default/types/SubGroups.xml
 msgid "SubGroups"
-msgstr "Subgrupos"
+msgstr "Finalidades"
 
 #: bika/lims/content/subgroup.py:39
 msgid "Subgroups are sorted with this key in group views"
 msgstr ""
-"Os subgrupos são classificados com esta chave nas visualizações de grupo"
+"As Finalidades são classificados com esta chave nas visualizações de grupo"
 
 #: bika/lims/browser/publish/templates/email.pt:115
 #: bika/lims/browser/templates/analysisreport_info.pt:165
@@ -6920,7 +6920,7 @@ msgstr ""
 
 #: bika/lims/content/analysisprofile.py:101
 msgid "Use Analysis Profile Price"
-msgstr "Use Perfil de Análise de Preço"
+msgstr "Use Pacote de Análise de Preço"
 
 #: bika/lims/content/bikasetup.py:504
 msgid "Use Dashboard as default front page"
@@ -7372,8 +7372,8 @@ msgid ""
 "When it's set, the system uses the analysis profile's price to quote and the "
 "system's VAT is overridden by the analysis profile's specific VAT"
 msgstr ""
-"Quando definido, o sistema usa o preço do perfil de análise para cotar, e o "
-"IVA do sistema é substituído pelo IVA específico do perfil de análise"
+"Quando definido, o sistema usa o preço do pacote de análise para cotar, e o "
+"IVA do sistema é substituído pelo IVA específico do pacote de análise"
 
 #: bika/lims/content/abstractbaseanalysis.py:461
 msgid ""
@@ -7694,7 +7694,7 @@ msgstr ""
 #: senaite/core/content/analysisprofile.py:184
 msgid "description_analysisprofile_sampletypes"
 msgstr ""
-"Tipos de amostra para os quais este perfil de análise é compatível. Este "
+"Tipos de amostra para os quais este pacote de análise é compatível. Este "
 "perfil não estará disponível para seleção nos formulários de criação e "
 "edição de amostras, a menos que o tipo de amostra selecionado seja um "
 "destes. Se nenhum tipo de amostra for definido aqui, este perfil estará "
@@ -7752,7 +7752,7 @@ msgstr "A amostra primária do PDF"
 #. Default: "Select the analysis profile for this template"
 #: bika/lims/content/artemplate.py:257
 msgid "description_artemplate_profile"
-msgstr "Selecione o perfil de análises para o Modelo"
+msgstr "Selecione o pacote de análises para o Modelo"
 
 #. Default: "Select the sample point for this template"
 #: bika/lims/content/artemplate.py:58
@@ -8115,7 +8115,7 @@ msgstr "Selecione uma amostra para criar uma amostra secundária"
 #. Default: "Select an analysis profile for this sample"
 #: bika/lims/content/analysisrequest.py:404
 msgid "description_sample_profiles"
-msgstr "Selecione um perfil de análise para esta amostra"
+msgstr "Selecione um pacote de análise para esta amostra"
 
 #. Default: "Select an analysis specification that should be used in the sample publication report"
 #: bika/lims/content/analysisrequest.py:720
@@ -8167,7 +8167,7 @@ msgstr "Local onde a amostra é armazenada"
 #. Default: "The assigned batch sub group of this request"
 #: bika/lims/content/analysisrequest.py:349
 msgid "description_sample_subgroup"
-msgstr "O subgrupo de lote atribuído desta solicitação"
+msgstr "A Finalidade de lote atribuído desta solicitação"
 
 #. Default: "Select an analysis template for this sample"
 #: bika/lims/content/analysisrequest.py:376
@@ -8681,7 +8681,7 @@ msgstr "Amostra Primária"
 #. Default: "Analysis Profile"
 #: bika/lims/content/artemplate.py:254
 msgid "label_artemplate_profile"
-msgstr "Perfil de Análises"
+msgstr "Pacote de Análises"
 
 #. Default: "Sample Point"
 #: bika/lims/content/artemplate.py:55
@@ -9021,7 +9021,7 @@ msgstr "Amostra Primária"
 #. Default: "Analysis Profiles"
 #: bika/lims/content/analysisrequest.py:401
 msgid "label_sample_profiles"
-msgstr "Perfil de Análise"
+msgstr "Pacotes de Análises"
 
 #. Default: "Publication Specification"
 #: bika/lims/content/analysisrequest.py:717
@@ -9071,7 +9071,7 @@ msgstr "Localização de Armazenamento"
 #. Default: "Batch Sub-group"
 #: bika/lims/content/analysisrequest.py:346
 msgid "label_sample_subgroup"
-msgstr "Sub-grupo do Lote Interno"
+msgstr "Finalidade"
 
 #. Default: "Sample Template"
 #: bika/lims/content/analysisrequest.py:373
@@ -10459,7 +10459,7 @@ msgstr "Nome"
 #. Default: "Use analysis profile price"
 #: senaite/core/content/analysisprofile.py:133
 msgid "title_analysisprofile_use_profile_price"
-msgstr "Usar preço do perfil de análise"
+msgstr "Usar preço do pacote de análise"
 
 #. Default: "Analyst"
 #: senaite/core/permissions/localroles.py:30
