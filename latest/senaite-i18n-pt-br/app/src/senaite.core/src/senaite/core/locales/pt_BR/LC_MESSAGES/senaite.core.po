@@ -1432,7 +1432,7 @@ msgstr "Comentários"
 
 #: bika/lims/content/analysisrequest.py:1321
 msgid "Comments or results interpretation"
-msgstr "Comentários ou interpretação de resultados"
+msgstr "Comentários ou conclusão de Laudo"
 
 #: bika/lims/content/abstractbaseanalysis.py:834
 #: bika/lims/content/analysisprofile.py:91
@@ -5180,7 +5180,7 @@ msgstr "Resultados foram retirados"
 
 #: senaite/core/browser/viewlets/resultsinterpretation.py:39
 msgid "Results interpretation"
-msgstr "Interpretação de resultados"
+msgstr "Conclusão de Laudo"
 
 #: senaite/core/browser/dashboard/dashboard.py:431
 msgid "Results pending"
