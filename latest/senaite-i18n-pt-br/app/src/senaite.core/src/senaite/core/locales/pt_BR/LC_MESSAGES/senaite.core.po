@@ -5285,7 +5285,7 @@ msgstr "Cumprimento"
 
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "Sample"
-msgstr "Receber"
+msgstr "Realizar Entrada"
 
 #: bika/lims/browser/analysisrequest/add2.py:1955
 msgid "Sample ${AR} was successfully created."
@@ -5380,7 +5380,7 @@ msgstr "Data da amostra obrigatória para a amostra %s"
 
 #: senaite/core/profiles/default/workflows/senaite_sample_workflow/definition.xml
 msgid "Sample due"
-msgstr "Amostra devida"
+msgstr "Amostra pendente"
 
 #: senaite/core/browser/dashboard/dashboard.py:630
 msgid "Sample received"
