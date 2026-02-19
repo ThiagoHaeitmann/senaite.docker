@@ -2761,11 +2761,11 @@ msgstr "Campo Oculto"
 
 #: bika/lims/config.py:140
 msgid "High"
-msgstr "Alto"
+msgstr "Alta - Taxa Rush"
 
 #: bika/lims/config.py:139
 msgid "Highest"
-msgstr "Maior"
+msgstr "Muito Alta - Exigência Regulatória"
 
 #: bika/lims/browser/fields/durationfield.py:37
 msgid "Hours"
@@ -3596,11 +3596,11 @@ msgstr "Número do lote"
 
 #: bika/lims/config.py:142
 msgid "Low"
-msgstr "Baixo"
+msgstr "Normal / Prazo Comum"
 
 #: bika/lims/config.py:143
 msgid "Lowest"
-msgstr "Menor"
+msgstr "Baixa / Amostra Interna - Proficência"
 
 #: bika/lims/config.py:82
 msgid "Mailing address"
@@ -3762,7 +3762,7 @@ msgstr "Tempo máximo de execução"
 
 #: bika/lims/config.py:141
 msgid "Medium"
-msgstr "Meio"
+msgstr "Médio / Comparação - Reanálise"
 
 #: senaite/core/browser/install/templates/senaite-overview.pt:153
 msgid "Meet the community, browse the code and get support on"
